@@ -1,0 +1,6 @@
+[TASK] Test1
+	[GOTO] "http://www.imt-atlantique.fr/fr"
+	[SELECT] $lien1
+		[CONTENT] "Toutes les actualités"
+		[TYPE] $LINK
+	[TEST] $lien1

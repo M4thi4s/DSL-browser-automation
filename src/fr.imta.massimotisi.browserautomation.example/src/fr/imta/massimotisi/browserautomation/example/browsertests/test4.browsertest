@@ -1,0 +1,15 @@
+[TASK] Test_3
+  [GOTO] "http://www.imt-atlantique.fr/fr"
+  [SELECT] $toutesLesActus
+    [CONTENT] "Toutes les actualités"
+    [TYPE] $LINK
+  [ACTION] $toutesLesActus
+	[CLICK]
+  [SELECT] $image
+	[ALT] "Accueil"
+  [ACTION] $image
+	[CLICK] 
+  [SELECT] $toutesLesActus2
+	[TYPE] $LINK
+	[CONTENT] $toutesLesActus.CONTENT
+  [TEST] $toutesLesActus2

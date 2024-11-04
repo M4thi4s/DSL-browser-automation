@@ -1,0 +1,20 @@
+[TASK] "Test 6"
+	[GOTO] "http://www.imt-atlantique.fr/fr/rechercher"
+	[SELECT] $field
+		[LABEL] "Rechercher"
+		[TYPE] $INPUT
+	[ACTION] $field
+		[SET-TEXT] "2006"
+	[SELECT] $select
+		[LABEL] "Période de publication"
+		[TYPE] $INPUT
+	[ACTION] $select
+		[CHOOSE] "Le mois dernier"
+	[SELECT] $btn
+		[VALUE] "Appliquer les filtres"
+	[ACTION] $btn
+		[CLICK]
+	[SELECT] $result
+		[TYPE] $TEXT
+		[CONTENT] "Aucun résultat ne correspond à votre recherche"
+	[TEST] $result

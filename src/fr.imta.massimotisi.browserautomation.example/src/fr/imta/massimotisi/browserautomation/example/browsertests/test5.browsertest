@@ -1,0 +1,26 @@
+[TASK] "Test 5"
+	[GOTO] "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
+	[SELECT] $checkbox
+		[LABEL] $ALL
+		[TYPE] $CHECKBOX
+	[ACTION] $checkbox
+		[CHECK] $FALSE
+	[SELECT] $checkbox1
+		[LABEL] "Anglais"
+		[TYPE] $CHECKBOX
+	[SELECT] $checkbox2
+		[NAME] "À domicile"
+		[TYPE] $CHECKBOX
+	[SELECT] $checkbox3
+		[NAME] "Temps plein"
+		[TYPE] $CHECKBOX
+	[ACTION] $checkbox1 $checkbox2 $checkbox3
+		[CHECK] $TRUE
+	[SELECT] $btn
+		[VALUE] "Appliquer les filtres"
+	[ACTION] $btn
+		[CLICK]
+	[SELECT] $result
+		[TYPE] $TEXT
+		[CONTENT] "No found course matching your criteria."
+	[TEST] $result

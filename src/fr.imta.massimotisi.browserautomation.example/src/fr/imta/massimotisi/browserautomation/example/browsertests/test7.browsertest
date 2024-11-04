@@ -1,0 +1,15 @@
+[TASK] "Test 7"
+	[GOTO] "http://www.imt-atlantique.fr/fr"
+	[SELECT] $firstNewsLink
+		[TYPE] $DIV
+		[CONTENT] "Actualités"
+		[PARENT] {
+			[TYPE] $LINK
+			[NTH-CHILD] 1
+		}
+	[ACTION] $firstNewsLink
+		[CLICK] 
+	[SELECT] $result
+		[CONTENT] $firstNewsLink.CONTENT
+		[TYPE] $TITLE
+	[TEST] $result
