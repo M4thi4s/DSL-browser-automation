@@ -17,25 +17,26 @@ GoTo:
 
 Select:
     '[SELECT]' var=Variable
-    properties+=Property*;
+    properties+=Property*
+ ;
     
 Variable:
 	'$' name=ID;
 	//'$'name=ID('.'param=STRING)?;
 
 Property:
-    '[CONTENT]' content=(Variable | STRING) |
+    '[CONTENT]' (contentVariable=Variable | contentString=STRING)
     '[TYPE]' '$'type=Type |
-    '[LABEL]' label=(Variable | STRING) |
-    '[NAME]' name=(Variable | STRING) |
-    '[VALUE]' value=(Variable | STRING) |
-    '[ALT]' alt=(Variable | STRING) |
+    '[LABEL]' (contentVariable=Variable | contentString=STRING) |
+    '[NAME]' (contentVariable=Variable | contentString=STRING) |
+    '[VALUE]' (contentVariable=Variable | contentString=STRING) |
+    '[ALT]' (contentVariable=Variable | contentString=STRING)|
     '[PARENT]' '{' subProperties+=Property* '}' |
-    '[NTH-CHILD]' child=INT;
+    '[NTH-CHILD]' child=INT
+;
 
 ActionCommand:
-    '[ACTION]' var=Variable
-    	command=ActionType;
+    '[ACTION]' var=Variable command=ActionType;
 
 ActionType:
     '[CLICK]' |
