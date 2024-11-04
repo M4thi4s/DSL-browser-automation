@@ -1,0 +1,9 @@
+grammar org.xtext.browserautomation.mydsl.BrowserTest with org.eclipse.xtext.common.Terminals
+
+generate browserTest "http://www.xtext.org/browserautomation/mydsl/BrowserTest"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

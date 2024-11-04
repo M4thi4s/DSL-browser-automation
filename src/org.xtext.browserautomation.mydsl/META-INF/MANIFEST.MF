@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.browserautomation.mydsl
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.browserautomation.mydsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.browserautomation.mydsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.36.0",
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.xtext.browserautomation.mydsl.browserTest.util,
+ org.xtext.browserautomation.mydsl.parser.antlr,
+ org.xtext.browserautomation.mydsl.validation,
+ org.xtext.browserautomation.mydsl.browserTest,
+ org.xtext.browserautomation.mydsl.scoping,
+ org.xtext.browserautomation.mydsl.generator,
+ org.xtext.browserautomation.mydsl.services,
+ org.xtext.browserautomation.mydsl.browserTest.impl,
+ org.xtext.browserautomation.mydsl.parser.antlr.internal,
+ org.xtext.browserautomation.mydsl,
+ org.xtext.browserautomation.mydsl.serializer
+Import-Package: org.apache.log4j
