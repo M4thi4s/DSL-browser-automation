@@ -1346,7 +1346,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProperty"
-    // InternalBrowserTest.g:511:1: ruleProperty returns [EObject current=null] : ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' ) ) ;
+    // InternalBrowserTest.g:511:1: ruleProperty returns [EObject current=null] : ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' ) ) ;
     public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1360,9 +1360,9 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         Token lv_name_12_0=null;
         Token otherlv_13=null;
         Token lv_child_14_0=null;
-        Token otherlv_15=null;
         Token otherlv_16=null;
-        Token otherlv_18=null;
+        Token otherlv_17=null;
+        Token otherlv_19=null;
         EObject lv_content_1_0 = null;
 
         EObject lv_label_3_0 = null;
@@ -1373,17 +1373,17 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
         Enumerator lv_type_10_0 = null;
 
-        EObject lv_subProperties_17_0 = null;
+        EObject lv_subProperties_18_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:517:2: ( ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' ) ) )
-            // InternalBrowserTest.g:518:2: ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' ) )
+            // InternalBrowserTest.g:517:2: ( ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' ) ) )
+            // InternalBrowserTest.g:518:2: ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' ) )
             {
-            // InternalBrowserTest.g:518:2: ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' ) )
+            // InternalBrowserTest.g:518:2: ( (otherlv_0= '[CONTENT]' ( (lv_content_1_0= ruleEntree ) ) ) | (otherlv_2= '[LABEL]' ( (lv_label_3_0= ruleEntree ) ) ) | (otherlv_4= '[VALUE]' ( (lv_value_5_0= ruleEntree ) ) ) | (otherlv_6= '[ALT]' ( (lv_alt_7_0= ruleEntree ) ) ) | (otherlv_8= '[TYPE]' otherlv_9= '$' ( (lv_type_10_0= ruleType ) ) ) | (otherlv_11= '[NAME]' ( (lv_name_12_0= RULE_STRING ) ) ) | (otherlv_13= '[NTH-CHILD]' ( (lv_child_14_0= RULE_INT ) ) ) | ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' ) )
             int alt9=8;
             switch ( input.LA(1) ) {
             case 16:
@@ -1758,20 +1758,31 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalBrowserTest.g:703:3: (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' )
+                    // InternalBrowserTest.g:703:3: ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' )
                     {
-                    // InternalBrowserTest.g:703:3: (otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}' )
-                    // InternalBrowserTest.g:704:4: otherlv_15= '[PARENT]' otherlv_16= '{' ( (lv_subProperties_17_0= ruleProperty ) )* otherlv_18= '}'
+                    // InternalBrowserTest.g:703:3: ( () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}' )
+                    // InternalBrowserTest.g:704:4: () otherlv_16= '[PARENT]' otherlv_17= '{' ( (lv_subProperties_18_0= ruleProperty ) )* otherlv_19= '}'
                     {
-                    otherlv_15=(Token)match(input,23,FOLLOW_16); 
+                    // InternalBrowserTest.g:704:4: ()
+                    // InternalBrowserTest.g:705:5: 
+                    {
 
-                    				newLeafNode(otherlv_15, grammarAccess.getPropertyAccess().getPARENTKeyword_7_0());
-                    			
-                    otherlv_16=(Token)match(input,24,FOLLOW_17); 
+                    					current = forceCreateModelElement(
+                    						grammarAccess.getPropertyAccess().getPropertyAction_7_0(),
+                    						current);
+                    				
 
-                    				newLeafNode(otherlv_16, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_1());
+                    }
+
+                    otherlv_16=(Token)match(input,23,FOLLOW_16); 
+
+                    				newLeafNode(otherlv_16, grammarAccess.getPropertyAccess().getPARENTKeyword_7_1());
                     			
-                    // InternalBrowserTest.g:712:4: ( (lv_subProperties_17_0= ruleProperty ) )*
+                    otherlv_17=(Token)match(input,24,FOLLOW_17); 
+
+                    				newLeafNode(otherlv_17, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_2());
+                    			
+                    // InternalBrowserTest.g:719:4: ( (lv_subProperties_18_0= ruleProperty ) )*
                     loop8:
                     do {
                         int alt8=2;
@@ -1784,16 +1795,16 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // InternalBrowserTest.g:713:5: (lv_subProperties_17_0= ruleProperty )
+                    	    // InternalBrowserTest.g:720:5: (lv_subProperties_18_0= ruleProperty )
                     	    {
-                    	    // InternalBrowserTest.g:713:5: (lv_subProperties_17_0= ruleProperty )
-                    	    // InternalBrowserTest.g:714:6: lv_subProperties_17_0= ruleProperty
+                    	    // InternalBrowserTest.g:720:5: (lv_subProperties_18_0= ruleProperty )
+                    	    // InternalBrowserTest.g:721:6: lv_subProperties_18_0= ruleProperty
                     	    {
 
-                    	    						newCompositeNode(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_2_0());
+                    	    						newCompositeNode(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_3_0());
                     	    					
                     	    pushFollow(FOLLOW_17);
-                    	    lv_subProperties_17_0=ruleProperty();
+                    	    lv_subProperties_18_0=ruleProperty();
 
                     	    state._fsp--;
 
@@ -1804,7 +1815,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     	    						add(
                     	    							current,
                     	    							"subProperties",
-                    	    							lv_subProperties_17_0,
+                    	    							lv_subProperties_18_0,
                     	    							"org.xtext.browserautomation.mydsl.BrowserTest.Property");
                     	    						afterParserOrEnumRuleCall();
                     	    					
@@ -1820,9 +1831,9 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_18=(Token)match(input,25,FOLLOW_2); 
+                    otherlv_19=(Token)match(input,25,FOLLOW_2); 
 
-                    				newLeafNode(otherlv_18, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_3());
+                    				newLeafNode(otherlv_19, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_4());
                     			
 
                     }
@@ -1853,7 +1864,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleActionCommand"
-    // InternalBrowserTest.g:740:1: entryRuleActionCommand returns [EObject current=null] : iv_ruleActionCommand= ruleActionCommand EOF ;
+    // InternalBrowserTest.g:747:1: entryRuleActionCommand returns [EObject current=null] : iv_ruleActionCommand= ruleActionCommand EOF ;
     public final EObject entryRuleActionCommand() throws RecognitionException {
         EObject current = null;
 
@@ -1861,8 +1872,8 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBrowserTest.g:740:54: (iv_ruleActionCommand= ruleActionCommand EOF )
-            // InternalBrowserTest.g:741:2: iv_ruleActionCommand= ruleActionCommand EOF
+            // InternalBrowserTest.g:747:54: (iv_ruleActionCommand= ruleActionCommand EOF )
+            // InternalBrowserTest.g:748:2: iv_ruleActionCommand= ruleActionCommand EOF
             {
              newCompositeNode(grammarAccess.getActionCommandRule()); 
             pushFollow(FOLLOW_1);
@@ -1889,7 +1900,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActionCommand"
-    // InternalBrowserTest.g:747:1: ruleActionCommand returns [EObject current=null] : (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) ) ;
+    // InternalBrowserTest.g:754:1: ruleActionCommand returns [EObject current=null] : (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) ) ;
     public final EObject ruleActionCommand() throws RecognitionException {
         EObject current = null;
 
@@ -1903,17 +1914,17 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:753:2: ( (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) ) )
-            // InternalBrowserTest.g:754:2: (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) )
+            // InternalBrowserTest.g:760:2: ( (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) ) )
+            // InternalBrowserTest.g:761:2: (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) )
             {
-            // InternalBrowserTest.g:754:2: (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) )
-            // InternalBrowserTest.g:755:3: otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) )
+            // InternalBrowserTest.g:761:2: (otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) ) )
+            // InternalBrowserTest.g:762:3: otherlv_0= '[ACTION]' ( (lv_var_1_0= ruleVariable ) )+ ( (lv_command_2_0= ruleActionType ) )
             {
             otherlv_0=(Token)match(input,26,FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getActionCommandAccess().getACTIONKeyword_0());
             		
-            // InternalBrowserTest.g:759:3: ( (lv_var_1_0= ruleVariable ) )+
+            // InternalBrowserTest.g:766:3: ( (lv_var_1_0= ruleVariable ) )+
             int cnt10=0;
             loop10:
             do {
@@ -1927,10 +1938,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalBrowserTest.g:760:4: (lv_var_1_0= ruleVariable )
+            	    // InternalBrowserTest.g:767:4: (lv_var_1_0= ruleVariable )
             	    {
-            	    // InternalBrowserTest.g:760:4: (lv_var_1_0= ruleVariable )
-            	    // InternalBrowserTest.g:761:5: lv_var_1_0= ruleVariable
+            	    // InternalBrowserTest.g:767:4: (lv_var_1_0= ruleVariable )
+            	    // InternalBrowserTest.g:768:5: lv_var_1_0= ruleVariable
             	    {
 
             	    					newCompositeNode(grammarAccess.getActionCommandAccess().getVarVariableParserRuleCall_1_0());
@@ -1967,11 +1978,11 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                 cnt10++;
             } while (true);
 
-            // InternalBrowserTest.g:778:3: ( (lv_command_2_0= ruleActionType ) )
-            // InternalBrowserTest.g:779:4: (lv_command_2_0= ruleActionType )
+            // InternalBrowserTest.g:785:3: ( (lv_command_2_0= ruleActionType ) )
+            // InternalBrowserTest.g:786:4: (lv_command_2_0= ruleActionType )
             {
-            // InternalBrowserTest.g:779:4: (lv_command_2_0= ruleActionType )
-            // InternalBrowserTest.g:780:5: lv_command_2_0= ruleActionType
+            // InternalBrowserTest.g:786:4: (lv_command_2_0= ruleActionType )
+            // InternalBrowserTest.g:787:5: lv_command_2_0= ruleActionType
             {
 
             					newCompositeNode(grammarAccess.getActionCommandAccess().getCommandActionTypeParserRuleCall_2_0());
@@ -2021,7 +2032,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleActionType"
-    // InternalBrowserTest.g:801:1: entryRuleActionType returns [EObject current=null] : iv_ruleActionType= ruleActionType EOF ;
+    // InternalBrowserTest.g:808:1: entryRuleActionType returns [EObject current=null] : iv_ruleActionType= ruleActionType EOF ;
     public final EObject entryRuleActionType() throws RecognitionException {
         EObject current = null;
 
@@ -2029,8 +2040,8 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBrowserTest.g:801:51: (iv_ruleActionType= ruleActionType EOF )
-            // InternalBrowserTest.g:802:2: iv_ruleActionType= ruleActionType EOF
+            // InternalBrowserTest.g:808:51: (iv_ruleActionType= ruleActionType EOF )
+            // InternalBrowserTest.g:809:2: iv_ruleActionType= ruleActionType EOF
             {
              newCompositeNode(grammarAccess.getActionTypeRule()); 
             pushFollow(FOLLOW_1);
@@ -2057,7 +2068,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleActionType"
-    // InternalBrowserTest.g:808:1: ruleActionType returns [EObject current=null] : (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) ) ;
+    // InternalBrowserTest.g:815:1: ruleActionType returns [EObject current=null] : (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) ) ;
     public final EObject ruleActionType() throws RecognitionException {
         EObject current = null;
 
@@ -2077,10 +2088,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:814:2: ( (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) ) )
-            // InternalBrowserTest.g:815:2: (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) )
+            // InternalBrowserTest.g:821:2: ( (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) ) )
+            // InternalBrowserTest.g:822:2: (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) )
             {
-            // InternalBrowserTest.g:815:2: (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) )
+            // InternalBrowserTest.g:822:2: (otherlv_0= '[CLICK]' | (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) ) | (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) ) | (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) ) )
             int alt11=4;
             switch ( input.LA(1) ) {
             case 27:
@@ -2112,7 +2123,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
             switch (alt11) {
                 case 1 :
-                    // InternalBrowserTest.g:816:3: otherlv_0= '[CLICK]'
+                    // InternalBrowserTest.g:823:3: otherlv_0= '[CLICK]'
                     {
                     otherlv_0=(Token)match(input,27,FOLLOW_2); 
 
@@ -2122,10 +2133,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBrowserTest.g:821:3: (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) )
+                    // InternalBrowserTest.g:828:3: (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) )
                     {
-                    // InternalBrowserTest.g:821:3: (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) )
-                    // InternalBrowserTest.g:822:4: otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) )
+                    // InternalBrowserTest.g:828:3: (otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) ) )
+                    // InternalBrowserTest.g:829:4: otherlv_1= '[CHECK]' otherlv_2= '$' ( (lv_value_3_0= ruleBoolean ) )
                     {
                     otherlv_1=(Token)match(input,28,FOLLOW_7); 
 
@@ -2135,11 +2146,11 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
                     				newLeafNode(otherlv_2, grammarAccess.getActionTypeAccess().getDollarSignKeyword_1_1());
                     			
-                    // InternalBrowserTest.g:830:4: ( (lv_value_3_0= ruleBoolean ) )
-                    // InternalBrowserTest.g:831:5: (lv_value_3_0= ruleBoolean )
+                    // InternalBrowserTest.g:837:4: ( (lv_value_3_0= ruleBoolean ) )
+                    // InternalBrowserTest.g:838:5: (lv_value_3_0= ruleBoolean )
                     {
-                    // InternalBrowserTest.g:831:5: (lv_value_3_0= ruleBoolean )
-                    // InternalBrowserTest.g:832:6: lv_value_3_0= ruleBoolean
+                    // InternalBrowserTest.g:838:5: (lv_value_3_0= ruleBoolean )
+                    // InternalBrowserTest.g:839:6: lv_value_3_0= ruleBoolean
                     {
 
                     						newCompositeNode(grammarAccess.getActionTypeAccess().getValueBooleanEnumRuleCall_1_2_0());
@@ -2173,20 +2184,20 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBrowserTest.g:851:3: (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) )
+                    // InternalBrowserTest.g:858:3: (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) )
                     {
-                    // InternalBrowserTest.g:851:3: (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) )
-                    // InternalBrowserTest.g:852:4: otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) )
+                    // InternalBrowserTest.g:858:3: (otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) ) )
+                    // InternalBrowserTest.g:859:4: otherlv_4= '[SET-TEXT]' ( (lv_text_5_0= ruleEntree ) )
                     {
                     otherlv_4=(Token)match(input,29,FOLLOW_13); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getActionTypeAccess().getSETTEXTKeyword_2_0());
                     			
-                    // InternalBrowserTest.g:856:4: ( (lv_text_5_0= ruleEntree ) )
-                    // InternalBrowserTest.g:857:5: (lv_text_5_0= ruleEntree )
+                    // InternalBrowserTest.g:863:4: ( (lv_text_5_0= ruleEntree ) )
+                    // InternalBrowserTest.g:864:5: (lv_text_5_0= ruleEntree )
                     {
-                    // InternalBrowserTest.g:857:5: (lv_text_5_0= ruleEntree )
-                    // InternalBrowserTest.g:858:6: lv_text_5_0= ruleEntree
+                    // InternalBrowserTest.g:864:5: (lv_text_5_0= ruleEntree )
+                    // InternalBrowserTest.g:865:6: lv_text_5_0= ruleEntree
                     {
 
                     						newCompositeNode(grammarAccess.getActionTypeAccess().getTextEntreeParserRuleCall_2_1_0());
@@ -2220,20 +2231,20 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBrowserTest.g:877:3: (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) )
+                    // InternalBrowserTest.g:884:3: (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) )
                     {
-                    // InternalBrowserTest.g:877:3: (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) )
-                    // InternalBrowserTest.g:878:4: otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) )
+                    // InternalBrowserTest.g:884:3: (otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) ) )
+                    // InternalBrowserTest.g:885:4: otherlv_6= '[CHOOSE]' ( (lv_option_7_0= ruleEntree ) )
                     {
                     otherlv_6=(Token)match(input,30,FOLLOW_13); 
 
                     				newLeafNode(otherlv_6, grammarAccess.getActionTypeAccess().getCHOOSEKeyword_3_0());
                     			
-                    // InternalBrowserTest.g:882:4: ( (lv_option_7_0= ruleEntree ) )
-                    // InternalBrowserTest.g:883:5: (lv_option_7_0= ruleEntree )
+                    // InternalBrowserTest.g:889:4: ( (lv_option_7_0= ruleEntree ) )
+                    // InternalBrowserTest.g:890:5: (lv_option_7_0= ruleEntree )
                     {
-                    // InternalBrowserTest.g:883:5: (lv_option_7_0= ruleEntree )
-                    // InternalBrowserTest.g:884:6: lv_option_7_0= ruleEntree
+                    // InternalBrowserTest.g:890:5: (lv_option_7_0= ruleEntree )
+                    // InternalBrowserTest.g:891:6: lv_option_7_0= ruleEntree
                     {
 
                     						newCompositeNode(grammarAccess.getActionTypeAccess().getOptionEntreeParserRuleCall_3_1_0());
@@ -2289,7 +2300,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTest"
-    // InternalBrowserTest.g:906:1: entryRuleTest returns [EObject current=null] : iv_ruleTest= ruleTest EOF ;
+    // InternalBrowserTest.g:913:1: entryRuleTest returns [EObject current=null] : iv_ruleTest= ruleTest EOF ;
     public final EObject entryRuleTest() throws RecognitionException {
         EObject current = null;
 
@@ -2297,8 +2308,8 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalBrowserTest.g:906:45: (iv_ruleTest= ruleTest EOF )
-            // InternalBrowserTest.g:907:2: iv_ruleTest= ruleTest EOF
+            // InternalBrowserTest.g:913:45: (iv_ruleTest= ruleTest EOF )
+            // InternalBrowserTest.g:914:2: iv_ruleTest= ruleTest EOF
             {
              newCompositeNode(grammarAccess.getTestRule()); 
             pushFollow(FOLLOW_1);
@@ -2325,7 +2336,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTest"
-    // InternalBrowserTest.g:913:1: ruleTest returns [EObject current=null] : (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) ) ;
+    // InternalBrowserTest.g:920:1: ruleTest returns [EObject current=null] : (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) ) ;
     public final EObject ruleTest() throws RecognitionException {
         EObject current = null;
 
@@ -2337,21 +2348,21 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:919:2: ( (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) ) )
-            // InternalBrowserTest.g:920:2: (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) )
+            // InternalBrowserTest.g:926:2: ( (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) ) )
+            // InternalBrowserTest.g:927:2: (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) )
             {
-            // InternalBrowserTest.g:920:2: (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) )
-            // InternalBrowserTest.g:921:3: otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) )
+            // InternalBrowserTest.g:927:2: (otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) ) )
+            // InternalBrowserTest.g:928:3: otherlv_0= '[TEST]' ( (lv_var_1_0= ruleVariable ) )
             {
             otherlv_0=(Token)match(input,31,FOLLOW_7); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTestAccess().getTESTKeyword_0());
             		
-            // InternalBrowserTest.g:925:3: ( (lv_var_1_0= ruleVariable ) )
-            // InternalBrowserTest.g:926:4: (lv_var_1_0= ruleVariable )
+            // InternalBrowserTest.g:932:3: ( (lv_var_1_0= ruleVariable ) )
+            // InternalBrowserTest.g:933:4: (lv_var_1_0= ruleVariable )
             {
-            // InternalBrowserTest.g:926:4: (lv_var_1_0= ruleVariable )
-            // InternalBrowserTest.g:927:5: lv_var_1_0= ruleVariable
+            // InternalBrowserTest.g:933:4: (lv_var_1_0= ruleVariable )
+            // InternalBrowserTest.g:934:5: lv_var_1_0= ruleVariable
             {
 
             					newCompositeNode(grammarAccess.getTestAccess().getVarVariableParserRuleCall_1_0());
@@ -2401,7 +2412,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleType"
-    // InternalBrowserTest.g:948:1: ruleType returns [Enumerator current=null] : ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) ) ;
+    // InternalBrowserTest.g:955:1: ruleType returns [Enumerator current=null] : ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) ) ;
     public final Enumerator ruleType() throws RecognitionException {
         Enumerator current = null;
 
@@ -2417,10 +2428,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:954:2: ( ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) ) )
-            // InternalBrowserTest.g:955:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) )
+            // InternalBrowserTest.g:961:2: ( ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) ) )
+            // InternalBrowserTest.g:962:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) )
             {
-            // InternalBrowserTest.g:955:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) )
+            // InternalBrowserTest.g:962:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'INPUT' ) | (enumLiteral_2= 'TEXT' ) | (enumLiteral_3= 'CHECKBOX' ) | (enumLiteral_4= 'DIV' ) | (enumLiteral_5= 'TITLE' ) | (enumLiteral_6= 'CONTENT' ) )
             int alt12=7;
             switch ( input.LA(1) ) {
             case 32:
@@ -2467,10 +2478,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
             switch (alt12) {
                 case 1 :
-                    // InternalBrowserTest.g:956:3: (enumLiteral_0= 'LINK' )
+                    // InternalBrowserTest.g:963:3: (enumLiteral_0= 'LINK' )
                     {
-                    // InternalBrowserTest.g:956:3: (enumLiteral_0= 'LINK' )
-                    // InternalBrowserTest.g:957:4: enumLiteral_0= 'LINK'
+                    // InternalBrowserTest.g:963:3: (enumLiteral_0= 'LINK' )
+                    // InternalBrowserTest.g:964:4: enumLiteral_0= 'LINK'
                     {
                     enumLiteral_0=(Token)match(input,32,FOLLOW_2); 
 
@@ -2484,10 +2495,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBrowserTest.g:964:3: (enumLiteral_1= 'INPUT' )
+                    // InternalBrowserTest.g:971:3: (enumLiteral_1= 'INPUT' )
                     {
-                    // InternalBrowserTest.g:964:3: (enumLiteral_1= 'INPUT' )
-                    // InternalBrowserTest.g:965:4: enumLiteral_1= 'INPUT'
+                    // InternalBrowserTest.g:971:3: (enumLiteral_1= 'INPUT' )
+                    // InternalBrowserTest.g:972:4: enumLiteral_1= 'INPUT'
                     {
                     enumLiteral_1=(Token)match(input,33,FOLLOW_2); 
 
@@ -2501,10 +2512,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBrowserTest.g:972:3: (enumLiteral_2= 'TEXT' )
+                    // InternalBrowserTest.g:979:3: (enumLiteral_2= 'TEXT' )
                     {
-                    // InternalBrowserTest.g:972:3: (enumLiteral_2= 'TEXT' )
-                    // InternalBrowserTest.g:973:4: enumLiteral_2= 'TEXT'
+                    // InternalBrowserTest.g:979:3: (enumLiteral_2= 'TEXT' )
+                    // InternalBrowserTest.g:980:4: enumLiteral_2= 'TEXT'
                     {
                     enumLiteral_2=(Token)match(input,34,FOLLOW_2); 
 
@@ -2518,10 +2529,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalBrowserTest.g:980:3: (enumLiteral_3= 'CHECKBOX' )
+                    // InternalBrowserTest.g:987:3: (enumLiteral_3= 'CHECKBOX' )
                     {
-                    // InternalBrowserTest.g:980:3: (enumLiteral_3= 'CHECKBOX' )
-                    // InternalBrowserTest.g:981:4: enumLiteral_3= 'CHECKBOX'
+                    // InternalBrowserTest.g:987:3: (enumLiteral_3= 'CHECKBOX' )
+                    // InternalBrowserTest.g:988:4: enumLiteral_3= 'CHECKBOX'
                     {
                     enumLiteral_3=(Token)match(input,35,FOLLOW_2); 
 
@@ -2535,10 +2546,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalBrowserTest.g:988:3: (enumLiteral_4= 'DIV' )
+                    // InternalBrowserTest.g:995:3: (enumLiteral_4= 'DIV' )
                     {
-                    // InternalBrowserTest.g:988:3: (enumLiteral_4= 'DIV' )
-                    // InternalBrowserTest.g:989:4: enumLiteral_4= 'DIV'
+                    // InternalBrowserTest.g:995:3: (enumLiteral_4= 'DIV' )
+                    // InternalBrowserTest.g:996:4: enumLiteral_4= 'DIV'
                     {
                     enumLiteral_4=(Token)match(input,36,FOLLOW_2); 
 
@@ -2552,10 +2563,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalBrowserTest.g:996:3: (enumLiteral_5= 'TITLE' )
+                    // InternalBrowserTest.g:1003:3: (enumLiteral_5= 'TITLE' )
                     {
-                    // InternalBrowserTest.g:996:3: (enumLiteral_5= 'TITLE' )
-                    // InternalBrowserTest.g:997:4: enumLiteral_5= 'TITLE'
+                    // InternalBrowserTest.g:1003:3: (enumLiteral_5= 'TITLE' )
+                    // InternalBrowserTest.g:1004:4: enumLiteral_5= 'TITLE'
                     {
                     enumLiteral_5=(Token)match(input,37,FOLLOW_2); 
 
@@ -2569,10 +2580,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalBrowserTest.g:1004:3: (enumLiteral_6= 'CONTENT' )
+                    // InternalBrowserTest.g:1011:3: (enumLiteral_6= 'CONTENT' )
                     {
-                    // InternalBrowserTest.g:1004:3: (enumLiteral_6= 'CONTENT' )
-                    // InternalBrowserTest.g:1005:4: enumLiteral_6= 'CONTENT'
+                    // InternalBrowserTest.g:1011:3: (enumLiteral_6= 'CONTENT' )
+                    // InternalBrowserTest.g:1012:4: enumLiteral_6= 'CONTENT'
                     {
                     enumLiteral_6=(Token)match(input,38,FOLLOW_2); 
 
@@ -2608,7 +2619,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // InternalBrowserTest.g:1015:1: ruleBoolean returns [Enumerator current=null] : ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) ) ;
+    // InternalBrowserTest.g:1022:1: ruleBoolean returns [Enumerator current=null] : ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) ) ;
     public final Enumerator ruleBoolean() throws RecognitionException {
         Enumerator current = null;
 
@@ -2619,10 +2630,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:1021:2: ( ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) ) )
-            // InternalBrowserTest.g:1022:2: ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) )
+            // InternalBrowserTest.g:1028:2: ( ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) ) )
+            // InternalBrowserTest.g:1029:2: ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) )
             {
-            // InternalBrowserTest.g:1022:2: ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) )
+            // InternalBrowserTest.g:1029:2: ( (enumLiteral_0= 'FALSE' ) | (enumLiteral_1= 'TRUE' ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2640,10 +2651,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalBrowserTest.g:1023:3: (enumLiteral_0= 'FALSE' )
+                    // InternalBrowserTest.g:1030:3: (enumLiteral_0= 'FALSE' )
                     {
-                    // InternalBrowserTest.g:1023:3: (enumLiteral_0= 'FALSE' )
-                    // InternalBrowserTest.g:1024:4: enumLiteral_0= 'FALSE'
+                    // InternalBrowserTest.g:1030:3: (enumLiteral_0= 'FALSE' )
+                    // InternalBrowserTest.g:1031:4: enumLiteral_0= 'FALSE'
                     {
                     enumLiteral_0=(Token)match(input,39,FOLLOW_2); 
 
@@ -2657,10 +2668,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBrowserTest.g:1031:3: (enumLiteral_1= 'TRUE' )
+                    // InternalBrowserTest.g:1038:3: (enumLiteral_1= 'TRUE' )
                     {
-                    // InternalBrowserTest.g:1031:3: (enumLiteral_1= 'TRUE' )
-                    // InternalBrowserTest.g:1032:4: enumLiteral_1= 'TRUE'
+                    // InternalBrowserTest.g:1038:3: (enumLiteral_1= 'TRUE' )
+                    // InternalBrowserTest.g:1039:4: enumLiteral_1= 'TRUE'
                     {
                     enumLiteral_1=(Token)match(input,40,FOLLOW_2); 
 
@@ -2696,7 +2707,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttribute"
-    // InternalBrowserTest.g:1042:1: ruleAttribute returns [Enumerator current=null] : ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) ) ;
+    // InternalBrowserTest.g:1049:1: ruleAttribute returns [Enumerator current=null] : ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) ) ;
     public final Enumerator ruleAttribute() throws RecognitionException {
         Enumerator current = null;
 
@@ -2708,10 +2719,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:1048:2: ( ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) ) )
-            // InternalBrowserTest.g:1049:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) )
+            // InternalBrowserTest.g:1055:2: ( ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) ) )
+            // InternalBrowserTest.g:1056:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) )
             {
-            // InternalBrowserTest.g:1049:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) )
+            // InternalBrowserTest.g:1056:2: ( (enumLiteral_0= 'LINK' ) | (enumLiteral_1= 'TITLE' ) | (enumLiteral_2= 'CONTENT' ) )
             int alt14=3;
             switch ( input.LA(1) ) {
             case 32:
@@ -2738,10 +2749,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
             switch (alt14) {
                 case 1 :
-                    // InternalBrowserTest.g:1050:3: (enumLiteral_0= 'LINK' )
+                    // InternalBrowserTest.g:1057:3: (enumLiteral_0= 'LINK' )
                     {
-                    // InternalBrowserTest.g:1050:3: (enumLiteral_0= 'LINK' )
-                    // InternalBrowserTest.g:1051:4: enumLiteral_0= 'LINK'
+                    // InternalBrowserTest.g:1057:3: (enumLiteral_0= 'LINK' )
+                    // InternalBrowserTest.g:1058:4: enumLiteral_0= 'LINK'
                     {
                     enumLiteral_0=(Token)match(input,32,FOLLOW_2); 
 
@@ -2755,10 +2766,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalBrowserTest.g:1058:3: (enumLiteral_1= 'TITLE' )
+                    // InternalBrowserTest.g:1065:3: (enumLiteral_1= 'TITLE' )
                     {
-                    // InternalBrowserTest.g:1058:3: (enumLiteral_1= 'TITLE' )
-                    // InternalBrowserTest.g:1059:4: enumLiteral_1= 'TITLE'
+                    // InternalBrowserTest.g:1065:3: (enumLiteral_1= 'TITLE' )
+                    // InternalBrowserTest.g:1066:4: enumLiteral_1= 'TITLE'
                     {
                     enumLiteral_1=(Token)match(input,37,FOLLOW_2); 
 
@@ -2772,10 +2783,10 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalBrowserTest.g:1066:3: (enumLiteral_2= 'CONTENT' )
+                    // InternalBrowserTest.g:1073:3: (enumLiteral_2= 'CONTENT' )
                     {
-                    // InternalBrowserTest.g:1066:3: (enumLiteral_2= 'CONTENT' )
-                    // InternalBrowserTest.g:1067:4: enumLiteral_2= 'CONTENT'
+                    // InternalBrowserTest.g:1073:3: (enumLiteral_2= 'CONTENT' )
+                    // InternalBrowserTest.g:1074:4: enumLiteral_2= 'CONTENT'
                     {
                     enumLiteral_2=(Token)match(input,38,FOLLOW_2); 
 
@@ -2811,7 +2822,7 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAccessor"
-    // InternalBrowserTest.g:1077:1: ruleAccessor returns [Enumerator current=null] : (enumLiteral_0= 'ALL' ) ;
+    // InternalBrowserTest.g:1084:1: ruleAccessor returns [Enumerator current=null] : (enumLiteral_0= 'ALL' ) ;
     public final Enumerator ruleAccessor() throws RecognitionException {
         Enumerator current = null;
 
@@ -2821,11 +2832,11 @@ public class InternalBrowserTestParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalBrowserTest.g:1083:2: ( (enumLiteral_0= 'ALL' ) )
-            // InternalBrowserTest.g:1084:2: (enumLiteral_0= 'ALL' )
+            // InternalBrowserTest.g:1090:2: ( (enumLiteral_0= 'ALL' ) )
+            // InternalBrowserTest.g:1091:2: (enumLiteral_0= 'ALL' )
             {
-            // InternalBrowserTest.g:1084:2: (enumLiteral_0= 'ALL' )
-            // InternalBrowserTest.g:1085:3: enumLiteral_0= 'ALL'
+            // InternalBrowserTest.g:1091:2: (enumLiteral_0= 'ALL' )
+            // InternalBrowserTest.g:1092:3: enumLiteral_0= 'ALL'
             {
             enumLiteral_0=(Token)match(input,41,FOLLOW_2); 
 

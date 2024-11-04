@@ -78,7 +78,7 @@ public class BrowserTestParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getPropertyAccess().getTypeAssignment_4_2(), "rule__Property__TypeAssignment_4_2");
 			builder.put(grammarAccess.getPropertyAccess().getNameAssignment_5_1(), "rule__Property__NameAssignment_5_1");
 			builder.put(grammarAccess.getPropertyAccess().getChildAssignment_6_1(), "rule__Property__ChildAssignment_6_1");
-			builder.put(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_2(), "rule__Property__SubPropertiesAssignment_7_2");
+			builder.put(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_3(), "rule__Property__SubPropertiesAssignment_7_3");
 			builder.put(grammarAccess.getActionCommandAccess().getVarAssignment_1(), "rule__ActionCommand__VarAssignment_1");
 			builder.put(grammarAccess.getActionCommandAccess().getCommandAssignment_2(), "rule__ActionCommand__CommandAssignment_2");
 			builder.put(grammarAccess.getActionTypeAccess().getValueAssignment_1_2(), "rule__ActionType__ValueAssignment_1_2");

@@ -4794,7 +4794,7 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
             // InternalBrowserTest.g:1496:1: ( rule__Property__Group_7__0__Impl rule__Property__Group_7__1 )
             // InternalBrowserTest.g:1497:2: rule__Property__Group_7__0__Impl rule__Property__Group_7__1
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_9);
             rule__Property__Group_7__0__Impl();
 
             state._fsp--;
@@ -4823,31 +4823,31 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__Group_7__0__Impl"
-    // InternalBrowserTest.g:1504:1: rule__Property__Group_7__0__Impl : ( '[PARENT]' ) ;
+    // InternalBrowserTest.g:1504:1: rule__Property__Group_7__0__Impl : ( () ) ;
     public final void rule__Property__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1508:1: ( ( '[PARENT]' ) )
-            // InternalBrowserTest.g:1509:1: ( '[PARENT]' )
+            // InternalBrowserTest.g:1508:1: ( ( () ) )
+            // InternalBrowserTest.g:1509:1: ( () )
             {
-            // InternalBrowserTest.g:1509:1: ( '[PARENT]' )
-            // InternalBrowserTest.g:1510:2: '[PARENT]'
+            // InternalBrowserTest.g:1509:1: ( () )
+            // InternalBrowserTest.g:1510:2: ()
             {
-             before(grammarAccess.getPropertyAccess().getPARENTKeyword_7_0()); 
-            match(input,34,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getPARENTKeyword_7_0()); 
+             before(grammarAccess.getPropertyAccess().getPropertyAction_7_0()); 
+            // InternalBrowserTest.g:1511:2: ()
+            // InternalBrowserTest.g:1511:3: 
+            {
+            }
+
+             after(grammarAccess.getPropertyAccess().getPropertyAction_7_0()); 
 
             }
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -4869,7 +4869,7 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
             // InternalBrowserTest.g:1523:1: ( rule__Property__Group_7__1__Impl rule__Property__Group_7__2 )
             // InternalBrowserTest.g:1524:2: rule__Property__Group_7__1__Impl rule__Property__Group_7__2
             {
-            pushFollow(FOLLOW_19);
+            pushFollow(FOLLOW_18);
             rule__Property__Group_7__1__Impl();
 
             state._fsp--;
@@ -4898,21 +4898,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__Group_7__1__Impl"
-    // InternalBrowserTest.g:1531:1: rule__Property__Group_7__1__Impl : ( '{' ) ;
+    // InternalBrowserTest.g:1531:1: rule__Property__Group_7__1__Impl : ( '[PARENT]' ) ;
     public final void rule__Property__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1535:1: ( ( '{' ) )
-            // InternalBrowserTest.g:1536:1: ( '{' )
+            // InternalBrowserTest.g:1535:1: ( ( '[PARENT]' ) )
+            // InternalBrowserTest.g:1536:1: ( '[PARENT]' )
             {
-            // InternalBrowserTest.g:1536:1: ( '{' )
-            // InternalBrowserTest.g:1537:2: '{'
+            // InternalBrowserTest.g:1536:1: ( '[PARENT]' )
+            // InternalBrowserTest.g:1537:2: '[PARENT]'
             {
-             before(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_1()); 
-            match(input,35,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_1()); 
+             before(grammarAccess.getPropertyAccess().getPARENTKeyword_7_1()); 
+            match(input,34,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getPARENTKeyword_7_1()); 
 
             }
 
@@ -4973,49 +4973,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__Group_7__2__Impl"
-    // InternalBrowserTest.g:1558:1: rule__Property__Group_7__2__Impl : ( ( rule__Property__SubPropertiesAssignment_7_2 )* ) ;
+    // InternalBrowserTest.g:1558:1: rule__Property__Group_7__2__Impl : ( '{' ) ;
     public final void rule__Property__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1562:1: ( ( ( rule__Property__SubPropertiesAssignment_7_2 )* ) )
-            // InternalBrowserTest.g:1563:1: ( ( rule__Property__SubPropertiesAssignment_7_2 )* )
+            // InternalBrowserTest.g:1562:1: ( ( '{' ) )
+            // InternalBrowserTest.g:1563:1: ( '{' )
             {
-            // InternalBrowserTest.g:1563:1: ( ( rule__Property__SubPropertiesAssignment_7_2 )* )
-            // InternalBrowserTest.g:1564:2: ( rule__Property__SubPropertiesAssignment_7_2 )*
+            // InternalBrowserTest.g:1563:1: ( '{' )
+            // InternalBrowserTest.g:1564:2: '{'
             {
-             before(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_2()); 
-            // InternalBrowserTest.g:1565:2: ( rule__Property__SubPropertiesAssignment_7_2 )*
-            loop13:
-            do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
-
-                if ( ((LA13_0>=27 && LA13_0<=34)) ) {
-                    alt13=1;
-                }
-
-
-                switch (alt13) {
-            	case 1 :
-            	    // InternalBrowserTest.g:1565:3: rule__Property__SubPropertiesAssignment_7_2
-            	    {
-            	    pushFollow(FOLLOW_10);
-            	    rule__Property__SubPropertiesAssignment_7_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop13;
-                }
-            } while (true);
-
-             after(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_2()); 
+             before(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_2()); 
+            match(input,35,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_2()); 
 
             }
 
@@ -5038,17 +5010,22 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__Group_7__3"
-    // InternalBrowserTest.g:1573:1: rule__Property__Group_7__3 : rule__Property__Group_7__3__Impl ;
+    // InternalBrowserTest.g:1573:1: rule__Property__Group_7__3 : rule__Property__Group_7__3__Impl rule__Property__Group_7__4 ;
     public final void rule__Property__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1577:1: ( rule__Property__Group_7__3__Impl )
-            // InternalBrowserTest.g:1578:2: rule__Property__Group_7__3__Impl
+            // InternalBrowserTest.g:1577:1: ( rule__Property__Group_7__3__Impl rule__Property__Group_7__4 )
+            // InternalBrowserTest.g:1578:2: rule__Property__Group_7__3__Impl rule__Property__Group_7__4
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_19);
             rule__Property__Group_7__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Property__Group_7__4();
 
             state._fsp--;
 
@@ -5071,21 +5048,49 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__Group_7__3__Impl"
-    // InternalBrowserTest.g:1584:1: rule__Property__Group_7__3__Impl : ( '}' ) ;
+    // InternalBrowserTest.g:1585:1: rule__Property__Group_7__3__Impl : ( ( rule__Property__SubPropertiesAssignment_7_3 )* ) ;
     public final void rule__Property__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1588:1: ( ( '}' ) )
-            // InternalBrowserTest.g:1589:1: ( '}' )
+            // InternalBrowserTest.g:1589:1: ( ( ( rule__Property__SubPropertiesAssignment_7_3 )* ) )
+            // InternalBrowserTest.g:1590:1: ( ( rule__Property__SubPropertiesAssignment_7_3 )* )
             {
-            // InternalBrowserTest.g:1589:1: ( '}' )
-            // InternalBrowserTest.g:1590:2: '}'
+            // InternalBrowserTest.g:1590:1: ( ( rule__Property__SubPropertiesAssignment_7_3 )* )
+            // InternalBrowserTest.g:1591:2: ( rule__Property__SubPropertiesAssignment_7_3 )*
             {
-             before(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_3()); 
-            match(input,36,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_3()); 
+             before(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_3()); 
+            // InternalBrowserTest.g:1592:2: ( rule__Property__SubPropertiesAssignment_7_3 )*
+            loop13:
+            do {
+                int alt13=2;
+                int LA13_0 = input.LA(1);
+
+                if ( ((LA13_0>=27 && LA13_0<=34)) ) {
+                    alt13=1;
+                }
+
+
+                switch (alt13) {
+            	case 1 :
+            	    // InternalBrowserTest.g:1592:3: rule__Property__SubPropertiesAssignment_7_3
+            	    {
+            	    pushFollow(FOLLOW_10);
+            	    rule__Property__SubPropertiesAssignment_7_3();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop13;
+                }
+            } while (true);
+
+             after(grammarAccess.getPropertyAccess().getSubPropertiesAssignment_7_3()); 
 
             }
 
@@ -5107,15 +5112,85 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Property__Group_7__3__Impl"
 
 
+    // $ANTLR start "rule__Property__Group_7__4"
+    // InternalBrowserTest.g:1600:1: rule__Property__Group_7__4 : rule__Property__Group_7__4__Impl ;
+    public final void rule__Property__Group_7__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBrowserTest.g:1604:1: ( rule__Property__Group_7__4__Impl )
+            // InternalBrowserTest.g:1605:2: rule__Property__Group_7__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Property__Group_7__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Property__Group_7__4"
+
+
+    // $ANTLR start "rule__Property__Group_7__4__Impl"
+    // InternalBrowserTest.g:1611:1: rule__Property__Group_7__4__Impl : ( '}' ) ;
+    public final void rule__Property__Group_7__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalBrowserTest.g:1615:1: ( ( '}' ) )
+            // InternalBrowserTest.g:1616:1: ( '}' )
+            {
+            // InternalBrowserTest.g:1616:1: ( '}' )
+            // InternalBrowserTest.g:1617:2: '}'
+            {
+             before(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_4()); 
+            match(input,36,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Property__Group_7__4__Impl"
+
+
     // $ANTLR start "rule__ActionCommand__Group__0"
-    // InternalBrowserTest.g:1600:1: rule__ActionCommand__Group__0 : rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1 ;
+    // InternalBrowserTest.g:1627:1: rule__ActionCommand__Group__0 : rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1 ;
     public final void rule__ActionCommand__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1604:1: ( rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1 )
-            // InternalBrowserTest.g:1605:2: rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1
+            // InternalBrowserTest.g:1631:1: ( rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1 )
+            // InternalBrowserTest.g:1632:2: rule__ActionCommand__Group__0__Impl rule__ActionCommand__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__ActionCommand__Group__0__Impl();
@@ -5146,17 +5221,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__Group__0__Impl"
-    // InternalBrowserTest.g:1612:1: rule__ActionCommand__Group__0__Impl : ( '[ACTION]' ) ;
+    // InternalBrowserTest.g:1639:1: rule__ActionCommand__Group__0__Impl : ( '[ACTION]' ) ;
     public final void rule__ActionCommand__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1616:1: ( ( '[ACTION]' ) )
-            // InternalBrowserTest.g:1617:1: ( '[ACTION]' )
+            // InternalBrowserTest.g:1643:1: ( ( '[ACTION]' ) )
+            // InternalBrowserTest.g:1644:1: ( '[ACTION]' )
             {
-            // InternalBrowserTest.g:1617:1: ( '[ACTION]' )
-            // InternalBrowserTest.g:1618:2: '[ACTION]'
+            // InternalBrowserTest.g:1644:1: ( '[ACTION]' )
+            // InternalBrowserTest.g:1645:2: '[ACTION]'
             {
              before(grammarAccess.getActionCommandAccess().getACTIONKeyword_0()); 
             match(input,37,FOLLOW_2); 
@@ -5183,14 +5258,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__Group__1"
-    // InternalBrowserTest.g:1627:1: rule__ActionCommand__Group__1 : rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2 ;
+    // InternalBrowserTest.g:1654:1: rule__ActionCommand__Group__1 : rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2 ;
     public final void rule__ActionCommand__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1631:1: ( rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2 )
-            // InternalBrowserTest.g:1632:2: rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2
+            // InternalBrowserTest.g:1658:1: ( rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2 )
+            // InternalBrowserTest.g:1659:2: rule__ActionCommand__Group__1__Impl rule__ActionCommand__Group__2
             {
             pushFollow(FOLLOW_20);
             rule__ActionCommand__Group__1__Impl();
@@ -5221,24 +5296,24 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__Group__1__Impl"
-    // InternalBrowserTest.g:1639:1: rule__ActionCommand__Group__1__Impl : ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) ) ;
+    // InternalBrowserTest.g:1666:1: rule__ActionCommand__Group__1__Impl : ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) ) ;
     public final void rule__ActionCommand__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1643:1: ( ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) ) )
-            // InternalBrowserTest.g:1644:1: ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) )
+            // InternalBrowserTest.g:1670:1: ( ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) ) )
+            // InternalBrowserTest.g:1671:1: ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) )
             {
-            // InternalBrowserTest.g:1644:1: ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) )
-            // InternalBrowserTest.g:1645:2: ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* )
+            // InternalBrowserTest.g:1671:1: ( ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* ) )
+            // InternalBrowserTest.g:1672:2: ( ( rule__ActionCommand__VarAssignment_1 ) ) ( ( rule__ActionCommand__VarAssignment_1 )* )
             {
-            // InternalBrowserTest.g:1645:2: ( ( rule__ActionCommand__VarAssignment_1 ) )
-            // InternalBrowserTest.g:1646:3: ( rule__ActionCommand__VarAssignment_1 )
+            // InternalBrowserTest.g:1672:2: ( ( rule__ActionCommand__VarAssignment_1 ) )
+            // InternalBrowserTest.g:1673:3: ( rule__ActionCommand__VarAssignment_1 )
             {
              before(grammarAccess.getActionCommandAccess().getVarAssignment_1()); 
-            // InternalBrowserTest.g:1647:3: ( rule__ActionCommand__VarAssignment_1 )
-            // InternalBrowserTest.g:1647:4: rule__ActionCommand__VarAssignment_1
+            // InternalBrowserTest.g:1674:3: ( rule__ActionCommand__VarAssignment_1 )
+            // InternalBrowserTest.g:1674:4: rule__ActionCommand__VarAssignment_1
             {
             pushFollow(FOLLOW_21);
             rule__ActionCommand__VarAssignment_1();
@@ -5252,11 +5327,11 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
             }
 
-            // InternalBrowserTest.g:1650:2: ( ( rule__ActionCommand__VarAssignment_1 )* )
-            // InternalBrowserTest.g:1651:3: ( rule__ActionCommand__VarAssignment_1 )*
+            // InternalBrowserTest.g:1677:2: ( ( rule__ActionCommand__VarAssignment_1 )* )
+            // InternalBrowserTest.g:1678:3: ( rule__ActionCommand__VarAssignment_1 )*
             {
              before(grammarAccess.getActionCommandAccess().getVarAssignment_1()); 
-            // InternalBrowserTest.g:1652:3: ( rule__ActionCommand__VarAssignment_1 )*
+            // InternalBrowserTest.g:1679:3: ( rule__ActionCommand__VarAssignment_1 )*
             loop14:
             do {
                 int alt14=2;
@@ -5269,7 +5344,7 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalBrowserTest.g:1652:4: rule__ActionCommand__VarAssignment_1
+            	    // InternalBrowserTest.g:1679:4: rule__ActionCommand__VarAssignment_1
             	    {
             	    pushFollow(FOLLOW_21);
             	    rule__ActionCommand__VarAssignment_1();
@@ -5311,14 +5386,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__Group__2"
-    // InternalBrowserTest.g:1661:1: rule__ActionCommand__Group__2 : rule__ActionCommand__Group__2__Impl ;
+    // InternalBrowserTest.g:1688:1: rule__ActionCommand__Group__2 : rule__ActionCommand__Group__2__Impl ;
     public final void rule__ActionCommand__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1665:1: ( rule__ActionCommand__Group__2__Impl )
-            // InternalBrowserTest.g:1666:2: rule__ActionCommand__Group__2__Impl
+            // InternalBrowserTest.g:1692:1: ( rule__ActionCommand__Group__2__Impl )
+            // InternalBrowserTest.g:1693:2: rule__ActionCommand__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ActionCommand__Group__2__Impl();
@@ -5344,21 +5419,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__Group__2__Impl"
-    // InternalBrowserTest.g:1672:1: rule__ActionCommand__Group__2__Impl : ( ( rule__ActionCommand__CommandAssignment_2 ) ) ;
+    // InternalBrowserTest.g:1699:1: rule__ActionCommand__Group__2__Impl : ( ( rule__ActionCommand__CommandAssignment_2 ) ) ;
     public final void rule__ActionCommand__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1676:1: ( ( ( rule__ActionCommand__CommandAssignment_2 ) ) )
-            // InternalBrowserTest.g:1677:1: ( ( rule__ActionCommand__CommandAssignment_2 ) )
+            // InternalBrowserTest.g:1703:1: ( ( ( rule__ActionCommand__CommandAssignment_2 ) ) )
+            // InternalBrowserTest.g:1704:1: ( ( rule__ActionCommand__CommandAssignment_2 ) )
             {
-            // InternalBrowserTest.g:1677:1: ( ( rule__ActionCommand__CommandAssignment_2 ) )
-            // InternalBrowserTest.g:1678:2: ( rule__ActionCommand__CommandAssignment_2 )
+            // InternalBrowserTest.g:1704:1: ( ( rule__ActionCommand__CommandAssignment_2 ) )
+            // InternalBrowserTest.g:1705:2: ( rule__ActionCommand__CommandAssignment_2 )
             {
              before(grammarAccess.getActionCommandAccess().getCommandAssignment_2()); 
-            // InternalBrowserTest.g:1679:2: ( rule__ActionCommand__CommandAssignment_2 )
-            // InternalBrowserTest.g:1679:3: rule__ActionCommand__CommandAssignment_2
+            // InternalBrowserTest.g:1706:2: ( rule__ActionCommand__CommandAssignment_2 )
+            // InternalBrowserTest.g:1706:3: rule__ActionCommand__CommandAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__ActionCommand__CommandAssignment_2();
@@ -5391,14 +5466,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__0"
-    // InternalBrowserTest.g:1688:1: rule__ActionType__Group_1__0 : rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1 ;
+    // InternalBrowserTest.g:1715:1: rule__ActionType__Group_1__0 : rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1 ;
     public final void rule__ActionType__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1692:1: ( rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1 )
-            // InternalBrowserTest.g:1693:2: rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1
+            // InternalBrowserTest.g:1719:1: ( rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1 )
+            // InternalBrowserTest.g:1720:2: rule__ActionType__Group_1__0__Impl rule__ActionType__Group_1__1
             {
             pushFollow(FOLLOW_8);
             rule__ActionType__Group_1__0__Impl();
@@ -5429,17 +5504,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__0__Impl"
-    // InternalBrowserTest.g:1700:1: rule__ActionType__Group_1__0__Impl : ( '[CHECK]' ) ;
+    // InternalBrowserTest.g:1727:1: rule__ActionType__Group_1__0__Impl : ( '[CHECK]' ) ;
     public final void rule__ActionType__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1704:1: ( ( '[CHECK]' ) )
-            // InternalBrowserTest.g:1705:1: ( '[CHECK]' )
+            // InternalBrowserTest.g:1731:1: ( ( '[CHECK]' ) )
+            // InternalBrowserTest.g:1732:1: ( '[CHECK]' )
             {
-            // InternalBrowserTest.g:1705:1: ( '[CHECK]' )
-            // InternalBrowserTest.g:1706:2: '[CHECK]'
+            // InternalBrowserTest.g:1732:1: ( '[CHECK]' )
+            // InternalBrowserTest.g:1733:2: '[CHECK]'
             {
              before(grammarAccess.getActionTypeAccess().getCHECKKeyword_1_0()); 
             match(input,38,FOLLOW_2); 
@@ -5466,14 +5541,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__1"
-    // InternalBrowserTest.g:1715:1: rule__ActionType__Group_1__1 : rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2 ;
+    // InternalBrowserTest.g:1742:1: rule__ActionType__Group_1__1 : rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2 ;
     public final void rule__ActionType__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1719:1: ( rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2 )
-            // InternalBrowserTest.g:1720:2: rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2
+            // InternalBrowserTest.g:1746:1: ( rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2 )
+            // InternalBrowserTest.g:1747:2: rule__ActionType__Group_1__1__Impl rule__ActionType__Group_1__2
             {
             pushFollow(FOLLOW_22);
             rule__ActionType__Group_1__1__Impl();
@@ -5504,17 +5579,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__1__Impl"
-    // InternalBrowserTest.g:1727:1: rule__ActionType__Group_1__1__Impl : ( '$' ) ;
+    // InternalBrowserTest.g:1754:1: rule__ActionType__Group_1__1__Impl : ( '$' ) ;
     public final void rule__ActionType__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1731:1: ( ( '$' ) )
-            // InternalBrowserTest.g:1732:1: ( '$' )
+            // InternalBrowserTest.g:1758:1: ( ( '$' ) )
+            // InternalBrowserTest.g:1759:1: ( '$' )
             {
-            // InternalBrowserTest.g:1732:1: ( '$' )
-            // InternalBrowserTest.g:1733:2: '$'
+            // InternalBrowserTest.g:1759:1: ( '$' )
+            // InternalBrowserTest.g:1760:2: '$'
             {
              before(grammarAccess.getActionTypeAccess().getDollarSignKeyword_1_1()); 
             match(input,25,FOLLOW_2); 
@@ -5541,14 +5616,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__2"
-    // InternalBrowserTest.g:1742:1: rule__ActionType__Group_1__2 : rule__ActionType__Group_1__2__Impl ;
+    // InternalBrowserTest.g:1769:1: rule__ActionType__Group_1__2 : rule__ActionType__Group_1__2__Impl ;
     public final void rule__ActionType__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1746:1: ( rule__ActionType__Group_1__2__Impl )
-            // InternalBrowserTest.g:1747:2: rule__ActionType__Group_1__2__Impl
+            // InternalBrowserTest.g:1773:1: ( rule__ActionType__Group_1__2__Impl )
+            // InternalBrowserTest.g:1774:2: rule__ActionType__Group_1__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__Group_1__2__Impl();
@@ -5574,21 +5649,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_1__2__Impl"
-    // InternalBrowserTest.g:1753:1: rule__ActionType__Group_1__2__Impl : ( ( rule__ActionType__ValueAssignment_1_2 ) ) ;
+    // InternalBrowserTest.g:1780:1: rule__ActionType__Group_1__2__Impl : ( ( rule__ActionType__ValueAssignment_1_2 ) ) ;
     public final void rule__ActionType__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1757:1: ( ( ( rule__ActionType__ValueAssignment_1_2 ) ) )
-            // InternalBrowserTest.g:1758:1: ( ( rule__ActionType__ValueAssignment_1_2 ) )
+            // InternalBrowserTest.g:1784:1: ( ( ( rule__ActionType__ValueAssignment_1_2 ) ) )
+            // InternalBrowserTest.g:1785:1: ( ( rule__ActionType__ValueAssignment_1_2 ) )
             {
-            // InternalBrowserTest.g:1758:1: ( ( rule__ActionType__ValueAssignment_1_2 ) )
-            // InternalBrowserTest.g:1759:2: ( rule__ActionType__ValueAssignment_1_2 )
+            // InternalBrowserTest.g:1785:1: ( ( rule__ActionType__ValueAssignment_1_2 ) )
+            // InternalBrowserTest.g:1786:2: ( rule__ActionType__ValueAssignment_1_2 )
             {
              before(grammarAccess.getActionTypeAccess().getValueAssignment_1_2()); 
-            // InternalBrowserTest.g:1760:2: ( rule__ActionType__ValueAssignment_1_2 )
-            // InternalBrowserTest.g:1760:3: rule__ActionType__ValueAssignment_1_2
+            // InternalBrowserTest.g:1787:2: ( rule__ActionType__ValueAssignment_1_2 )
+            // InternalBrowserTest.g:1787:3: rule__ActionType__ValueAssignment_1_2
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__ValueAssignment_1_2();
@@ -5621,14 +5696,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_2__0"
-    // InternalBrowserTest.g:1769:1: rule__ActionType__Group_2__0 : rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1 ;
+    // InternalBrowserTest.g:1796:1: rule__ActionType__Group_2__0 : rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1 ;
     public final void rule__ActionType__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1773:1: ( rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1 )
-            // InternalBrowserTest.g:1774:2: rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1
+            // InternalBrowserTest.g:1800:1: ( rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1 )
+            // InternalBrowserTest.g:1801:2: rule__ActionType__Group_2__0__Impl rule__ActionType__Group_2__1
             {
             pushFollow(FOLLOW_15);
             rule__ActionType__Group_2__0__Impl();
@@ -5659,17 +5734,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_2__0__Impl"
-    // InternalBrowserTest.g:1781:1: rule__ActionType__Group_2__0__Impl : ( '[SET-TEXT]' ) ;
+    // InternalBrowserTest.g:1808:1: rule__ActionType__Group_2__0__Impl : ( '[SET-TEXT]' ) ;
     public final void rule__ActionType__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1785:1: ( ( '[SET-TEXT]' ) )
-            // InternalBrowserTest.g:1786:1: ( '[SET-TEXT]' )
+            // InternalBrowserTest.g:1812:1: ( ( '[SET-TEXT]' ) )
+            // InternalBrowserTest.g:1813:1: ( '[SET-TEXT]' )
             {
-            // InternalBrowserTest.g:1786:1: ( '[SET-TEXT]' )
-            // InternalBrowserTest.g:1787:2: '[SET-TEXT]'
+            // InternalBrowserTest.g:1813:1: ( '[SET-TEXT]' )
+            // InternalBrowserTest.g:1814:2: '[SET-TEXT]'
             {
              before(grammarAccess.getActionTypeAccess().getSETTEXTKeyword_2_0()); 
             match(input,39,FOLLOW_2); 
@@ -5696,14 +5771,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_2__1"
-    // InternalBrowserTest.g:1796:1: rule__ActionType__Group_2__1 : rule__ActionType__Group_2__1__Impl ;
+    // InternalBrowserTest.g:1823:1: rule__ActionType__Group_2__1 : rule__ActionType__Group_2__1__Impl ;
     public final void rule__ActionType__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1800:1: ( rule__ActionType__Group_2__1__Impl )
-            // InternalBrowserTest.g:1801:2: rule__ActionType__Group_2__1__Impl
+            // InternalBrowserTest.g:1827:1: ( rule__ActionType__Group_2__1__Impl )
+            // InternalBrowserTest.g:1828:2: rule__ActionType__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__Group_2__1__Impl();
@@ -5729,21 +5804,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_2__1__Impl"
-    // InternalBrowserTest.g:1807:1: rule__ActionType__Group_2__1__Impl : ( ( rule__ActionType__TextAssignment_2_1 ) ) ;
+    // InternalBrowserTest.g:1834:1: rule__ActionType__Group_2__1__Impl : ( ( rule__ActionType__TextAssignment_2_1 ) ) ;
     public final void rule__ActionType__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1811:1: ( ( ( rule__ActionType__TextAssignment_2_1 ) ) )
-            // InternalBrowserTest.g:1812:1: ( ( rule__ActionType__TextAssignment_2_1 ) )
+            // InternalBrowserTest.g:1838:1: ( ( ( rule__ActionType__TextAssignment_2_1 ) ) )
+            // InternalBrowserTest.g:1839:1: ( ( rule__ActionType__TextAssignment_2_1 ) )
             {
-            // InternalBrowserTest.g:1812:1: ( ( rule__ActionType__TextAssignment_2_1 ) )
-            // InternalBrowserTest.g:1813:2: ( rule__ActionType__TextAssignment_2_1 )
+            // InternalBrowserTest.g:1839:1: ( ( rule__ActionType__TextAssignment_2_1 ) )
+            // InternalBrowserTest.g:1840:2: ( rule__ActionType__TextAssignment_2_1 )
             {
              before(grammarAccess.getActionTypeAccess().getTextAssignment_2_1()); 
-            // InternalBrowserTest.g:1814:2: ( rule__ActionType__TextAssignment_2_1 )
-            // InternalBrowserTest.g:1814:3: rule__ActionType__TextAssignment_2_1
+            // InternalBrowserTest.g:1841:2: ( rule__ActionType__TextAssignment_2_1 )
+            // InternalBrowserTest.g:1841:3: rule__ActionType__TextAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__TextAssignment_2_1();
@@ -5776,14 +5851,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_3__0"
-    // InternalBrowserTest.g:1823:1: rule__ActionType__Group_3__0 : rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1 ;
+    // InternalBrowserTest.g:1850:1: rule__ActionType__Group_3__0 : rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1 ;
     public final void rule__ActionType__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1827:1: ( rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1 )
-            // InternalBrowserTest.g:1828:2: rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1
+            // InternalBrowserTest.g:1854:1: ( rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1 )
+            // InternalBrowserTest.g:1855:2: rule__ActionType__Group_3__0__Impl rule__ActionType__Group_3__1
             {
             pushFollow(FOLLOW_15);
             rule__ActionType__Group_3__0__Impl();
@@ -5814,17 +5889,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_3__0__Impl"
-    // InternalBrowserTest.g:1835:1: rule__ActionType__Group_3__0__Impl : ( '[CHOOSE]' ) ;
+    // InternalBrowserTest.g:1862:1: rule__ActionType__Group_3__0__Impl : ( '[CHOOSE]' ) ;
     public final void rule__ActionType__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1839:1: ( ( '[CHOOSE]' ) )
-            // InternalBrowserTest.g:1840:1: ( '[CHOOSE]' )
+            // InternalBrowserTest.g:1866:1: ( ( '[CHOOSE]' ) )
+            // InternalBrowserTest.g:1867:1: ( '[CHOOSE]' )
             {
-            // InternalBrowserTest.g:1840:1: ( '[CHOOSE]' )
-            // InternalBrowserTest.g:1841:2: '[CHOOSE]'
+            // InternalBrowserTest.g:1867:1: ( '[CHOOSE]' )
+            // InternalBrowserTest.g:1868:2: '[CHOOSE]'
             {
              before(grammarAccess.getActionTypeAccess().getCHOOSEKeyword_3_0()); 
             match(input,40,FOLLOW_2); 
@@ -5851,14 +5926,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_3__1"
-    // InternalBrowserTest.g:1850:1: rule__ActionType__Group_3__1 : rule__ActionType__Group_3__1__Impl ;
+    // InternalBrowserTest.g:1877:1: rule__ActionType__Group_3__1 : rule__ActionType__Group_3__1__Impl ;
     public final void rule__ActionType__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1854:1: ( rule__ActionType__Group_3__1__Impl )
-            // InternalBrowserTest.g:1855:2: rule__ActionType__Group_3__1__Impl
+            // InternalBrowserTest.g:1881:1: ( rule__ActionType__Group_3__1__Impl )
+            // InternalBrowserTest.g:1882:2: rule__ActionType__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__Group_3__1__Impl();
@@ -5884,21 +5959,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__Group_3__1__Impl"
-    // InternalBrowserTest.g:1861:1: rule__ActionType__Group_3__1__Impl : ( ( rule__ActionType__OptionAssignment_3_1 ) ) ;
+    // InternalBrowserTest.g:1888:1: rule__ActionType__Group_3__1__Impl : ( ( rule__ActionType__OptionAssignment_3_1 ) ) ;
     public final void rule__ActionType__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1865:1: ( ( ( rule__ActionType__OptionAssignment_3_1 ) ) )
-            // InternalBrowserTest.g:1866:1: ( ( rule__ActionType__OptionAssignment_3_1 ) )
+            // InternalBrowserTest.g:1892:1: ( ( ( rule__ActionType__OptionAssignment_3_1 ) ) )
+            // InternalBrowserTest.g:1893:1: ( ( rule__ActionType__OptionAssignment_3_1 ) )
             {
-            // InternalBrowserTest.g:1866:1: ( ( rule__ActionType__OptionAssignment_3_1 ) )
-            // InternalBrowserTest.g:1867:2: ( rule__ActionType__OptionAssignment_3_1 )
+            // InternalBrowserTest.g:1893:1: ( ( rule__ActionType__OptionAssignment_3_1 ) )
+            // InternalBrowserTest.g:1894:2: ( rule__ActionType__OptionAssignment_3_1 )
             {
              before(grammarAccess.getActionTypeAccess().getOptionAssignment_3_1()); 
-            // InternalBrowserTest.g:1868:2: ( rule__ActionType__OptionAssignment_3_1 )
-            // InternalBrowserTest.g:1868:3: rule__ActionType__OptionAssignment_3_1
+            // InternalBrowserTest.g:1895:2: ( rule__ActionType__OptionAssignment_3_1 )
+            // InternalBrowserTest.g:1895:3: rule__ActionType__OptionAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__ActionType__OptionAssignment_3_1();
@@ -5931,14 +6006,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Test__Group__0"
-    // InternalBrowserTest.g:1877:1: rule__Test__Group__0 : rule__Test__Group__0__Impl rule__Test__Group__1 ;
+    // InternalBrowserTest.g:1904:1: rule__Test__Group__0 : rule__Test__Group__0__Impl rule__Test__Group__1 ;
     public final void rule__Test__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1881:1: ( rule__Test__Group__0__Impl rule__Test__Group__1 )
-            // InternalBrowserTest.g:1882:2: rule__Test__Group__0__Impl rule__Test__Group__1
+            // InternalBrowserTest.g:1908:1: ( rule__Test__Group__0__Impl rule__Test__Group__1 )
+            // InternalBrowserTest.g:1909:2: rule__Test__Group__0__Impl rule__Test__Group__1
             {
             pushFollow(FOLLOW_8);
             rule__Test__Group__0__Impl();
@@ -5969,17 +6044,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Test__Group__0__Impl"
-    // InternalBrowserTest.g:1889:1: rule__Test__Group__0__Impl : ( '[TEST]' ) ;
+    // InternalBrowserTest.g:1916:1: rule__Test__Group__0__Impl : ( '[TEST]' ) ;
     public final void rule__Test__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1893:1: ( ( '[TEST]' ) )
-            // InternalBrowserTest.g:1894:1: ( '[TEST]' )
+            // InternalBrowserTest.g:1920:1: ( ( '[TEST]' ) )
+            // InternalBrowserTest.g:1921:1: ( '[TEST]' )
             {
-            // InternalBrowserTest.g:1894:1: ( '[TEST]' )
-            // InternalBrowserTest.g:1895:2: '[TEST]'
+            // InternalBrowserTest.g:1921:1: ( '[TEST]' )
+            // InternalBrowserTest.g:1922:2: '[TEST]'
             {
              before(grammarAccess.getTestAccess().getTESTKeyword_0()); 
             match(input,41,FOLLOW_2); 
@@ -6006,14 +6081,14 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Test__Group__1"
-    // InternalBrowserTest.g:1904:1: rule__Test__Group__1 : rule__Test__Group__1__Impl ;
+    // InternalBrowserTest.g:1931:1: rule__Test__Group__1 : rule__Test__Group__1__Impl ;
     public final void rule__Test__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1908:1: ( rule__Test__Group__1__Impl )
-            // InternalBrowserTest.g:1909:2: rule__Test__Group__1__Impl
+            // InternalBrowserTest.g:1935:1: ( rule__Test__Group__1__Impl )
+            // InternalBrowserTest.g:1936:2: rule__Test__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Test__Group__1__Impl();
@@ -6039,21 +6114,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Test__Group__1__Impl"
-    // InternalBrowserTest.g:1915:1: rule__Test__Group__1__Impl : ( ( rule__Test__VarAssignment_1 ) ) ;
+    // InternalBrowserTest.g:1942:1: rule__Test__Group__1__Impl : ( ( rule__Test__VarAssignment_1 ) ) ;
     public final void rule__Test__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1919:1: ( ( ( rule__Test__VarAssignment_1 ) ) )
-            // InternalBrowserTest.g:1920:1: ( ( rule__Test__VarAssignment_1 ) )
+            // InternalBrowserTest.g:1946:1: ( ( ( rule__Test__VarAssignment_1 ) ) )
+            // InternalBrowserTest.g:1947:1: ( ( rule__Test__VarAssignment_1 ) )
             {
-            // InternalBrowserTest.g:1920:1: ( ( rule__Test__VarAssignment_1 ) )
-            // InternalBrowserTest.g:1921:2: ( rule__Test__VarAssignment_1 )
+            // InternalBrowserTest.g:1947:1: ( ( rule__Test__VarAssignment_1 ) )
+            // InternalBrowserTest.g:1948:2: ( rule__Test__VarAssignment_1 )
             {
              before(grammarAccess.getTestAccess().getVarAssignment_1()); 
-            // InternalBrowserTest.g:1922:2: ( rule__Test__VarAssignment_1 )
-            // InternalBrowserTest.g:1922:3: rule__Test__VarAssignment_1
+            // InternalBrowserTest.g:1949:2: ( rule__Test__VarAssignment_1 )
+            // InternalBrowserTest.g:1949:3: rule__Test__VarAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Test__VarAssignment_1();
@@ -6086,17 +6161,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__TestFile__TaskAssignment"
-    // InternalBrowserTest.g:1931:1: rule__TestFile__TaskAssignment : ( ruleTask ) ;
+    // InternalBrowserTest.g:1958:1: rule__TestFile__TaskAssignment : ( ruleTask ) ;
     public final void rule__TestFile__TaskAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1935:1: ( ( ruleTask ) )
-            // InternalBrowserTest.g:1936:2: ( ruleTask )
+            // InternalBrowserTest.g:1962:1: ( ( ruleTask ) )
+            // InternalBrowserTest.g:1963:2: ( ruleTask )
             {
-            // InternalBrowserTest.g:1936:2: ( ruleTask )
-            // InternalBrowserTest.g:1937:3: ruleTask
+            // InternalBrowserTest.g:1963:2: ( ruleTask )
+            // InternalBrowserTest.g:1964:3: ruleTask
             {
              before(grammarAccess.getTestFileAccess().getTaskTaskParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -6127,21 +6202,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Task__NameAssignment_1"
-    // InternalBrowserTest.g:1946:1: rule__Task__NameAssignment_1 : ( ( rule__Task__NameAlternatives_1_0 ) ) ;
+    // InternalBrowserTest.g:1973:1: rule__Task__NameAssignment_1 : ( ( rule__Task__NameAlternatives_1_0 ) ) ;
     public final void rule__Task__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1950:1: ( ( ( rule__Task__NameAlternatives_1_0 ) ) )
-            // InternalBrowserTest.g:1951:2: ( ( rule__Task__NameAlternatives_1_0 ) )
+            // InternalBrowserTest.g:1977:1: ( ( ( rule__Task__NameAlternatives_1_0 ) ) )
+            // InternalBrowserTest.g:1978:2: ( ( rule__Task__NameAlternatives_1_0 ) )
             {
-            // InternalBrowserTest.g:1951:2: ( ( rule__Task__NameAlternatives_1_0 ) )
-            // InternalBrowserTest.g:1952:3: ( rule__Task__NameAlternatives_1_0 )
+            // InternalBrowserTest.g:1978:2: ( ( rule__Task__NameAlternatives_1_0 ) )
+            // InternalBrowserTest.g:1979:3: ( rule__Task__NameAlternatives_1_0 )
             {
              before(grammarAccess.getTaskAccess().getNameAlternatives_1_0()); 
-            // InternalBrowserTest.g:1953:3: ( rule__Task__NameAlternatives_1_0 )
-            // InternalBrowserTest.g:1953:4: rule__Task__NameAlternatives_1_0
+            // InternalBrowserTest.g:1980:3: ( rule__Task__NameAlternatives_1_0 )
+            // InternalBrowserTest.g:1980:4: rule__Task__NameAlternatives_1_0
             {
             pushFollow(FOLLOW_2);
             rule__Task__NameAlternatives_1_0();
@@ -6174,17 +6249,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Task__ActionsAssignment_2"
-    // InternalBrowserTest.g:1961:1: rule__Task__ActionsAssignment_2 : ( ruleAction ) ;
+    // InternalBrowserTest.g:1988:1: rule__Task__ActionsAssignment_2 : ( ruleAction ) ;
     public final void rule__Task__ActionsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1965:1: ( ( ruleAction ) )
-            // InternalBrowserTest.g:1966:2: ( ruleAction )
+            // InternalBrowserTest.g:1992:1: ( ( ruleAction ) )
+            // InternalBrowserTest.g:1993:2: ( ruleAction )
             {
-            // InternalBrowserTest.g:1966:2: ( ruleAction )
-            // InternalBrowserTest.g:1967:3: ruleAction
+            // InternalBrowserTest.g:1993:2: ( ruleAction )
+            // InternalBrowserTest.g:1994:3: ruleAction
             {
              before(grammarAccess.getTaskAccess().getActionsActionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -6215,17 +6290,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__GoTo__UrlAssignment_1"
-    // InternalBrowserTest.g:1976:1: rule__GoTo__UrlAssignment_1 : ( RULE_STRING ) ;
+    // InternalBrowserTest.g:2003:1: rule__GoTo__UrlAssignment_1 : ( RULE_STRING ) ;
     public final void rule__GoTo__UrlAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1980:1: ( ( RULE_STRING ) )
-            // InternalBrowserTest.g:1981:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2007:1: ( ( RULE_STRING ) )
+            // InternalBrowserTest.g:2008:2: ( RULE_STRING )
             {
-            // InternalBrowserTest.g:1981:2: ( RULE_STRING )
-            // InternalBrowserTest.g:1982:3: RULE_STRING
+            // InternalBrowserTest.g:2008:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2009:3: RULE_STRING
             {
              before(grammarAccess.getGoToAccess().getUrlSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6252,17 +6327,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Select__VarAssignment_1"
-    // InternalBrowserTest.g:1991:1: rule__Select__VarAssignment_1 : ( ruleVariable ) ;
+    // InternalBrowserTest.g:2018:1: rule__Select__VarAssignment_1 : ( ruleVariable ) ;
     public final void rule__Select__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:1995:1: ( ( ruleVariable ) )
-            // InternalBrowserTest.g:1996:2: ( ruleVariable )
+            // InternalBrowserTest.g:2022:1: ( ( ruleVariable ) )
+            // InternalBrowserTest.g:2023:2: ( ruleVariable )
             {
-            // InternalBrowserTest.g:1996:2: ( ruleVariable )
-            // InternalBrowserTest.g:1997:3: ruleVariable
+            // InternalBrowserTest.g:2023:2: ( ruleVariable )
+            // InternalBrowserTest.g:2024:3: ruleVariable
             {
              before(grammarAccess.getSelectAccess().getVarVariableParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6293,17 +6368,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Select__PropertiesAssignment_2"
-    // InternalBrowserTest.g:2006:1: rule__Select__PropertiesAssignment_2 : ( ruleProperty ) ;
+    // InternalBrowserTest.g:2033:1: rule__Select__PropertiesAssignment_2 : ( ruleProperty ) ;
     public final void rule__Select__PropertiesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2010:1: ( ( ruleProperty ) )
-            // InternalBrowserTest.g:2011:2: ( ruleProperty )
+            // InternalBrowserTest.g:2037:1: ( ( ruleProperty ) )
+            // InternalBrowserTest.g:2038:2: ( ruleProperty )
             {
-            // InternalBrowserTest.g:2011:2: ( ruleProperty )
-            // InternalBrowserTest.g:2012:3: ruleProperty
+            // InternalBrowserTest.g:2038:2: ( ruleProperty )
+            // InternalBrowserTest.g:2039:3: ruleProperty
             {
              before(grammarAccess.getSelectAccess().getPropertiesPropertyParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -6334,17 +6409,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Variable__NameAssignment_1"
-    // InternalBrowserTest.g:2021:1: rule__Variable__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalBrowserTest.g:2048:1: rule__Variable__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Variable__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2025:1: ( ( RULE_ID ) )
-            // InternalBrowserTest.g:2026:2: ( RULE_ID )
+            // InternalBrowserTest.g:2052:1: ( ( RULE_ID ) )
+            // InternalBrowserTest.g:2053:2: ( RULE_ID )
             {
-            // InternalBrowserTest.g:2026:2: ( RULE_ID )
-            // InternalBrowserTest.g:2027:3: RULE_ID
+            // InternalBrowserTest.g:2053:2: ( RULE_ID )
+            // InternalBrowserTest.g:2054:3: RULE_ID
             {
              before(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -6371,17 +6446,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Entree__VarAssignment_0_0"
-    // InternalBrowserTest.g:2036:1: rule__Entree__VarAssignment_0_0 : ( ruleVariable ) ;
+    // InternalBrowserTest.g:2063:1: rule__Entree__VarAssignment_0_0 : ( ruleVariable ) ;
     public final void rule__Entree__VarAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2040:1: ( ( ruleVariable ) )
-            // InternalBrowserTest.g:2041:2: ( ruleVariable )
+            // InternalBrowserTest.g:2067:1: ( ( ruleVariable ) )
+            // InternalBrowserTest.g:2068:2: ( ruleVariable )
             {
-            // InternalBrowserTest.g:2041:2: ( ruleVariable )
-            // InternalBrowserTest.g:2042:3: ruleVariable
+            // InternalBrowserTest.g:2068:2: ( ruleVariable )
+            // InternalBrowserTest.g:2069:3: ruleVariable
             {
              before(grammarAccess.getEntreeAccess().getVarVariableParserRuleCall_0_0_0()); 
             pushFollow(FOLLOW_2);
@@ -6412,17 +6487,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Entree__ParamAssignment_0_2_0"
-    // InternalBrowserTest.g:2051:1: rule__Entree__ParamAssignment_0_2_0 : ( ruleAttribute ) ;
+    // InternalBrowserTest.g:2078:1: rule__Entree__ParamAssignment_0_2_0 : ( ruleAttribute ) ;
     public final void rule__Entree__ParamAssignment_0_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2055:1: ( ( ruleAttribute ) )
-            // InternalBrowserTest.g:2056:2: ( ruleAttribute )
+            // InternalBrowserTest.g:2082:1: ( ( ruleAttribute ) )
+            // InternalBrowserTest.g:2083:2: ( ruleAttribute )
             {
-            // InternalBrowserTest.g:2056:2: ( ruleAttribute )
-            // InternalBrowserTest.g:2057:3: ruleAttribute
+            // InternalBrowserTest.g:2083:2: ( ruleAttribute )
+            // InternalBrowserTest.g:2084:3: ruleAttribute
             {
              before(grammarAccess.getEntreeAccess().getParamAttributeEnumRuleCall_0_2_0_0()); 
             pushFollow(FOLLOW_2);
@@ -6453,17 +6528,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Entree__UntypedAssignment_0_2_1"
-    // InternalBrowserTest.g:2066:1: rule__Entree__UntypedAssignment_0_2_1 : ( RULE_ID ) ;
+    // InternalBrowserTest.g:2093:1: rule__Entree__UntypedAssignment_0_2_1 : ( RULE_ID ) ;
     public final void rule__Entree__UntypedAssignment_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2070:1: ( ( RULE_ID ) )
-            // InternalBrowserTest.g:2071:2: ( RULE_ID )
+            // InternalBrowserTest.g:2097:1: ( ( RULE_ID ) )
+            // InternalBrowserTest.g:2098:2: ( RULE_ID )
             {
-            // InternalBrowserTest.g:2071:2: ( RULE_ID )
-            // InternalBrowserTest.g:2072:3: RULE_ID
+            // InternalBrowserTest.g:2098:2: ( RULE_ID )
+            // InternalBrowserTest.g:2099:3: RULE_ID
             {
              before(grammarAccess.getEntreeAccess().getUntypedIDTerminalRuleCall_0_2_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -6490,17 +6565,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Entree__StringAssignment_1"
-    // InternalBrowserTest.g:2081:1: rule__Entree__StringAssignment_1 : ( RULE_STRING ) ;
+    // InternalBrowserTest.g:2108:1: rule__Entree__StringAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Entree__StringAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2085:1: ( ( RULE_STRING ) )
-            // InternalBrowserTest.g:2086:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2112:1: ( ( RULE_STRING ) )
+            // InternalBrowserTest.g:2113:2: ( RULE_STRING )
             {
-            // InternalBrowserTest.g:2086:2: ( RULE_STRING )
-            // InternalBrowserTest.g:2087:3: RULE_STRING
+            // InternalBrowserTest.g:2113:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2114:3: RULE_STRING
             {
              before(grammarAccess.getEntreeAccess().getStringSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6527,17 +6602,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Entree__AccessorAssignment_2_1"
-    // InternalBrowserTest.g:2096:1: rule__Entree__AccessorAssignment_2_1 : ( ruleAccessor ) ;
+    // InternalBrowserTest.g:2123:1: rule__Entree__AccessorAssignment_2_1 : ( ruleAccessor ) ;
     public final void rule__Entree__AccessorAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2100:1: ( ( ruleAccessor ) )
-            // InternalBrowserTest.g:2101:2: ( ruleAccessor )
+            // InternalBrowserTest.g:2127:1: ( ( ruleAccessor ) )
+            // InternalBrowserTest.g:2128:2: ( ruleAccessor )
             {
-            // InternalBrowserTest.g:2101:2: ( ruleAccessor )
-            // InternalBrowserTest.g:2102:3: ruleAccessor
+            // InternalBrowserTest.g:2128:2: ( ruleAccessor )
+            // InternalBrowserTest.g:2129:3: ruleAccessor
             {
              before(grammarAccess.getEntreeAccess().getAccessorAccessorEnumRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6568,17 +6643,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__ContentAssignment_0_1"
-    // InternalBrowserTest.g:2111:1: rule__Property__ContentAssignment_0_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2138:1: rule__Property__ContentAssignment_0_1 : ( ruleEntree ) ;
     public final void rule__Property__ContentAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2115:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2116:2: ( ruleEntree )
+            // InternalBrowserTest.g:2142:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2143:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2116:2: ( ruleEntree )
-            // InternalBrowserTest.g:2117:3: ruleEntree
+            // InternalBrowserTest.g:2143:2: ( ruleEntree )
+            // InternalBrowserTest.g:2144:3: ruleEntree
             {
              before(grammarAccess.getPropertyAccess().getContentEntreeParserRuleCall_0_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6609,17 +6684,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__LabelAssignment_1_1"
-    // InternalBrowserTest.g:2126:1: rule__Property__LabelAssignment_1_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2153:1: rule__Property__LabelAssignment_1_1 : ( ruleEntree ) ;
     public final void rule__Property__LabelAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2130:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2131:2: ( ruleEntree )
+            // InternalBrowserTest.g:2157:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2158:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2131:2: ( ruleEntree )
-            // InternalBrowserTest.g:2132:3: ruleEntree
+            // InternalBrowserTest.g:2158:2: ( ruleEntree )
+            // InternalBrowserTest.g:2159:3: ruleEntree
             {
              before(grammarAccess.getPropertyAccess().getLabelEntreeParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6650,17 +6725,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__ValueAssignment_2_1"
-    // InternalBrowserTest.g:2141:1: rule__Property__ValueAssignment_2_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2168:1: rule__Property__ValueAssignment_2_1 : ( ruleEntree ) ;
     public final void rule__Property__ValueAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2145:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2146:2: ( ruleEntree )
+            // InternalBrowserTest.g:2172:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2173:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2146:2: ( ruleEntree )
-            // InternalBrowserTest.g:2147:3: ruleEntree
+            // InternalBrowserTest.g:2173:2: ( ruleEntree )
+            // InternalBrowserTest.g:2174:3: ruleEntree
             {
              before(grammarAccess.getPropertyAccess().getValueEntreeParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6691,17 +6766,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__AltAssignment_3_1"
-    // InternalBrowserTest.g:2156:1: rule__Property__AltAssignment_3_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2183:1: rule__Property__AltAssignment_3_1 : ( ruleEntree ) ;
     public final void rule__Property__AltAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2160:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2161:2: ( ruleEntree )
+            // InternalBrowserTest.g:2187:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2188:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2161:2: ( ruleEntree )
-            // InternalBrowserTest.g:2162:3: ruleEntree
+            // InternalBrowserTest.g:2188:2: ( ruleEntree )
+            // InternalBrowserTest.g:2189:3: ruleEntree
             {
              before(grammarAccess.getPropertyAccess().getAltEntreeParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6732,17 +6807,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__TypeAssignment_4_2"
-    // InternalBrowserTest.g:2171:1: rule__Property__TypeAssignment_4_2 : ( ruleType ) ;
+    // InternalBrowserTest.g:2198:1: rule__Property__TypeAssignment_4_2 : ( ruleType ) ;
     public final void rule__Property__TypeAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2175:1: ( ( ruleType ) )
-            // InternalBrowserTest.g:2176:2: ( ruleType )
+            // InternalBrowserTest.g:2202:1: ( ( ruleType ) )
+            // InternalBrowserTest.g:2203:2: ( ruleType )
             {
-            // InternalBrowserTest.g:2176:2: ( ruleType )
-            // InternalBrowserTest.g:2177:3: ruleType
+            // InternalBrowserTest.g:2203:2: ( ruleType )
+            // InternalBrowserTest.g:2204:3: ruleType
             {
              before(grammarAccess.getPropertyAccess().getTypeTypeEnumRuleCall_4_2_0()); 
             pushFollow(FOLLOW_2);
@@ -6773,17 +6848,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__NameAssignment_5_1"
-    // InternalBrowserTest.g:2186:1: rule__Property__NameAssignment_5_1 : ( RULE_STRING ) ;
+    // InternalBrowserTest.g:2213:1: rule__Property__NameAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__Property__NameAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2190:1: ( ( RULE_STRING ) )
-            // InternalBrowserTest.g:2191:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2217:1: ( ( RULE_STRING ) )
+            // InternalBrowserTest.g:2218:2: ( RULE_STRING )
             {
-            // InternalBrowserTest.g:2191:2: ( RULE_STRING )
-            // InternalBrowserTest.g:2192:3: RULE_STRING
+            // InternalBrowserTest.g:2218:2: ( RULE_STRING )
+            // InternalBrowserTest.g:2219:3: RULE_STRING
             {
              before(grammarAccess.getPropertyAccess().getNameSTRINGTerminalRuleCall_5_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6810,17 +6885,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Property__ChildAssignment_6_1"
-    // InternalBrowserTest.g:2201:1: rule__Property__ChildAssignment_6_1 : ( RULE_INT ) ;
+    // InternalBrowserTest.g:2228:1: rule__Property__ChildAssignment_6_1 : ( RULE_INT ) ;
     public final void rule__Property__ChildAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2205:1: ( ( RULE_INT ) )
-            // InternalBrowserTest.g:2206:2: ( RULE_INT )
+            // InternalBrowserTest.g:2232:1: ( ( RULE_INT ) )
+            // InternalBrowserTest.g:2233:2: ( RULE_INT )
             {
-            // InternalBrowserTest.g:2206:2: ( RULE_INT )
-            // InternalBrowserTest.g:2207:3: RULE_INT
+            // InternalBrowserTest.g:2233:2: ( RULE_INT )
+            // InternalBrowserTest.g:2234:3: RULE_INT
             {
              before(grammarAccess.getPropertyAccess().getChildINTTerminalRuleCall_6_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -6846,26 +6921,26 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
     // $ANTLR end "rule__Property__ChildAssignment_6_1"
 
 
-    // $ANTLR start "rule__Property__SubPropertiesAssignment_7_2"
-    // InternalBrowserTest.g:2216:1: rule__Property__SubPropertiesAssignment_7_2 : ( ruleProperty ) ;
-    public final void rule__Property__SubPropertiesAssignment_7_2() throws RecognitionException {
+    // $ANTLR start "rule__Property__SubPropertiesAssignment_7_3"
+    // InternalBrowserTest.g:2243:1: rule__Property__SubPropertiesAssignment_7_3 : ( ruleProperty ) ;
+    public final void rule__Property__SubPropertiesAssignment_7_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2220:1: ( ( ruleProperty ) )
-            // InternalBrowserTest.g:2221:2: ( ruleProperty )
+            // InternalBrowserTest.g:2247:1: ( ( ruleProperty ) )
+            // InternalBrowserTest.g:2248:2: ( ruleProperty )
             {
-            // InternalBrowserTest.g:2221:2: ( ruleProperty )
-            // InternalBrowserTest.g:2222:3: ruleProperty
+            // InternalBrowserTest.g:2248:2: ( ruleProperty )
+            // InternalBrowserTest.g:2249:3: ruleProperty
             {
-             before(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_2_0()); 
+             before(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_3_0()); 
             pushFollow(FOLLOW_2);
             ruleProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_2_0()); 
+             after(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_3_0()); 
 
             }
 
@@ -6884,21 +6959,21 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
         }
         return ;
     }
-    // $ANTLR end "rule__Property__SubPropertiesAssignment_7_2"
+    // $ANTLR end "rule__Property__SubPropertiesAssignment_7_3"
 
 
     // $ANTLR start "rule__ActionCommand__VarAssignment_1"
-    // InternalBrowserTest.g:2231:1: rule__ActionCommand__VarAssignment_1 : ( ruleVariable ) ;
+    // InternalBrowserTest.g:2258:1: rule__ActionCommand__VarAssignment_1 : ( ruleVariable ) ;
     public final void rule__ActionCommand__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2235:1: ( ( ruleVariable ) )
-            // InternalBrowserTest.g:2236:2: ( ruleVariable )
+            // InternalBrowserTest.g:2262:1: ( ( ruleVariable ) )
+            // InternalBrowserTest.g:2263:2: ( ruleVariable )
             {
-            // InternalBrowserTest.g:2236:2: ( ruleVariable )
-            // InternalBrowserTest.g:2237:3: ruleVariable
+            // InternalBrowserTest.g:2263:2: ( ruleVariable )
+            // InternalBrowserTest.g:2264:3: ruleVariable
             {
              before(grammarAccess.getActionCommandAccess().getVarVariableParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -6929,17 +7004,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionCommand__CommandAssignment_2"
-    // InternalBrowserTest.g:2246:1: rule__ActionCommand__CommandAssignment_2 : ( ruleActionType ) ;
+    // InternalBrowserTest.g:2273:1: rule__ActionCommand__CommandAssignment_2 : ( ruleActionType ) ;
     public final void rule__ActionCommand__CommandAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2250:1: ( ( ruleActionType ) )
-            // InternalBrowserTest.g:2251:2: ( ruleActionType )
+            // InternalBrowserTest.g:2277:1: ( ( ruleActionType ) )
+            // InternalBrowserTest.g:2278:2: ( ruleActionType )
             {
-            // InternalBrowserTest.g:2251:2: ( ruleActionType )
-            // InternalBrowserTest.g:2252:3: ruleActionType
+            // InternalBrowserTest.g:2278:2: ( ruleActionType )
+            // InternalBrowserTest.g:2279:3: ruleActionType
             {
              before(grammarAccess.getActionCommandAccess().getCommandActionTypeParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -6970,17 +7045,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__ValueAssignment_1_2"
-    // InternalBrowserTest.g:2261:1: rule__ActionType__ValueAssignment_1_2 : ( ruleBoolean ) ;
+    // InternalBrowserTest.g:2288:1: rule__ActionType__ValueAssignment_1_2 : ( ruleBoolean ) ;
     public final void rule__ActionType__ValueAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2265:1: ( ( ruleBoolean ) )
-            // InternalBrowserTest.g:2266:2: ( ruleBoolean )
+            // InternalBrowserTest.g:2292:1: ( ( ruleBoolean ) )
+            // InternalBrowserTest.g:2293:2: ( ruleBoolean )
             {
-            // InternalBrowserTest.g:2266:2: ( ruleBoolean )
-            // InternalBrowserTest.g:2267:3: ruleBoolean
+            // InternalBrowserTest.g:2293:2: ( ruleBoolean )
+            // InternalBrowserTest.g:2294:3: ruleBoolean
             {
              before(grammarAccess.getActionTypeAccess().getValueBooleanEnumRuleCall_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -7011,17 +7086,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__TextAssignment_2_1"
-    // InternalBrowserTest.g:2276:1: rule__ActionType__TextAssignment_2_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2303:1: rule__ActionType__TextAssignment_2_1 : ( ruleEntree ) ;
     public final void rule__ActionType__TextAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2280:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2281:2: ( ruleEntree )
+            // InternalBrowserTest.g:2307:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2308:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2281:2: ( ruleEntree )
-            // InternalBrowserTest.g:2282:3: ruleEntree
+            // InternalBrowserTest.g:2308:2: ( ruleEntree )
+            // InternalBrowserTest.g:2309:3: ruleEntree
             {
              before(grammarAccess.getActionTypeAccess().getTextEntreeParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7052,17 +7127,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__ActionType__OptionAssignment_3_1"
-    // InternalBrowserTest.g:2291:1: rule__ActionType__OptionAssignment_3_1 : ( ruleEntree ) ;
+    // InternalBrowserTest.g:2318:1: rule__ActionType__OptionAssignment_3_1 : ( ruleEntree ) ;
     public final void rule__ActionType__OptionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2295:1: ( ( ruleEntree ) )
-            // InternalBrowserTest.g:2296:2: ( ruleEntree )
+            // InternalBrowserTest.g:2322:1: ( ( ruleEntree ) )
+            // InternalBrowserTest.g:2323:2: ( ruleEntree )
             {
-            // InternalBrowserTest.g:2296:2: ( ruleEntree )
-            // InternalBrowserTest.g:2297:3: ruleEntree
+            // InternalBrowserTest.g:2323:2: ( ruleEntree )
+            // InternalBrowserTest.g:2324:3: ruleEntree
             {
              before(grammarAccess.getActionTypeAccess().getOptionEntreeParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -7093,17 +7168,17 @@ public class InternalBrowserTestParser extends AbstractInternalContentAssistPars
 
 
     // $ANTLR start "rule__Test__VarAssignment_1"
-    // InternalBrowserTest.g:2306:1: rule__Test__VarAssignment_1 : ( ruleVariable ) ;
+    // InternalBrowserTest.g:2333:1: rule__Test__VarAssignment_1 : ( ruleVariable ) ;
     public final void rule__Test__VarAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalBrowserTest.g:2310:1: ( ( ruleVariable ) )
-            // InternalBrowserTest.g:2311:2: ( ruleVariable )
+            // InternalBrowserTest.g:2337:1: ( ( ruleVariable ) )
+            // InternalBrowserTest.g:2338:2: ( ruleVariable )
             {
-            // InternalBrowserTest.g:2311:2: ( ruleVariable )
-            // InternalBrowserTest.g:2312:3: ruleVariable
+            // InternalBrowserTest.g:2338:2: ( ruleVariable )
+            // InternalBrowserTest.g:2339:3: ruleVariable
             {
              before(grammarAccess.getTestAccess().getVarVariableParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);

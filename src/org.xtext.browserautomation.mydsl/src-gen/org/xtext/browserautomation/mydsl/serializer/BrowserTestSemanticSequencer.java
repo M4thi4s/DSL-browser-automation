@@ -155,7 +155,7 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *         name=STRING | 
 	 *         child=INT | 
 	 *         subProperties+=Property+
-	 *     )
+	 *     )?
 	 * </pre>
 	 */
 	protected void sequence_Property(ISerializationContext context, Property semanticObject) {

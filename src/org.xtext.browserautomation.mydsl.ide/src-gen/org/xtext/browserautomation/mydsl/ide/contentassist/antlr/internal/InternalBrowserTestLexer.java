@@ -717,10 +717,10 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2321:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalBrowserTest.g:2321:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBrowserTest.g:2348:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalBrowserTest.g:2348:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalBrowserTest.g:2321:11: ( '^' )?
+            // InternalBrowserTest.g:2348:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -729,7 +729,7 @@ public class InternalBrowserTestLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalBrowserTest.g:2321:11: '^'
+                    // InternalBrowserTest.g:2348:11: '^'
                     {
                     match('^'); 
 
@@ -747,7 +747,7 @@ public class InternalBrowserTestLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalBrowserTest.g:2321:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBrowserTest.g:2348:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -796,10 +796,10 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2323:10: ( ( '0' .. '9' )+ )
-            // InternalBrowserTest.g:2323:12: ( '0' .. '9' )+
+            // InternalBrowserTest.g:2350:10: ( ( '0' .. '9' )+ )
+            // InternalBrowserTest.g:2350:12: ( '0' .. '9' )+
             {
-            // InternalBrowserTest.g:2323:12: ( '0' .. '9' )+
+            // InternalBrowserTest.g:2350:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -813,7 +813,7 @@ public class InternalBrowserTestLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalBrowserTest.g:2323:13: '0' .. '9'
+            	    // InternalBrowserTest.g:2350:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -845,10 +845,10 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2325:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalBrowserTest.g:2325:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBrowserTest.g:2352:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalBrowserTest.g:2352:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalBrowserTest.g:2325:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBrowserTest.g:2352:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -866,10 +866,10 @@ public class InternalBrowserTestLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalBrowserTest.g:2325:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalBrowserTest.g:2352:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalBrowserTest.g:2325:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalBrowserTest.g:2352:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -885,7 +885,7 @@ public class InternalBrowserTestLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalBrowserTest.g:2325:21: '\\\\' .
+                    	    // InternalBrowserTest.g:2352:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -893,7 +893,7 @@ public class InternalBrowserTestLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBrowserTest.g:2325:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalBrowserTest.g:2352:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -918,10 +918,10 @@ public class InternalBrowserTestLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalBrowserTest.g:2325:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalBrowserTest.g:2352:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalBrowserTest.g:2325:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalBrowserTest.g:2352:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -937,7 +937,7 @@ public class InternalBrowserTestLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalBrowserTest.g:2325:54: '\\\\' .
+                    	    // InternalBrowserTest.g:2352:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -945,7 +945,7 @@ public class InternalBrowserTestLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBrowserTest.g:2325:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalBrowserTest.g:2352:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -988,12 +988,12 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2327:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalBrowserTest.g:2327:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalBrowserTest.g:2354:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalBrowserTest.g:2354:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalBrowserTest.g:2327:24: ( options {greedy=false; } : . )*
+            // InternalBrowserTest.g:2354:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1018,7 +1018,7 @@ public class InternalBrowserTestLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalBrowserTest.g:2327:52: .
+            	    // InternalBrowserTest.g:2354:52: .
             	    {
             	    matchAny(); 
 
@@ -1048,12 +1048,12 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2329:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalBrowserTest.g:2329:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalBrowserTest.g:2356:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalBrowserTest.g:2356:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalBrowserTest.g:2329:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalBrowserTest.g:2356:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1066,7 +1066,7 @@ public class InternalBrowserTestLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalBrowserTest.g:2329:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalBrowserTest.g:2356:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1086,7 +1086,7 @@ public class InternalBrowserTestLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalBrowserTest.g:2329:40: ( ( '\\r' )? '\\n' )?
+            // InternalBrowserTest.g:2356:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1095,9 +1095,9 @@ public class InternalBrowserTestLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalBrowserTest.g:2329:41: ( '\\r' )? '\\n'
+                    // InternalBrowserTest.g:2356:41: ( '\\r' )? '\\n'
                     {
-                    // InternalBrowserTest.g:2329:41: ( '\\r' )?
+                    // InternalBrowserTest.g:2356:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1106,7 +1106,7 @@ public class InternalBrowserTestLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalBrowserTest.g:2329:41: '\\r'
+                            // InternalBrowserTest.g:2356:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1138,10 +1138,10 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2331:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalBrowserTest.g:2331:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBrowserTest.g:2358:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalBrowserTest.g:2358:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalBrowserTest.g:2331:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBrowserTest.g:2358:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1195,8 +1195,8 @@ public class InternalBrowserTestLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrowserTest.g:2333:16: ( . )
-            // InternalBrowserTest.g:2333:18: .
+            // InternalBrowserTest.g:2360:16: ( . )
+            // InternalBrowserTest.g:2360:18: .
             {
             matchAny(); 
 

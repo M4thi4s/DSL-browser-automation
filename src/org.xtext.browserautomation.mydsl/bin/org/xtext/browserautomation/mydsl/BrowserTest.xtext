@@ -28,24 +28,24 @@ Entree:
 	| '$'accessor=Accessor;
 
 Property:
-    '[CONTENT]' 	content=Entree |
-    '[LABEL]' 		label=Entree |
-    '[VALUE]' 		value=Entree |
-    '[ALT]' 		alt=Entree |
-    '[TYPE]' 		'$'type=Type |
-    '[NAME]' 		name=STRING |
-    '[NTH-CHILD]' 	child=INT |
-    '[PARENT]' 		'{' subProperties+=Property* '}';
+    '[CONTENT]' 			content=Entree |
+    '[LABEL]' 				label=Entree |
+    '[VALUE]' 				value=Entree |
+    '[ALT]' 				alt=Entree |
+    '[TYPE]' 				'$'type=Type |
+    '[NAME]' 				name=STRING |
+    '[NTH-CHILD]' 			child=INT |
+	{Property} '[PARENT]'	'{' subProperties+=Property* '}';
 
 ActionCommand:
     '[ACTION]' var+=Variable+
     	command=ActionType;
 
 ActionType:
-    '[CLICK]' |
-    '[CHECK]' '$'value=Boolean |
-    '[SET-TEXT]' text=Entree |
-    '[CHOOSE]' option=Entree;
+    {ActionType} 	'[CLICK]' |
+    '[CHECK]' 		'$'value=Boolean |
+    '[SET-TEXT]'	text=Entree |
+    '[CHOOSE]' 		option=Entree;
     
 Test:
     '[TEST]' var=Variable;

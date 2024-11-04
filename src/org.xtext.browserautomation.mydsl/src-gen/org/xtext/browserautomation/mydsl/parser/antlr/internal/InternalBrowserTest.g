@@ -701,20 +701,27 @@ ruleProperty returns [EObject current=null]
 		)
 		    |
 		(
-			otherlv_15='[PARENT]'
+			(
+				{
+					$current = forceCreateModelElement(
+						grammarAccess.getPropertyAccess().getPropertyAction_7_0(),
+						$current);
+				}
+			)
+			otherlv_16='[PARENT]'
 			{
-				newLeafNode(otherlv_15, grammarAccess.getPropertyAccess().getPARENTKeyword_7_0());
+				newLeafNode(otherlv_16, grammarAccess.getPropertyAccess().getPARENTKeyword_7_1());
 			}
-			otherlv_16='{'
+			otherlv_17='{'
 			{
-				newLeafNode(otherlv_16, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_1());
+				newLeafNode(otherlv_17, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_7_2());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_2_0());
+						newCompositeNode(grammarAccess.getPropertyAccess().getSubPropertiesPropertyParserRuleCall_7_3_0());
 					}
-					lv_subProperties_17_0=ruleProperty
+					lv_subProperties_18_0=ruleProperty
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getPropertyRule());
@@ -722,15 +729,15 @@ ruleProperty returns [EObject current=null]
 						add(
 							$current,
 							"subProperties",
-							lv_subProperties_17_0,
+							lv_subProperties_18_0,
 							"org.xtext.browserautomation.mydsl.BrowserTest.Property");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)*
-			otherlv_18='}'
+			otherlv_19='}'
 			{
-				newLeafNode(otherlv_18, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_3());
+				newLeafNode(otherlv_19, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_7_4());
 			}
 		)
 	)

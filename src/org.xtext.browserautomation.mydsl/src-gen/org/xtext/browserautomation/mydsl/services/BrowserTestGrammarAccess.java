@@ -6,6 +6,7 @@ package org.xtext.browserautomation.mydsl.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.EnumLiteralDeclaration;
@@ -294,11 +295,12 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		private final Assignment cChildAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cChildINTTerminalRuleCall_6_1_0 = (RuleCall)cChildAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cAlternatives.eContents().get(7);
-		private final Keyword cPARENTKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cSubPropertiesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cSubPropertiesPropertyParserRuleCall_7_2_0 = (RuleCall)cSubPropertiesAssignment_7_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
+		private final Action cPropertyAction_7_0 = (Action)cGroup_7.eContents().get(0);
+		private final Keyword cPARENTKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final Assignment cSubPropertiesAssignment_7_3 = (Assignment)cGroup_7.eContents().get(3);
+		private final RuleCall cSubPropertiesPropertyParserRuleCall_7_3_0 = (RuleCall)cSubPropertiesAssignment_7_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		
 		//Property:
 		//    '[CONTENT]'     content=Entree |
@@ -308,7 +310,7 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//    '[TYPE]'         '$'type=Type |
 		//    '[NAME]'         name=STRING |
 		//    '[NTH-CHILD]'     child=INT |
-		//    '[PARENT]'         '{' subProperties+=Property* '}';
+		//    {Property} '[PARENT]'         '{' subProperties+=Property* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'[CONTENT]'     content=Entree |
@@ -318,7 +320,7 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//'[TYPE]'         '$'type=Type |
 		//'[NAME]'         name=STRING |
 		//'[NTH-CHILD]'     child=INT |
-		//'[PARENT]'         '{' subProperties+=Property* '}'
+		//{Property} '[PARENT]'         '{' subProperties+=Property* '}'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'[CONTENT]' 	content=Entree
@@ -408,23 +410,26 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//INT
 		public RuleCall getChildINTTerminalRuleCall_6_1_0() { return cChildINTTerminalRuleCall_6_1_0; }
 		
-		//'[PARENT]' 		'{' subProperties+=Property* '}'
+		//{Property} '[PARENT]' 		'{' subProperties+=Property* '}'
 		public Group getGroup_7() { return cGroup_7; }
 		
+		//{Property}
+		public Action getPropertyAction_7_0() { return cPropertyAction_7_0; }
+		
 		//'[PARENT]'
-		public Keyword getPARENTKeyword_7_0() { return cPARENTKeyword_7_0; }
+		public Keyword getPARENTKeyword_7_1() { return cPARENTKeyword_7_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		public Keyword getLeftCurlyBracketKeyword_7_2() { return cLeftCurlyBracketKeyword_7_2; }
 		
 		//subProperties+=Property*
-		public Assignment getSubPropertiesAssignment_7_2() { return cSubPropertiesAssignment_7_2; }
+		public Assignment getSubPropertiesAssignment_7_3() { return cSubPropertiesAssignment_7_3; }
 		
 		//Property
-		public RuleCall getSubPropertiesPropertyParserRuleCall_7_2_0() { return cSubPropertiesPropertyParserRuleCall_7_2_0; }
+		public RuleCall getSubPropertiesPropertyParserRuleCall_7_3_0() { return cSubPropertiesPropertyParserRuleCall_7_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_3() { return cRightCurlyBracketKeyword_7_3; }
+		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
 	}
 	public class ActionCommandElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.browserautomation.mydsl.BrowserTest.ActionCommand");
@@ -839,7 +844,7 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	//    '[TYPE]'         '$'type=Type |
 	//    '[NAME]'         name=STRING |
 	//    '[NTH-CHILD]'     child=INT |
-	//    '[PARENT]'         '{' subProperties+=Property* '}';
+	//    {Property} '[PARENT]'         '{' subProperties+=Property* '}';
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
