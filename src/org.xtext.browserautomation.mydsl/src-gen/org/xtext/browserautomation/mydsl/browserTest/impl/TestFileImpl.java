@@ -18,40 +18,40 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
-import org.xtext.browserautomation.mydsl.browserTest.Greeting;
-import org.xtext.browserautomation.mydsl.browserTest.Model;
+import org.xtext.browserautomation.mydsl.browserTest.Task;
+import org.xtext.browserautomation.mydsl.browserTest.TestFile;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Test File</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestFileImpl#getTask <em>Task</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class TestFileImpl extends MinimalEObjectImpl.Container implements TestFile
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getTask() <em>Task</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getTask()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<Task> task;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected TestFileImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserTestPackage.Literals.MODEL;
+    return BrowserTestPackage.Literals.TEST_FILE;
   }
 
   /**
@@ -73,13 +73,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<Greeting> getGreetings()
+  public EList<Task> getTask()
   {
-    if (greetings == null)
+    if (task == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, BrowserTestPackage.MODEL__GREETINGS);
+      task = new EObjectContainmentEList<Task>(Task.class, this, BrowserTestPackage.TEST_FILE__TASK);
     }
-    return greetings;
+    return task;
   }
 
   /**
@@ -92,8 +92,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrowserTestPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case BrowserTestPackage.TEST_FILE__TASK:
+        return ((InternalEList<?>)getTask()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrowserTestPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case BrowserTestPackage.TEST_FILE__TASK:
+        return getTask();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrowserTestPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case BrowserTestPackage.TEST_FILE__TASK:
+        getTask().clear();
+        getTask().addAll((Collection<? extends Task>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrowserTestPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case BrowserTestPackage.TEST_FILE__TASK:
+        getTask().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +160,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrowserTestPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case BrowserTestPackage.TEST_FILE__TASK:
+        return task != null && !task.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ModelImpl
+} //TestFileImpl

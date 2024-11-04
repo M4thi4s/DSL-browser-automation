@@ -27,7 +27,7 @@ public class BrowserTestParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "TestFile";
 	}
 
 	public BrowserTestGrammarAccess getGrammarAccess() {

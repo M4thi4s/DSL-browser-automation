@@ -24,22 +24,85 @@ public interface BrowserTestFactory extends EFactory
   BrowserTestFactory eINSTANCE = org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Test File</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Test File</em>'.
    * @generated
    */
-  Model createModel();
+  TestFile createTestFile();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Task</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Task</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Task createTask();
+
+  /**
+   * Returns a new object of class '<em>Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action</em>'.
+   * @generated
+   */
+  Action createAction();
+
+  /**
+   * Returns a new object of class '<em>Go To</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Go To</em>'.
+   * @generated
+   */
+  GoTo createGoTo();
+
+  /**
+   * Returns a new object of class '<em>Select</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Select</em>'.
+   * @generated
+   */
+  Select createSelect();
+
+  /**
+   * Returns a new object of class '<em>Property</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Property</em>'.
+   * @generated
+   */
+  Property createProperty();
+
+  /**
+   * Returns a new object of class '<em>Action Command</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action Command</em>'.
+   * @generated
+   */
+  ActionCommand createActionCommand();
+
+  /**
+   * Returns a new object of class '<em>Action Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action Type</em>'.
+   * @generated
+   */
+  ActionType createActionType();
+
+  /**
+   * Returns a new object of class '<em>Test</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Test</em>'.
+   * @generated
+   */
+  Test createTest();
 
   /**
    * Returns the package supported by this factory.

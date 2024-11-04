@@ -76,14 +76,49 @@ public class BrowserTestAdapterFactory extends AdapterFactoryImpl
     new BrowserTestSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseTestFile(TestFile object)
       {
-        return createModelAdapter();
+        return createTestFileAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseTask(Task object)
       {
-        return createGreetingAdapter();
+        return createTaskAdapter();
+      }
+      @Override
+      public Adapter caseAction(Action object)
+      {
+        return createActionAdapter();
+      }
+      @Override
+      public Adapter caseGoTo(GoTo object)
+      {
+        return createGoToAdapter();
+      }
+      @Override
+      public Adapter caseSelect(Select object)
+      {
+        return createSelectAdapter();
+      }
+      @Override
+      public Adapter caseProperty(Property object)
+      {
+        return createPropertyAdapter();
+      }
+      @Override
+      public Adapter caseActionCommand(ActionCommand object)
+      {
+        return createActionCommandAdapter();
+      }
+      @Override
+      public Adapter caseActionType(ActionType object)
+      {
+        return createActionTypeAdapter();
+      }
+      @Override
+      public Adapter caseTest(Test object)
+      {
+        return createTestAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -108,31 +143,136 @@ public class BrowserTestAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.TestFile <em>Test File</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Model
+   * @see org.xtext.browserautomation.mydsl.browserTest.TestFile
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createTestFileAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Task <em>Task</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Greeting
+   * @see org.xtext.browserautomation.mydsl.browserTest.Task
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createTaskAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Action <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Action
+   * @generated
+   */
+  public Adapter createActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.GoTo <em>Go To</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.GoTo
+   * @generated
+   */
+  public Adapter createGoToAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Select <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Select
+   * @generated
+   */
+  public Adapter createSelectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Property <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property
+   * @generated
+   */
+  public Adapter createPropertyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand <em>Action Command</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionCommand
+   * @generated
+   */
+  public Adapter createActionCommandAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType <em>Action Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionType
+   * @generated
+   */
+  public Adapter createActionTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Test <em>Test</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Test
+   * @generated
+   */
+  public Adapter createTestAdapter()
   {
     return null;
   }

@@ -4,6 +4,7 @@
 package org.xtext.browserautomation.mydsl.browserTest.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -65,8 +66,15 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
   {
     switch (eClass.getClassifierID())
     {
-      case BrowserTestPackage.MODEL: return createModel();
-      case BrowserTestPackage.GREETING: return createGreeting();
+      case BrowserTestPackage.TEST_FILE: return createTestFile();
+      case BrowserTestPackage.TASK: return createTask();
+      case BrowserTestPackage.ACTION: return createAction();
+      case BrowserTestPackage.GO_TO: return createGoTo();
+      case BrowserTestPackage.SELECT: return createSelect();
+      case BrowserTestPackage.PROPERTY: return createProperty();
+      case BrowserTestPackage.ACTION_COMMAND: return createActionCommand();
+      case BrowserTestPackage.ACTION_TYPE: return createActionType();
+      case BrowserTestPackage.TEST: return createTest();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -78,10 +86,15 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
    * @generated
    */
   @Override
-  public Model createModel()
+  public Object createFromString(EDataType eDataType, String initialValue)
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    switch (eDataType.getClassifierID())
+    {
+      case BrowserTestPackage.TYPE:
+        return createTypeFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
   }
 
   /**
@@ -90,10 +103,145 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
    * @generated
    */
   @Override
-  public Greeting createGreeting()
+  public String convertToString(EDataType eDataType, Object instanceValue)
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    switch (eDataType.getClassifierID())
+    {
+      case BrowserTestPackage.TYPE:
+        return convertTypeToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TestFile createTestFile()
+  {
+    TestFileImpl testFile = new TestFileImpl();
+    return testFile;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Task createTask()
+  {
+    TaskImpl task = new TaskImpl();
+    return task;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Action createAction()
+  {
+    ActionImpl action = new ActionImpl();
+    return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public GoTo createGoTo()
+  {
+    GoToImpl goTo = new GoToImpl();
+    return goTo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Select createSelect()
+  {
+    SelectImpl select = new SelectImpl();
+    return select;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Property createProperty()
+  {
+    PropertyImpl property = new PropertyImpl();
+    return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ActionCommand createActionCommand()
+  {
+    ActionCommandImpl actionCommand = new ActionCommandImpl();
+    return actionCommand;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ActionType createActionType()
+  {
+    ActionTypeImpl actionType = new ActionTypeImpl();
+    return actionType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Test createTest()
+  {
+    TestImpl test = new TestImpl();
+    return test;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Type createTypeFromString(EDataType eDataType, String initialValue)
+  {
+    Type result = Type.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

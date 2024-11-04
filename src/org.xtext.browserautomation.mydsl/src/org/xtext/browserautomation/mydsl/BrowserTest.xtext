@@ -2,8 +2,50 @@ grammar org.xtext.browserautomation.mydsl.BrowserTest with org.eclipse.xtext.com
 
 generate browserTest "http://www.xtext.org/browserautomation/mydsl/BrowserTest"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+TestFile:
+    task+=Task*;
+
+Task:
+    '[TASK]' name=(ID | STRING)
+    actions+=Action*;
+
+Action:
+    GoTo | Select | ActionCommand | Test;
+
+GoTo:
+    '[GOTO]' url=STRING;
+
+Select:
+    '[SELECT]' var=Variable
+    properties+=Property*;
+    
+Variable:
+	'$' name=ID;
+	//'$'name=ID('.'param=STRING)?;
+
+Property:
+    '[CONTENT]' content=(Variable | STRING) |
+    '[TYPE]' '$'type=Type |
+    '[LABEL]' label=(Variable | STRING) |
+    '[NAME]' name=(Variable | STRING) |
+    '[VALUE]' value=(Variable | STRING) |
+    '[ALT]' alt=(Variable | STRING) |
+    '[PARENT]' '{' subProperties+=Property* '}' |
+    '[NTH-CHILD]' child=INT;
+
+ActionCommand:
+    '[ACTION]' var=Variable
+    	command=ActionType;
+
+ActionType:
+    '[CLICK]' |
+    '[CHECK]' argument=STRING |
+    '[SET-TEXT]' argument=STRING |
+    '[CHOOSE]' argument=STRING;
+    
+Test:
+    '[TEST]' var=Variable;
+
+enum Type:
+    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE;
+        

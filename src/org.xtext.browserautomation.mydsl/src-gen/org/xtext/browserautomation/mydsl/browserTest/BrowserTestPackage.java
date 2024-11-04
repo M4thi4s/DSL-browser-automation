@@ -5,6 +5,7 @@ package org.xtext.browserautomation.mydsl.browserTest;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -58,42 +59,42 @@ public interface BrowserTestPackage extends EPackage
   BrowserTestPackage eINSTANCE = org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestFileImpl <em>Test File</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.browserautomation.mydsl.browserTest.impl.ModelImpl
-   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getModel()
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.TestFileImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTestFile()
    * @generated
    */
-  int MODEL = 0;
+  int TEST_FILE = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Task</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int TEST_FILE__TASK = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>Test File</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int TEST_FILE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TaskImpl <em>Task</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.browserautomation.mydsl.browserTest.impl.GreetingImpl
-   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getGreeting()
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.TaskImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTask()
    * @generated
    */
-  int GREETING = 1;
+  int TASK = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,59 +103,602 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
+  int TASK__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The feature id for the '<em><b>Actions</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
-
+  int TASK__ACTIONS = 1;
 
   /**
-   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Model <em>Model</em>}'.
+   * The number of structural features of the '<em>Task</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Model
    * @generated
+   * @ordered
    */
-  EClass getModel();
+  int TASK_FEATURE_COUNT = 2;
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.Model#getGreetings <em>Greetings</em>}'.
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionImpl <em>Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Model#getGreetings()
-   * @see #getModel()
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getAction()
    * @generated
    */
-  EReference getModel_Greetings();
+  int ACTION = 2;
 
   /**
-   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Greeting <em>Greeting</em>}'.
+   * The number of structural features of the '<em>Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Greeting
    * @generated
+   * @ordered
    */
-  EClass getGreeting();
+  int ACTION_FEATURE_COUNT = 0;
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Greeting#getName <em>Name</em>}'.
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.GoToImpl <em>Go To</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.GoToImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getGoTo()
+   * @generated
+   */
+  int GO_TO = 3;
+
+  /**
+   * The feature id for the '<em><b>Url</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GO_TO__URL = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Go To</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GO_TO_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl <em>Select</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getSelect()
+   * @generated
+   */
+  int SELECT = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT__NAME = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT__PROPERTIES = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Select</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECT_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl <em>Property</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getProperty()
+   * @generated
+   */
+  int PROPERTY = 5;
+
+  /**
+   * The feature id for the '<em><b>Content</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__CONTENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__LABEL = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__NAME = 3;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__VALUE = 4;
+
+  /**
+   * The feature id for the '<em><b>Alt</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__ALT = 5;
+
+  /**
+   * The feature id for the '<em><b>Sub Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__SUB_PROPERTIES = 6;
+
+  /**
+   * The feature id for the '<em><b>Child</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__CHILD = 7;
+
+  /**
+   * The number of structural features of the '<em>Property</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_FEATURE_COUNT = 8;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl <em>Action Command</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getActionCommand()
+   * @generated
+   */
+  int ACTION_COMMAND = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_COMMAND__NAME = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Command</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_COMMAND__COMMAND = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Action Command</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_COMMAND_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl <em>Action Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getActionType()
+   * @generated
+   */
+  int ACTION_TYPE = 7;
+
+  /**
+   * The feature id for the '<em><b>Argument</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_TYPE__ARGUMENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Action Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_TYPE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl <em>Test</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTest()
+   * @generated
+   */
+  int TEST = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEST__NAME = ACTION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Test</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEST_FEATURE_COUNT = ACTION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.Type <em>Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.browserautomation.mydsl.browserTest.Type
+   * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getType()
+   * @generated
+   */
+  int TYPE = 9;
+
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.TestFile <em>Test File</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Test File</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.TestFile
+   * @generated
+   */
+  EClass getTestFile();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.TestFile#getTask <em>Task</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Task</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.TestFile#getTask()
+   * @see #getTestFile()
+   * @generated
+   */
+  EReference getTestFile_Task();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Task <em>Task</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Task</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Task
+   * @generated
+   */
+  EClass getTask();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Task#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.browserautomation.mydsl.browserTest.Greeting#getName()
-   * @see #getGreeting()
+   * @see org.xtext.browserautomation.mydsl.browserTest.Task#getName()
+   * @see #getTask()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getTask_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.Task#getActions <em>Actions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Actions</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Task#getActions()
+   * @see #getTask()
+   * @generated
+   */
+  EReference getTask_Actions();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Action <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Action
+   * @generated
+   */
+  EClass getAction();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.GoTo <em>Go To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Go To</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.GoTo
+   * @generated
+   */
+  EClass getGoTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.GoTo#getUrl <em>Url</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Url</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.GoTo#getUrl()
+   * @see #getGoTo()
+   * @generated
+   */
+  EAttribute getGoTo_Url();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Select <em>Select</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Select</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Select
+   * @generated
+   */
+  EClass getSelect();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Select#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Select#getName()
+   * @see #getSelect()
+   * @generated
+   */
+  EAttribute getSelect_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.Select#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Select#getProperties()
+   * @see #getSelect()
+   * @generated
+   */
+  EReference getSelect_Properties();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Property <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Property</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property
+   * @generated
+   */
+  EClass getProperty();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Content</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getContent()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Content();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getType()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getLabel()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Label();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getName()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getValue()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Value();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getAlt <em>Alt</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Alt</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getAlt()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Alt();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getSubProperties <em>Sub Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sub Properties</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getSubProperties()
+   * @see #getProperty()
+   * @generated
+   */
+  EReference getProperty_SubProperties();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getChild <em>Child</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Child</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getChild()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Child();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand <em>Action Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action Command</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionCommand
+   * @generated
+   */
+  EClass getActionCommand();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Name</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getName()
+   * @see #getActionCommand()
+   * @generated
+   */
+  EAttribute getActionCommand_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getCommand <em>Command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Command</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getCommand()
+   * @see #getActionCommand()
+   * @generated
+   */
+  EReference getActionCommand_Command();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType <em>Action Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action Type</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionType
+   * @generated
+   */
+  EClass getActionType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getArgument <em>Argument</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Argument</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionType#getArgument()
+   * @see #getActionType()
+   * @generated
+   */
+  EAttribute getActionType_Argument();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.browserautomation.mydsl.browserTest.Test <em>Test</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Test</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Test
+   * @generated
+   */
+  EClass getTest();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Test#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Test#getName()
+   * @see #getTest()
+   * @generated
+   */
+  EAttribute getTest_Name();
+
+  /**
+   * Returns the meta object for enum '{@link org.xtext.browserautomation.mydsl.browserTest.Type <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Type</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Type
+   * @generated
+   */
+  EEnum getType();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -180,32 +724,32 @@ public interface BrowserTestPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestFileImpl <em>Test File</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.browserautomation.mydsl.browserTest.impl.ModelImpl
-     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getModel()
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.TestFileImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTestFile()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass TEST_FILE = eINSTANCE.getTestFile();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Task</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference TEST_FILE__TASK = eINSTANCE.getTestFile_Task();
 
     /**
-     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TaskImpl <em>Task</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.browserautomation.mydsl.browserTest.impl.GreetingImpl
-     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getGreeting()
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.TaskImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTask()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EClass TASK = eINSTANCE.getTask();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -213,7 +757,215 @@ public interface BrowserTestPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute TASK__NAME = eINSTANCE.getTask_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TASK__ACTIONS = eINSTANCE.getTask_Actions();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionImpl <em>Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getAction()
+     * @generated
+     */
+    EClass ACTION = eINSTANCE.getAction();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.GoToImpl <em>Go To</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.GoToImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getGoTo()
+     * @generated
+     */
+    EClass GO_TO = eINSTANCE.getGoTo();
+
+    /**
+     * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GO_TO__URL = eINSTANCE.getGoTo_Url();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl <em>Select</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getSelect()
+     * @generated
+     */
+    EClass SELECT = eINSTANCE.getSelect();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SELECT__NAME = eINSTANCE.getSelect_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECT__PROPERTIES = eINSTANCE.getSelect_Properties();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl <em>Property</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getProperty()
+     * @generated
+     */
+    EClass PROPERTY = eINSTANCE.getProperty();
+
+    /**
+     * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__CONTENT = eINSTANCE.getProperty_Content();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__TYPE = eINSTANCE.getProperty_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__LABEL = eINSTANCE.getProperty_Label();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Alt</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__ALT = eINSTANCE.getProperty_Alt();
+
+    /**
+     * The meta object literal for the '<em><b>Sub Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTY__SUB_PROPERTIES = eINSTANCE.getProperty_SubProperties();
+
+    /**
+     * The meta object literal for the '<em><b>Child</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__CHILD = eINSTANCE.getProperty_Child();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl <em>Action Command</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getActionCommand()
+     * @generated
+     */
+    EClass ACTION_COMMAND = eINSTANCE.getActionCommand();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION_COMMAND__NAME = eINSTANCE.getActionCommand_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Command</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTION_COMMAND__COMMAND = eINSTANCE.getActionCommand_Command();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl <em>Action Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getActionType()
+     * @generated
+     */
+    EClass ACTION_TYPE = eINSTANCE.getActionType();
+
+    /**
+     * The meta object literal for the '<em><b>Argument</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION_TYPE__ARGUMENT = eINSTANCE.getActionType_Argument();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl <em>Test</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getTest()
+     * @generated
+     */
+    EClass TEST = eINSTANCE.getTest();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEST__NAME = eINSTANCE.getTest_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.browserautomation.mydsl.browserTest.Type <em>Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.browserautomation.mydsl.browserTest.Type
+     * @see org.xtext.browserautomation.mydsl.browserTest.impl.BrowserTestPackageImpl#getType()
+     * @generated
+     */
+    EEnum TYPE = eINSTANCE.getType();
 
   }
 
