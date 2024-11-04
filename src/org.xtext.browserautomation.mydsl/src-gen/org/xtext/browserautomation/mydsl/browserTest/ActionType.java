@@ -14,7 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getArgument <em>Argument</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getText <em>Text</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getOption <em>Option</em>}</li>
  * </ul>
  *
  * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType()
@@ -24,25 +26,72 @@ import org.eclipse.emf.ecore.EObject;
 public interface ActionType extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Argument</b></em>' attribute.
+   * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.browserautomation.mydsl.browserTest.Boolean}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Argument</em>' attribute.
-   * @see #setArgument(String)
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType_Argument()
+   * @return the value of the '<em>Value</em>' attribute.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Boolean
+   * @see #setValue(org.xtext.browserautomation.mydsl.browserTest.Boolean)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType_Value()
    * @model
    * @generated
    */
-  String getArgument();
+  org.xtext.browserautomation.mydsl.browserTest.Boolean getValue();
 
   /**
-   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getArgument <em>Argument</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getValue <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Argument</em>' attribute.
-   * @see #getArgument()
+   * @param value the new value of the '<em>Value</em>' attribute.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Boolean
+   * @see #getValue()
    * @generated
    */
-  void setArgument(String value);
+  void setValue(org.xtext.browserautomation.mydsl.browserTest.Boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Text</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Text</em>' containment reference.
+   * @see #setText(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType_Text()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getText();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getText <em>Text</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Text</em>' containment reference.
+   * @see #getText()
+   * @generated
+   */
+  void setText(Entree value);
+
+  /**
+   * Returns the value of the '<em><b>Option</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Option</em>' containment reference.
+   * @see #setOption(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType_Option()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getOption();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getOption <em>Option</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Option</em>' containment reference.
+   * @see #getOption()
+   * @generated
+   */
+  void setOption(Entree value);
 
 } // ActionType

@@ -11,11 +11,14 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.browserautomation.mydsl.browserTest.Accessor;
 import org.xtext.browserautomation.mydsl.browserTest.Action;
 import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
 import org.xtext.browserautomation.mydsl.browserTest.ActionType;
+import org.xtext.browserautomation.mydsl.browserTest.Attribute;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestFactory;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
 import org.xtext.browserautomation.mydsl.browserTest.GoTo;
 import org.xtext.browserautomation.mydsl.browserTest.Property;
 import org.xtext.browserautomation.mydsl.browserTest.Select;
@@ -23,6 +26,7 @@ import org.xtext.browserautomation.mydsl.browserTest.Task;
 import org.xtext.browserautomation.mydsl.browserTest.Test;
 import org.xtext.browserautomation.mydsl.browserTest.TestFile;
 import org.xtext.browserautomation.mydsl.browserTest.Type;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,6 +76,20 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass variableEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass entreeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass propertyEClass = null;
 
   /**
@@ -101,6 +119,27 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   private EEnum typeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum booleanEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum attributeEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum accessorEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -269,9 +308,9 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
-  public EAttribute getSelect_Name()
+  public EReference getSelect_Var()
   {
-    return (EAttribute)selectEClass.getEStructuralFeatures().get(0);
+    return (EReference)selectEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -291,6 +330,94 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
+  public EClass getVariable()
+  {
+    return variableEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getVariable_Name()
+  {
+    return (EAttribute)variableEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getEntree()
+  {
+    return entreeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getEntree_Var()
+  {
+    return (EReference)entreeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEntree_Param()
+  {
+    return (EAttribute)entreeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEntree_Untyped()
+  {
+    return (EAttribute)entreeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEntree_String()
+  {
+    return (EAttribute)entreeEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getEntree_Accessor()
+  {
+    return (EAttribute)entreeEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getProperty()
   {
     return propertyEClass;
@@ -302,9 +429,42 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
-  public EAttribute getProperty_Content()
+  public EReference getProperty_Content()
   {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(0);
+    return (EReference)propertyEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getProperty_Label()
+  {
+    return (EReference)propertyEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getProperty_Value()
+  {
+    return (EReference)propertyEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getProperty_Alt()
+  {
+    return (EReference)propertyEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -315,18 +475,7 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
   @Override
   public EAttribute getProperty_Type()
   {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getProperty_Label()
-  {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)propertyEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -337,40 +486,7 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
   @Override
   public EAttribute getProperty_Name()
   {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getProperty_Value()
-  {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getProperty_Alt()
-  {
     return (EAttribute)propertyEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getProperty_SubProperties()
-  {
-    return (EReference)propertyEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -381,7 +497,18 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
   @Override
   public EAttribute getProperty_Child()
   {
-    return (EAttribute)propertyEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)propertyEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getProperty_SubProperties()
+  {
+    return (EReference)propertyEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -401,9 +528,9 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
-  public EAttribute getActionCommand_Name()
+  public EReference getActionCommand_Var()
   {
-    return (EAttribute)actionCommandEClass.getEStructuralFeatures().get(0);
+    return (EReference)actionCommandEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -434,9 +561,31 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
-  public EAttribute getActionType_Argument()
+  public EAttribute getActionType_Value()
   {
     return (EAttribute)actionTypeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getActionType_Text()
+  {
+    return (EReference)actionTypeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getActionType_Option()
+  {
+    return (EReference)actionTypeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -456,9 +605,9 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
    * @generated
    */
   @Override
-  public EAttribute getTest_Name()
+  public EReference getTest_Var()
   {
-    return (EAttribute)testEClass.getEStructuralFeatures().get(0);
+    return (EReference)testEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -470,6 +619,39 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
   public EEnum getType()
   {
     return typeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getBoolean()
+  {
+    return booleanEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getAttribute()
+  {
+    return attributeEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getAccessor()
+  {
+    return accessorEEnum;
   }
 
   /**
@@ -516,31 +698,46 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
     createEAttribute(goToEClass, GO_TO__URL);
 
     selectEClass = createEClass(SELECT);
-    createEAttribute(selectEClass, SELECT__NAME);
+    createEReference(selectEClass, SELECT__VAR);
     createEReference(selectEClass, SELECT__PROPERTIES);
 
+    variableEClass = createEClass(VARIABLE);
+    createEAttribute(variableEClass, VARIABLE__NAME);
+
+    entreeEClass = createEClass(ENTREE);
+    createEReference(entreeEClass, ENTREE__VAR);
+    createEAttribute(entreeEClass, ENTREE__PARAM);
+    createEAttribute(entreeEClass, ENTREE__UNTYPED);
+    createEAttribute(entreeEClass, ENTREE__STRING);
+    createEAttribute(entreeEClass, ENTREE__ACCESSOR);
+
     propertyEClass = createEClass(PROPERTY);
-    createEAttribute(propertyEClass, PROPERTY__CONTENT);
+    createEReference(propertyEClass, PROPERTY__CONTENT);
+    createEReference(propertyEClass, PROPERTY__LABEL);
+    createEReference(propertyEClass, PROPERTY__VALUE);
+    createEReference(propertyEClass, PROPERTY__ALT);
     createEAttribute(propertyEClass, PROPERTY__TYPE);
-    createEAttribute(propertyEClass, PROPERTY__LABEL);
     createEAttribute(propertyEClass, PROPERTY__NAME);
-    createEAttribute(propertyEClass, PROPERTY__VALUE);
-    createEAttribute(propertyEClass, PROPERTY__ALT);
-    createEReference(propertyEClass, PROPERTY__SUB_PROPERTIES);
     createEAttribute(propertyEClass, PROPERTY__CHILD);
+    createEReference(propertyEClass, PROPERTY__SUB_PROPERTIES);
 
     actionCommandEClass = createEClass(ACTION_COMMAND);
-    createEAttribute(actionCommandEClass, ACTION_COMMAND__NAME);
+    createEReference(actionCommandEClass, ACTION_COMMAND__VAR);
     createEReference(actionCommandEClass, ACTION_COMMAND__COMMAND);
 
     actionTypeEClass = createEClass(ACTION_TYPE);
-    createEAttribute(actionTypeEClass, ACTION_TYPE__ARGUMENT);
+    createEAttribute(actionTypeEClass, ACTION_TYPE__VALUE);
+    createEReference(actionTypeEClass, ACTION_TYPE__TEXT);
+    createEReference(actionTypeEClass, ACTION_TYPE__OPTION);
 
     testEClass = createEClass(TEST);
-    createEAttribute(testEClass, TEST__NAME);
+    createEReference(testEClass, TEST__VAR);
 
     // Create enums
     typeEEnum = createEEnum(TYPE);
+    booleanEEnum = createEEnum(BOOLEAN);
+    attributeEEnum = createEEnum(ATTRIBUTE);
+    accessorEEnum = createEEnum(ACCESSOR);
   }
 
   /**
@@ -591,28 +788,40 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
     initEAttribute(getGoTo_Url(), ecorePackage.getEString(), "url", null, 0, 1, GoTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(selectEClass, Select.class, "Select", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getSelect_Name(), ecorePackage.getEString(), "name", null, 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSelect_Var(), this.getVariable(), null, "var", null, 0, 1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSelect_Properties(), this.getProperty(), null, "properties", null, 0, -1, Select.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(entreeEClass, Entree.class, "Entree", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEntree_Var(), this.getVariable(), null, "var", null, 0, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEntree_Param(), this.getAttribute(), "param", null, 0, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEntree_Untyped(), ecorePackage.getEString(), "untyped", null, 0, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEntree_String(), ecorePackage.getEString(), "string", null, 0, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEntree_Accessor(), this.getAccessor(), "accessor", null, 0, 1, Entree.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getProperty_Content(), ecorePackage.getEString(), "content", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperty_Content(), this.getEntree(), null, "content", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperty_Label(), this.getEntree(), null, "label", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperty_Value(), this.getEntree(), null, "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperty_Alt(), this.getEntree(), null, "alt", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProperty_Type(), this.getType(), "type", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProperty_Label(), ecorePackage.getEString(), "label", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProperty_Name(), ecorePackage.getEString(), "name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getProperty_Alt(), ecorePackage.getEString(), "alt", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getProperty_SubProperties(), this.getProperty(), null, "subProperties", null, 0, -1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getProperty_Child(), ecorePackage.getEInt(), "child", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProperty_SubProperties(), this.getProperty(), null, "subProperties", null, 0, -1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionCommandEClass, ActionCommand.class, "ActionCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getActionCommand_Name(), ecorePackage.getEString(), "name", null, 0, -1, ActionCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionCommand_Var(), this.getVariable(), null, "var", null, 0, -1, ActionCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActionCommand_Command(), this.getActionType(), null, "command", null, 0, 1, ActionCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionTypeEClass, ActionType.class, "ActionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getActionType_Argument(), ecorePackage.getEString(), "argument", null, 0, 1, ActionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getActionType_Value(), this.getBoolean(), "value", null, 0, 1, ActionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionType_Text(), this.getEntree(), null, "text", null, 0, 1, ActionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionType_Option(), this.getEntree(), null, "option", null, 0, 1, ActionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getTest_Name(), ecorePackage.getEString(), "name", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTest_Var(), this.getVariable(), null, "var", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(typeEEnum, Type.class, "Type");
@@ -622,6 +831,19 @@ public class BrowserTestPackageImpl extends EPackageImpl implements BrowserTestP
     addEEnumLiteral(typeEEnum, Type.CHECKBOX);
     addEEnumLiteral(typeEEnum, Type.DIV);
     addEEnumLiteral(typeEEnum, Type.TITLE);
+    addEEnumLiteral(typeEEnum, Type.CONTENT);
+
+    initEEnum(booleanEEnum, org.xtext.browserautomation.mydsl.browserTest.Boolean.class, "Boolean");
+    addEEnumLiteral(booleanEEnum, org.xtext.browserautomation.mydsl.browserTest.Boolean.FALSE);
+    addEEnumLiteral(booleanEEnum, org.xtext.browserautomation.mydsl.browserTest.Boolean.TRUE);
+
+    initEEnum(attributeEEnum, Attribute.class, "Attribute");
+    addEEnumLiteral(attributeEEnum, Attribute.LINK);
+    addEEnumLiteral(attributeEEnum, Attribute.TITLE);
+    addEEnumLiteral(attributeEEnum, Attribute.CONTENT);
+
+    initEEnum(accessorEEnum, Accessor.class, "Accessor");
+    addEEnumLiteral(accessorEEnum, Accessor.ALL);
 
     // Create resource
     createResource(eNS_URI);

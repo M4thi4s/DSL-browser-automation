@@ -8,7 +8,18 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.xtext.browserautomation.mydsl.browserTest.*;
+import org.xtext.browserautomation.mydsl.browserTest.Action;
+import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
+import org.xtext.browserautomation.mydsl.browserTest.ActionType;
+import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
+import org.xtext.browserautomation.mydsl.browserTest.GoTo;
+import org.xtext.browserautomation.mydsl.browserTest.Property;
+import org.xtext.browserautomation.mydsl.browserTest.Select;
+import org.xtext.browserautomation.mydsl.browserTest.Task;
+import org.xtext.browserautomation.mydsl.browserTest.Test;
+import org.xtext.browserautomation.mydsl.browserTest.TestFile;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -107,6 +118,20 @@ public class BrowserTestSwitch<T> extends Switch<T>
         Select select = (Select)theEObject;
         T result = caseSelect(select);
         if (result == null) result = caseAction(select);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserTestPackage.VARIABLE:
+      {
+        Variable variable = (Variable)theEObject;
+        T result = caseVariable(variable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserTestPackage.ENTREE:
+      {
+        Entree entree = (Entree)theEObject;
+        T result = caseEntree(entree);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -220,6 +245,38 @@ public class BrowserTestSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSelect(Select object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariable(Variable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Entree</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Entree</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEntree(Entree object)
   {
     return null;
   }

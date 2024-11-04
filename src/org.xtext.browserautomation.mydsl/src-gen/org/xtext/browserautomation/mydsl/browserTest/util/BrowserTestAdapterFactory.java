@@ -10,7 +10,18 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.xtext.browserautomation.mydsl.browserTest.*;
+import org.xtext.browserautomation.mydsl.browserTest.Action;
+import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
+import org.xtext.browserautomation.mydsl.browserTest.ActionType;
+import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
+import org.xtext.browserautomation.mydsl.browserTest.GoTo;
+import org.xtext.browserautomation.mydsl.browserTest.Property;
+import org.xtext.browserautomation.mydsl.browserTest.Select;
+import org.xtext.browserautomation.mydsl.browserTest.Task;
+import org.xtext.browserautomation.mydsl.browserTest.Test;
+import org.xtext.browserautomation.mydsl.browserTest.TestFile;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,6 +110,16 @@ public class BrowserTestAdapterFactory extends AdapterFactoryImpl
       public Adapter caseSelect(Select object)
       {
         return createSelectAdapter();
+      }
+      @Override
+      public Adapter caseVariable(Variable object)
+      {
+        return createVariableAdapter();
+      }
+      @Override
+      public Adapter caseEntree(Entree object)
+      {
+        return createEntreeAdapter();
       }
       @Override
       public Adapter caseProperty(Property object)
@@ -213,6 +234,36 @@ public class BrowserTestAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSelectAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Variable
+   * @generated
+   */
+  public Adapter createVariableAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.browserautomation.mydsl.browserTest.Entree <em>Entree</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Entree
+   * @generated
+   */
+  public Adapter createEntreeAdapter()
   {
     return null;
   }

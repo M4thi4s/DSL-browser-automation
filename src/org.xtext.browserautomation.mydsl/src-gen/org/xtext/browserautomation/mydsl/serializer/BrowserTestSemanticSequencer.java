@@ -17,12 +17,14 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
 import org.xtext.browserautomation.mydsl.browserTest.ActionType;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
 import org.xtext.browserautomation.mydsl.browserTest.GoTo;
 import org.xtext.browserautomation.mydsl.browserTest.Property;
 import org.xtext.browserautomation.mydsl.browserTest.Select;
 import org.xtext.browserautomation.mydsl.browserTest.Task;
 import org.xtext.browserautomation.mydsl.browserTest.Test;
 import org.xtext.browserautomation.mydsl.browserTest.TestFile;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 import org.xtext.browserautomation.mydsl.services.BrowserTestGrammarAccess;
 
 @SuppressWarnings("all")
@@ -45,6 +47,9 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case BrowserTestPackage.ACTION_TYPE:
 				sequence_ActionType(context, (ActionType) semanticObject); 
 				return; 
+			case BrowserTestPackage.ENTREE:
+				sequence_Entree(context, (Entree) semanticObject); 
+				return; 
 			case BrowserTestPackage.GO_TO:
 				sequence_GoTo(context, (GoTo) semanticObject); 
 				return; 
@@ -63,6 +68,9 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 			case BrowserTestPackage.TEST_FILE:
 				sequence_TestFile(context, (TestFile) semanticObject); 
 				return; 
+			case BrowserTestPackage.VARIABLE:
+				sequence_Variable(context, (Variable) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -75,7 +83,7 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     ActionCommand returns ActionCommand
 	 *
 	 * Constraint:
-	 *     (name+=ID+ command=ActionType)
+	 *     (var+=Variable+ command=ActionType)
 	 * </pre>
 	 */
 	protected void sequence_ActionCommand(ISerializationContext context, ActionCommand semanticObject) {
@@ -89,10 +97,24 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     ActionType returns ActionType
 	 *
 	 * Constraint:
-	 *     (argument=STRING | argument=STRING | argument=STRING)
+	 *     (value=Boolean | text=Entree | option=Entree)
 	 * </pre>
 	 */
 	protected void sequence_ActionType(ISerializationContext context, ActionType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Entree returns Entree
+	 *
+	 * Constraint:
+	 *     ((var=Variable (param=Attribute | untyped=ID)) | string=STRING | accessor=Accessor)
+	 * </pre>
+	 */
+	protected void sequence_Entree(ISerializationContext context, Entree semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -125,14 +147,14 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *
 	 * Constraint:
 	 *     (
-	 *         content=STRING | 
+	 *         content=Entree | 
+	 *         label=Entree | 
+	 *         value=Entree | 
+	 *         alt=Entree | 
 	 *         type=Type | 
-	 *         label=STRING | 
 	 *         name=STRING | 
-	 *         value=STRING | 
-	 *         alt=STRING | 
-	 *         subProperties+=Property+ | 
-	 *         child=INT
+	 *         child=INT | 
+	 *         subProperties+=Property+
 	 *     )
 	 * </pre>
 	 */
@@ -148,7 +170,7 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Select returns Select
 	 *
 	 * Constraint:
-	 *     (name=ID properties+=Property*)
+	 *     (var=Variable properties+=Property*)
 	 * </pre>
 	 */
 	protected void sequence_Select(ISerializationContext context, Select semanticObject) {
@@ -162,7 +184,7 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Task returns Task
 	 *
 	 * Constraint:
-	 *     (name=ID actions+=Action*)
+	 *     ((name=ID | name=STRING) actions+=Action*)
 	 * </pre>
 	 */
 	protected void sequence_Task(ISerializationContext context, Task semanticObject) {
@@ -191,16 +213,36 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Test returns Test
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     var=Variable
 	 * </pre>
 	 */
 	protected void sequence_Test(ISerializationContext context, Test semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BrowserTestPackage.Literals.TEST__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserTestPackage.Literals.TEST__NAME));
+			if (transientValues.isValueTransient(semanticObject, BrowserTestPackage.Literals.TEST__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserTestPackage.Literals.TEST__VAR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTestAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getTestAccess().getVarVariableParserRuleCall_1_0(), semanticObject.getVar());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Variable returns Variable
+	 *
+	 * Constraint:
+	 *     name=ID
+	 * </pre>
+	 */
+	protected void sequence_Variable(ISerializationContext context, Variable semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BrowserTestPackage.Literals.VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserTestPackage.Literals.VARIABLE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

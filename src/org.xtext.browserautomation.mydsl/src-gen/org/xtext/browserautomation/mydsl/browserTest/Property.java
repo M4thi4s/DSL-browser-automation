@@ -17,13 +17,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getAlt <em>Alt</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getSubProperties <em>Sub Properties</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getChild <em>Child</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getSubProperties <em>Sub Properties</em>}</li>
  * </ul>
  *
  * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty()
@@ -33,26 +33,92 @@ import org.eclipse.emf.ecore.EObject;
 public interface Property extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Content</b></em>' attribute.
+   * Returns the value of the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Content</em>' attribute.
-   * @see #setContent(String)
+   * @return the value of the '<em>Content</em>' containment reference.
+   * @see #setContent(Entree)
    * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Content()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getContent();
+  Entree getContent();
 
   /**
-   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Content</em>' attribute.
+   * @param value the new value of the '<em>Content</em>' containment reference.
    * @see #getContent()
    * @generated
    */
-  void setContent(String value);
+  void setContent(Entree value);
+
+  /**
+   * Returns the value of the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Label</em>' containment reference.
+   * @see #setLabel(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Label()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getLabel();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLabel <em>Label</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Label</em>' containment reference.
+   * @see #getLabel()
+   * @generated
+   */
+  void setLabel(Entree value);
+
+  /**
+   * Returns the value of the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value</em>' containment reference.
+   * @see #setValue(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Value()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getValue();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getValue <em>Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value</em>' containment reference.
+   * @see #getValue()
+   * @generated
+   */
+  void setValue(Entree value);
+
+  /**
+   * Returns the value of the '<em><b>Alt</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Alt</em>' containment reference.
+   * @see #setAlt(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Alt()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getAlt();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getAlt <em>Alt</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Alt</em>' containment reference.
+   * @see #getAlt()
+   * @generated
+   */
+  void setAlt(Entree value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -80,28 +146,6 @@ public interface Property extends EObject
   void setType(Type value);
 
   /**
-   * Returns the value of the '<em><b>Label</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Label</em>' attribute.
-   * @see #setLabel(String)
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Label()
-   * @model
-   * @generated
-   */
-  String getLabel();
-
-  /**
-   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLabel <em>Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Label</em>' attribute.
-   * @see #getLabel()
-   * @generated
-   */
-  void setLabel(String value);
-
-  /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -124,62 +168,6 @@ public interface Property extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Value</em>' attribute.
-   * @see #setValue(String)
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Value()
-   * @model
-   * @generated
-   */
-  String getValue();
-
-  /**
-   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getValue <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Value</em>' attribute.
-   * @see #getValue()
-   * @generated
-   */
-  void setValue(String value);
-
-  /**
-   * Returns the value of the '<em><b>Alt</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Alt</em>' attribute.
-   * @see #setAlt(String)
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Alt()
-   * @model
-   * @generated
-   */
-  String getAlt();
-
-  /**
-   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getAlt <em>Alt</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Alt</em>' attribute.
-   * @see #getAlt()
-   * @generated
-   */
-  void setAlt(String value);
-
-  /**
-   * Returns the value of the '<em><b>Sub Properties</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.browserautomation.mydsl.browserTest.Property}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Sub Properties</em>' containment reference list.
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_SubProperties()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Property> getSubProperties();
-
-  /**
    * Returns the value of the '<em><b>Child</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -200,5 +188,17 @@ public interface Property extends EObject
    * @generated
    */
   void setChild(int value);
+
+  /**
+   * Returns the value of the '<em><b>Sub Properties</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.browserautomation.mydsl.browserTest.Property}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sub Properties</em>' containment reference list.
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_SubProperties()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Property> getSubProperties();
 
 } // Property

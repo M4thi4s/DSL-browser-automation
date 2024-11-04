@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
 import org.xtext.browserautomation.mydsl.browserTest.Property;
 import org.xtext.browserautomation.mydsl.browserTest.Select;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +31,7 @@ import org.xtext.browserautomation.mydsl.browserTest.Select;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl#getVar <em>Var</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.SelectImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  *
@@ -39,24 +40,14 @@ import org.xtext.browserautomation.mydsl.browserTest.Select;
 public class SelectImpl extends ActionImpl implements Select
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Variable var;
 
   /**
    * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
@@ -95,9 +86,26 @@ public class SelectImpl extends ActionImpl implements Select
    * @generated
    */
   @Override
-  public String getName()
+  public Variable getVar()
   {
-    return name;
+    return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar(Variable newVar, NotificationChain msgs)
+  {
+    Variable oldVar = var;
+    var = newVar;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.SELECT__VAR, oldVar, newVar);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -106,12 +114,20 @@ public class SelectImpl extends ActionImpl implements Select
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setVar(Variable newVar)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.SELECT__NAME, oldName, name));
+    if (newVar != var)
+    {
+      NotificationChain msgs = null;
+      if (var != null)
+        msgs = ((InternalEObject)var).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.SELECT__VAR, null, msgs);
+      if (newVar != null)
+        msgs = ((InternalEObject)newVar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.SELECT__VAR, null, msgs);
+      msgs = basicSetVar(newVar, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.SELECT__VAR, newVar, newVar));
   }
 
   /**
@@ -139,6 +155,8 @@ public class SelectImpl extends ActionImpl implements Select
   {
     switch (featureID)
     {
+      case BrowserTestPackage.SELECT__VAR:
+        return basicSetVar(null, msgs);
       case BrowserTestPackage.SELECT__PROPERTIES:
         return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
     }
@@ -155,8 +173,8 @@ public class SelectImpl extends ActionImpl implements Select
   {
     switch (featureID)
     {
-      case BrowserTestPackage.SELECT__NAME:
-        return getName();
+      case BrowserTestPackage.SELECT__VAR:
+        return getVar();
       case BrowserTestPackage.SELECT__PROPERTIES:
         return getProperties();
     }
@@ -174,8 +192,8 @@ public class SelectImpl extends ActionImpl implements Select
   {
     switch (featureID)
     {
-      case BrowserTestPackage.SELECT__NAME:
-        setName((String)newValue);
+      case BrowserTestPackage.SELECT__VAR:
+        setVar((Variable)newValue);
         return;
       case BrowserTestPackage.SELECT__PROPERTIES:
         getProperties().clear();
@@ -195,8 +213,8 @@ public class SelectImpl extends ActionImpl implements Select
   {
     switch (featureID)
     {
-      case BrowserTestPackage.SELECT__NAME:
-        setName(NAME_EDEFAULT);
+      case BrowserTestPackage.SELECT__VAR:
+        setVar((Variable)null);
         return;
       case BrowserTestPackage.SELECT__PROPERTIES:
         getProperties().clear();
@@ -215,29 +233,12 @@ public class SelectImpl extends ActionImpl implements Select
   {
     switch (featureID)
     {
-      case BrowserTestPackage.SELECT__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case BrowserTestPackage.SELECT__VAR:
+        return var != null;
       case BrowserTestPackage.SELECT__PROPERTIES:
         return properties != null && !properties.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //SelectImpl

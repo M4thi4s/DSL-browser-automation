@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
 import org.xtext.browserautomation.mydsl.browserTest.Property;
 import org.xtext.browserautomation.mydsl.browserTest.Type;
 
@@ -32,13 +33,13 @@ import org.xtext.browserautomation.mydsl.browserTest.Type;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getContent <em>Content</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getAlt <em>Alt</em>}</li>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getSubProperties <em>Sub Properties</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getChild <em>Child</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getSubProperties <em>Sub Properties</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,24 +47,44 @@ import org.xtext.browserautomation.mydsl.browserTest.Type;
 public class PropertyImpl extends MinimalEObjectImpl.Container implements Property
 {
   /**
-   * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
+   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getContent()
    * @generated
    * @ordered
    */
-  protected static final String CONTENT_EDEFAULT = null;
+  protected Entree content;
 
   /**
-   * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
+   * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getContent()
+   * @see #getLabel()
    * @generated
    * @ordered
    */
-  protected String content = CONTENT_EDEFAULT;
+  protected Entree label;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected Entree value;
+
+  /**
+   * The cached value of the '{@link #getAlt() <em>Alt</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAlt()
+   * @generated
+   * @ordered
+   */
+  protected Entree alt;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -86,26 +107,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   protected Type type = TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLabel()
-   * @generated
-   * @ordered
-   */
-  protected static final String LABEL_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLabel()
-   * @generated
-   * @ordered
-   */
-  protected String label = LABEL_EDEFAULT;
-
-  /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -126,56 +127,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected static final String VALUE_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValue()
-   * @generated
-   * @ordered
-   */
-  protected String value = VALUE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getAlt() <em>Alt</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAlt()
-   * @generated
-   * @ordered
-   */
-  protected static final String ALT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getAlt() <em>Alt</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAlt()
-   * @generated
-   * @ordered
-   */
-  protected String alt = ALT_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getSubProperties() <em>Sub Properties</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSubProperties()
-   * @generated
-   * @ordered
-   */
-  protected EList<Property> subProperties;
-
-  /**
    * The default value of the '{@link #getChild() <em>Child</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -194,6 +145,16 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @ordered
    */
   protected int child = CHILD_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getSubProperties() <em>Sub Properties</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSubProperties()
+   * @generated
+   * @ordered
+   */
+  protected EList<Property> subProperties;
 
   /**
    * <!-- begin-user-doc -->
@@ -222,7 +183,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @generated
    */
   @Override
-  public String getContent()
+  public Entree getContent()
   {
     return content;
   }
@@ -232,13 +193,188 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setContent(String newContent)
+  public NotificationChain basicSetContent(Entree newContent, NotificationChain msgs)
   {
-    String oldContent = content;
+    Entree oldContent = content;
     content = newContent;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__CONTENT, oldContent, content));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__CONTENT, oldContent, newContent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setContent(Entree newContent)
+  {
+    if (newContent != content)
+    {
+      NotificationChain msgs = null;
+      if (content != null)
+        msgs = ((InternalEObject)content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__CONTENT, null, msgs);
+      if (newContent != null)
+        msgs = ((InternalEObject)newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__CONTENT, null, msgs);
+      msgs = basicSetContent(newContent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__CONTENT, newContent, newContent));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree getLabel()
+  {
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLabel(Entree newLabel, NotificationChain msgs)
+  {
+    Entree oldLabel = label;
+    label = newLabel;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__LABEL, oldLabel, newLabel);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLabel(Entree newLabel)
+  {
+    if (newLabel != label)
+    {
+      NotificationChain msgs = null;
+      if (label != null)
+        msgs = ((InternalEObject)label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__LABEL, null, msgs);
+      if (newLabel != null)
+        msgs = ((InternalEObject)newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__LABEL, null, msgs);
+      msgs = basicSetLabel(newLabel, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__LABEL, newLabel, newLabel));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree getValue()
+  {
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetValue(Entree newValue, NotificationChain msgs)
+  {
+    Entree oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__VALUE, oldValue, newValue);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setValue(Entree newValue)
+  {
+    if (newValue != value)
+    {
+      NotificationChain msgs = null;
+      if (value != null)
+        msgs = ((InternalEObject)value).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__VALUE, null, msgs);
+      if (newValue != null)
+        msgs = ((InternalEObject)newValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__VALUE, null, msgs);
+      msgs = basicSetValue(newValue, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__VALUE, newValue, newValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree getAlt()
+  {
+    return alt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAlt(Entree newAlt, NotificationChain msgs)
+  {
+    Entree oldAlt = alt;
+    alt = newAlt;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__ALT, oldAlt, newAlt);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAlt(Entree newAlt)
+  {
+    if (newAlt != alt)
+    {
+      NotificationChain msgs = null;
+      if (alt != null)
+        msgs = ((InternalEObject)alt).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__ALT, null, msgs);
+      if (newAlt != null)
+        msgs = ((InternalEObject)newAlt).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__ALT, null, msgs);
+      msgs = basicSetAlt(newAlt, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__ALT, newAlt, newAlt));
   }
 
   /**
@@ -272,31 +408,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @generated
    */
   @Override
-  public String getLabel()
-  {
-    return label;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setLabel(String newLabel)
-  {
-    String oldLabel = label;
-    label = newLabel;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__LABEL, oldLabel, label));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public String getName()
   {
     return name;
@@ -314,71 +425,6 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getValue()
-  {
-    return value;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setValue(String newValue)
-  {
-    String oldValue = value;
-    value = newValue;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__VALUE, oldValue, value));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getAlt()
-  {
-    return alt;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setAlt(String newAlt)
-  {
-    String oldAlt = alt;
-    alt = newAlt;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__ALT, oldAlt, alt));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Property> getSubProperties()
-  {
-    if (subProperties == null)
-    {
-      subProperties = new EObjectContainmentEList<Property>(Property.class, this, BrowserTestPackage.PROPERTY__SUB_PROPERTIES);
-    }
-    return subProperties;
   }
 
   /**
@@ -412,10 +458,33 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @generated
    */
   @Override
+  public EList<Property> getSubProperties()
+  {
+    if (subProperties == null)
+    {
+      subProperties = new EObjectContainmentEList<Property>(Property.class, this, BrowserTestPackage.PROPERTY__SUB_PROPERTIES);
+    }
+    return subProperties;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
+      case BrowserTestPackage.PROPERTY__CONTENT:
+        return basicSetContent(null, msgs);
+      case BrowserTestPackage.PROPERTY__LABEL:
+        return basicSetLabel(null, msgs);
+      case BrowserTestPackage.PROPERTY__VALUE:
+        return basicSetValue(null, msgs);
+      case BrowserTestPackage.PROPERTY__ALT:
+        return basicSetAlt(null, msgs);
       case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
         return ((InternalEList<?>)getSubProperties()).basicRemove(otherEnd, msgs);
     }
@@ -434,20 +503,20 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     {
       case BrowserTestPackage.PROPERTY__CONTENT:
         return getContent();
-      case BrowserTestPackage.PROPERTY__TYPE:
-        return getType();
       case BrowserTestPackage.PROPERTY__LABEL:
         return getLabel();
-      case BrowserTestPackage.PROPERTY__NAME:
-        return getName();
       case BrowserTestPackage.PROPERTY__VALUE:
         return getValue();
       case BrowserTestPackage.PROPERTY__ALT:
         return getAlt();
-      case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
-        return getSubProperties();
+      case BrowserTestPackage.PROPERTY__TYPE:
+        return getType();
+      case BrowserTestPackage.PROPERTY__NAME:
+        return getName();
       case BrowserTestPackage.PROPERTY__CHILD:
         return getChild();
+      case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
+        return getSubProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -464,29 +533,29 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     switch (featureID)
     {
       case BrowserTestPackage.PROPERTY__CONTENT:
-        setContent((String)newValue);
+        setContent((Entree)newValue);
+        return;
+      case BrowserTestPackage.PROPERTY__LABEL:
+        setLabel((Entree)newValue);
+        return;
+      case BrowserTestPackage.PROPERTY__VALUE:
+        setValue((Entree)newValue);
+        return;
+      case BrowserTestPackage.PROPERTY__ALT:
+        setAlt((Entree)newValue);
         return;
       case BrowserTestPackage.PROPERTY__TYPE:
         setType((Type)newValue);
         return;
-      case BrowserTestPackage.PROPERTY__LABEL:
-        setLabel((String)newValue);
-        return;
       case BrowserTestPackage.PROPERTY__NAME:
         setName((String)newValue);
         return;
-      case BrowserTestPackage.PROPERTY__VALUE:
-        setValue((String)newValue);
-        return;
-      case BrowserTestPackage.PROPERTY__ALT:
-        setAlt((String)newValue);
+      case BrowserTestPackage.PROPERTY__CHILD:
+        setChild((Integer)newValue);
         return;
       case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
         getSubProperties().clear();
         getSubProperties().addAll((Collection<? extends Property>)newValue);
-        return;
-      case BrowserTestPackage.PROPERTY__CHILD:
-        setChild((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -503,28 +572,28 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     switch (featureID)
     {
       case BrowserTestPackage.PROPERTY__CONTENT:
-        setContent(CONTENT_EDEFAULT);
+        setContent((Entree)null);
+        return;
+      case BrowserTestPackage.PROPERTY__LABEL:
+        setLabel((Entree)null);
+        return;
+      case BrowserTestPackage.PROPERTY__VALUE:
+        setValue((Entree)null);
+        return;
+      case BrowserTestPackage.PROPERTY__ALT:
+        setAlt((Entree)null);
         return;
       case BrowserTestPackage.PROPERTY__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case BrowserTestPackage.PROPERTY__LABEL:
-        setLabel(LABEL_EDEFAULT);
-        return;
       case BrowserTestPackage.PROPERTY__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case BrowserTestPackage.PROPERTY__VALUE:
-        setValue(VALUE_EDEFAULT);
-        return;
-      case BrowserTestPackage.PROPERTY__ALT:
-        setAlt(ALT_EDEFAULT);
+      case BrowserTestPackage.PROPERTY__CHILD:
+        setChild(CHILD_EDEFAULT);
         return;
       case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
         getSubProperties().clear();
-        return;
-      case BrowserTestPackage.PROPERTY__CHILD:
-        setChild(CHILD_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -541,21 +610,21 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     switch (featureID)
     {
       case BrowserTestPackage.PROPERTY__CONTENT:
-        return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
+        return content != null;
+      case BrowserTestPackage.PROPERTY__LABEL:
+        return label != null;
+      case BrowserTestPackage.PROPERTY__VALUE:
+        return value != null;
+      case BrowserTestPackage.PROPERTY__ALT:
+        return alt != null;
       case BrowserTestPackage.PROPERTY__TYPE:
         return type != TYPE_EDEFAULT;
-      case BrowserTestPackage.PROPERTY__LABEL:
-        return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case BrowserTestPackage.PROPERTY__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case BrowserTestPackage.PROPERTY__VALUE:
-        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case BrowserTestPackage.PROPERTY__ALT:
-        return ALT_EDEFAULT == null ? alt != null : !ALT_EDEFAULT.equals(alt);
-      case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
-        return subProperties != null && !subProperties.isEmpty();
       case BrowserTestPackage.PROPERTY__CHILD:
         return child != CHILD_EDEFAULT;
+      case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
+        return subProperties != null && !subProperties.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -571,18 +640,10 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (content: ");
-    result.append(content);
-    result.append(", type: ");
+    result.append(" (type: ");
     result.append(type);
-    result.append(", label: ");
-    result.append(label);
     result.append(", name: ");
     result.append(name);
-    result.append(", value: ");
-    result.append(value);
-    result.append(", alt: ");
-    result.append(alt);
     result.append(", child: ");
     result.append(child);
     result.append(')');

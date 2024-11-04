@@ -4,13 +4,16 @@
 package org.xtext.browserautomation.mydsl.browserTest.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
 import org.xtext.browserautomation.mydsl.browserTest.Test;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +23,7 @@ import org.xtext.browserautomation.mydsl.browserTest.Test;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl#getVar <em>Var</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,24 +31,14 @@ import org.xtext.browserautomation.mydsl.browserTest.Test;
 public class TestImpl extends ActionImpl implements Test
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected Variable var;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,9 +67,26 @@ public class TestImpl extends ActionImpl implements Test
    * @generated
    */
   @Override
-  public String getName()
+  public Variable getVar()
   {
-    return name;
+    return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar(Variable newVar, NotificationChain msgs)
+  {
+    Variable oldVar = var;
+    var = newVar;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.TEST__VAR, oldVar, newVar);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -85,12 +95,36 @@ public class TestImpl extends ActionImpl implements Test
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setVar(Variable newVar)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.TEST__NAME, oldName, name));
+    if (newVar != var)
+    {
+      NotificationChain msgs = null;
+      if (var != null)
+        msgs = ((InternalEObject)var).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.TEST__VAR, null, msgs);
+      if (newVar != null)
+        msgs = ((InternalEObject)newVar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.TEST__VAR, null, msgs);
+      msgs = basicSetVar(newVar, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.TEST__VAR, newVar, newVar));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case BrowserTestPackage.TEST__VAR:
+        return basicSetVar(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -103,8 +137,8 @@ public class TestImpl extends ActionImpl implements Test
   {
     switch (featureID)
     {
-      case BrowserTestPackage.TEST__NAME:
-        return getName();
+      case BrowserTestPackage.TEST__VAR:
+        return getVar();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,8 +153,8 @@ public class TestImpl extends ActionImpl implements Test
   {
     switch (featureID)
     {
-      case BrowserTestPackage.TEST__NAME:
-        setName((String)newValue);
+      case BrowserTestPackage.TEST__VAR:
+        setVar((Variable)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -136,8 +170,8 @@ public class TestImpl extends ActionImpl implements Test
   {
     switch (featureID)
     {
-      case BrowserTestPackage.TEST__NAME:
-        setName(NAME_EDEFAULT);
+      case BrowserTestPackage.TEST__VAR:
+        setVar((Variable)null);
         return;
     }
     super.eUnset(featureID);
@@ -153,27 +187,10 @@ public class TestImpl extends ActionImpl implements Test
   {
     switch (featureID)
     {
-      case BrowserTestPackage.TEST__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case BrowserTestPackage.TEST__VAR:
+        return var != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //TestImpl

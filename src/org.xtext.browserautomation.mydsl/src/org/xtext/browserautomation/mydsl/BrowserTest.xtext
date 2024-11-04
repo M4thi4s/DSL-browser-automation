@@ -20,32 +20,44 @@ Select:
     properties+=Property*;
     
 Variable:
-	'$' name=ID;
-	//'$'name=ID('.'param=STRING)?;
+	'$'name=ID;
+	
+Entree:
+	var=Variable'.'(param=Attribute | untyped=ID)
+	| string=STRING
+	| '$'accessor=Accessor;
 
 Property:
-    '[CONTENT]' content=(Variable | STRING) |
-    '[TYPE]' '$'type=Type |
-    '[LABEL]' label=(Variable | STRING) |
-    '[NAME]' name=(Variable | STRING) |
-    '[VALUE]' value=(Variable | STRING) |
-    '[ALT]' alt=(Variable | STRING) |
-    '[PARENT]' '{' subProperties+=Property* '}' |
-    '[NTH-CHILD]' child=INT;
+    '[CONTENT]' 	content=Entree |
+    '[LABEL]' 		label=Entree |
+    '[VALUE]' 		value=Entree |
+    '[ALT]' 		alt=Entree |
+    '[TYPE]' 		'$'type=Type |
+    '[NAME]' 		name=STRING |
+    '[NTH-CHILD]' 	child=INT |
+    '[PARENT]' 		'{' subProperties+=Property* '}';
 
 ActionCommand:
-    '[ACTION]' var=Variable
+    '[ACTION]' var+=Variable+
     	command=ActionType;
 
 ActionType:
     '[CLICK]' |
-    '[CHECK]' argument=STRING |
-    '[SET-TEXT]' argument=STRING |
-    '[CHOOSE]' argument=STRING;
+    '[CHECK]' '$'value=Boolean |
+    '[SET-TEXT]' text=Entree |
+    '[CHOOSE]' option=Entree;
     
 Test:
     '[TEST]' var=Variable;
 
 enum Type:
-    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE;
-        
+    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE | CONTENT;
+
+enum Boolean:
+	FALSE | TRUE;
+
+enum Attribute:
+	LINK | TITLE | CONTENT;
+
+enum Accessor:
+	ALL;

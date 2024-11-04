@@ -78,7 +78,17 @@ public enum Type implements Enumerator
    * @generated
    * @ordered
    */
-  TITLE(5, "TITLE", "TITLE");
+  TITLE(5, "TITLE", "TITLE"),
+
+  /**
+   * The '<em><b>CONTENT</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #CONTENT_VALUE
+   * @generated
+   * @ordered
+   */
+  CONTENT(6, "CONTENT", "CONTENT");
 
   /**
    * The '<em><b>LINK</b></em>' literal value.
@@ -147,6 +157,17 @@ public enum Type implements Enumerator
   public static final int TITLE_VALUE = 5;
 
   /**
+   * The '<em><b>CONTENT</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #CONTENT
+   * @model
+   * @generated
+   * @ordered
+   */
+  public static final int CONTENT_VALUE = 6;
+
+  /**
    * An array of all the '<em><b>Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -161,6 +182,7 @@ public enum Type implements Enumerator
       CHECKBOX,
       DIV,
       TITLE,
+      CONTENT,
     };
 
   /**
@@ -231,6 +253,7 @@ public enum Type implements Enumerator
       case CHECKBOX_VALUE: return CHECKBOX;
       case DIV_VALUE: return DIV;
       case TITLE_VALUE: return TITLE;
+      case CONTENT_VALUE: return CONTENT;
     }
     return null;
   }

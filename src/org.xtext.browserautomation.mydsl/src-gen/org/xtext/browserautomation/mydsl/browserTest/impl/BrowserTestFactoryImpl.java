@@ -12,7 +12,22 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.xtext.browserautomation.mydsl.browserTest.*;
+import org.xtext.browserautomation.mydsl.browserTest.Accessor;
+import org.xtext.browserautomation.mydsl.browserTest.Action;
+import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
+import org.xtext.browserautomation.mydsl.browserTest.ActionType;
+import org.xtext.browserautomation.mydsl.browserTest.Attribute;
+import org.xtext.browserautomation.mydsl.browserTest.BrowserTestFactory;
+import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
+import org.xtext.browserautomation.mydsl.browserTest.GoTo;
+import org.xtext.browserautomation.mydsl.browserTest.Property;
+import org.xtext.browserautomation.mydsl.browserTest.Select;
+import org.xtext.browserautomation.mydsl.browserTest.Task;
+import org.xtext.browserautomation.mydsl.browserTest.Test;
+import org.xtext.browserautomation.mydsl.browserTest.TestFile;
+import org.xtext.browserautomation.mydsl.browserTest.Type;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,6 +86,8 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
       case BrowserTestPackage.ACTION: return createAction();
       case BrowserTestPackage.GO_TO: return createGoTo();
       case BrowserTestPackage.SELECT: return createSelect();
+      case BrowserTestPackage.VARIABLE: return createVariable();
+      case BrowserTestPackage.ENTREE: return createEntree();
       case BrowserTestPackage.PROPERTY: return createProperty();
       case BrowserTestPackage.ACTION_COMMAND: return createActionCommand();
       case BrowserTestPackage.ACTION_TYPE: return createActionType();
@@ -92,6 +109,12 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
     {
       case BrowserTestPackage.TYPE:
         return createTypeFromString(eDataType, initialValue);
+      case BrowserTestPackage.BOOLEAN:
+        return createBooleanFromString(eDataType, initialValue);
+      case BrowserTestPackage.ATTRIBUTE:
+        return createAttributeFromString(eDataType, initialValue);
+      case BrowserTestPackage.ACCESSOR:
+        return createAccessorFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -109,6 +132,12 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
     {
       case BrowserTestPackage.TYPE:
         return convertTypeToString(eDataType, instanceValue);
+      case BrowserTestPackage.BOOLEAN:
+        return convertBooleanToString(eDataType, instanceValue);
+      case BrowserTestPackage.ATTRIBUTE:
+        return convertAttributeToString(eDataType, instanceValue);
+      case BrowserTestPackage.ACCESSOR:
+        return convertAccessorToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -180,6 +209,30 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
    * @generated
    */
   @Override
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree createEntree()
+  {
+    EntreeImpl entree = new EntreeImpl();
+    return entree;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Property createProperty()
   {
     PropertyImpl property = new PropertyImpl();
@@ -240,6 +293,72 @@ public class BrowserTestFactoryImpl extends EFactoryImpl implements BrowserTestF
    * @generated
    */
   public String convertTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.xtext.browserautomation.mydsl.browserTest.Boolean createBooleanFromString(EDataType eDataType, String initialValue)
+  {
+    org.xtext.browserautomation.mydsl.browserTest.Boolean result = org.xtext.browserautomation.mydsl.browserTest.Boolean.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertBooleanToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Attribute createAttributeFromString(EDataType eDataType, String initialValue)
+  {
+    Attribute result = Attribute.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertAttributeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Accessor createAccessorFromString(EDataType eDataType, String initialValue)
+  {
+    Accessor result = Accessor.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertAccessorToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

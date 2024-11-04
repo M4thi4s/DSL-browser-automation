@@ -4,14 +4,17 @@
 package org.xtext.browserautomation.mydsl.browserTest.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.browserautomation.mydsl.browserTest.ActionType;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Entree;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +24,9 @@ import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getArgument <em>Argument</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getText <em>Text</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getOption <em>Option</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,24 +34,44 @@ import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
 public class ActionTypeImpl extends MinimalEObjectImpl.Container implements ActionType
 {
   /**
-   * The default value of the '{@link #getArgument() <em>Argument</em>}' attribute.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgument()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected static final String ARGUMENT_EDEFAULT = null;
+  protected static final org.xtext.browserautomation.mydsl.browserTest.Boolean VALUE_EDEFAULT = org.xtext.browserautomation.mydsl.browserTest.Boolean.FALSE;
 
   /**
-   * The cached value of the '{@link #getArgument() <em>Argument</em>}' attribute.
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getArgument()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected String argument = ARGUMENT_EDEFAULT;
+  protected org.xtext.browserautomation.mydsl.browserTest.Boolean value = VALUE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getText()
+   * @generated
+   * @ordered
+   */
+  protected Entree text;
+
+  /**
+   * The cached value of the '{@link #getOption() <em>Option</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOption()
+   * @generated
+   * @ordered
+   */
+  protected Entree option;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,9 +100,9 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
    * @generated
    */
   @Override
-  public String getArgument()
+  public org.xtext.browserautomation.mydsl.browserTest.Boolean getValue()
   {
-    return argument;
+    return value;
   }
 
   /**
@@ -86,12 +111,130 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
    * @generated
    */
   @Override
-  public void setArgument(String newArgument)
+  public void setValue(org.xtext.browserautomation.mydsl.browserTest.Boolean newValue)
   {
-    String oldArgument = argument;
-    argument = newArgument;
+    org.xtext.browserautomation.mydsl.browserTest.Boolean oldValue = value;
+    value = newValue == null ? VALUE_EDEFAULT : newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__ARGUMENT, oldArgument, argument));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__VALUE, oldValue, value));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree getText()
+  {
+    return text;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetText(Entree newText, NotificationChain msgs)
+  {
+    Entree oldText = text;
+    text = newText;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__TEXT, oldText, newText);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setText(Entree newText)
+  {
+    if (newText != text)
+    {
+      NotificationChain msgs = null;
+      if (text != null)
+        msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_TYPE__TEXT, null, msgs);
+      if (newText != null)
+        msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_TYPE__TEXT, null, msgs);
+      msgs = basicSetText(newText, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__TEXT, newText, newText));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Entree getOption()
+  {
+    return option;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOption(Entree newOption, NotificationChain msgs)
+  {
+    Entree oldOption = option;
+    option = newOption;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__OPTION, oldOption, newOption);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setOption(Entree newOption)
+  {
+    if (newOption != option)
+    {
+      NotificationChain msgs = null;
+      if (option != null)
+        msgs = ((InternalEObject)option).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_TYPE__OPTION, null, msgs);
+      if (newOption != null)
+        msgs = ((InternalEObject)newOption).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_TYPE__OPTION, null, msgs);
+      msgs = basicSetOption(newOption, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__OPTION, newOption, newOption));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case BrowserTestPackage.ACTION_TYPE__TEXT:
+        return basicSetText(null, msgs);
+      case BrowserTestPackage.ACTION_TYPE__OPTION:
+        return basicSetOption(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,8 +247,12 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_TYPE__ARGUMENT:
-        return getArgument();
+      case BrowserTestPackage.ACTION_TYPE__VALUE:
+        return getValue();
+      case BrowserTestPackage.ACTION_TYPE__TEXT:
+        return getText();
+      case BrowserTestPackage.ACTION_TYPE__OPTION:
+        return getOption();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,8 +267,14 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_TYPE__ARGUMENT:
-        setArgument((String)newValue);
+      case BrowserTestPackage.ACTION_TYPE__VALUE:
+        setValue((org.xtext.browserautomation.mydsl.browserTest.Boolean)newValue);
+        return;
+      case BrowserTestPackage.ACTION_TYPE__TEXT:
+        setText((Entree)newValue);
+        return;
+      case BrowserTestPackage.ACTION_TYPE__OPTION:
+        setOption((Entree)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +290,14 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_TYPE__ARGUMENT:
-        setArgument(ARGUMENT_EDEFAULT);
+      case BrowserTestPackage.ACTION_TYPE__VALUE:
+        setValue(VALUE_EDEFAULT);
+        return;
+      case BrowserTestPackage.ACTION_TYPE__TEXT:
+        setText((Entree)null);
+        return;
+      case BrowserTestPackage.ACTION_TYPE__OPTION:
+        setOption((Entree)null);
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +313,12 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_TYPE__ARGUMENT:
-        return ARGUMENT_EDEFAULT == null ? argument != null : !ARGUMENT_EDEFAULT.equals(argument);
+      case BrowserTestPackage.ACTION_TYPE__VALUE:
+        return value != VALUE_EDEFAULT;
+      case BrowserTestPackage.ACTION_TYPE__TEXT:
+        return text != null;
+      case BrowserTestPackage.ACTION_TYPE__OPTION:
+        return option != null;
     }
     return super.eIsSet(featureID);
   }
@@ -171,8 +334,8 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (argument: ");
-    result.append(argument);
+    result.append(" (value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }

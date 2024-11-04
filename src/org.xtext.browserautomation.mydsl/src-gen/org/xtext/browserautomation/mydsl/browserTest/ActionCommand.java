@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getVar <em>Var</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getCommand <em>Command</em>}</li>
  * </ul>
  *
@@ -25,16 +25,16 @@ import org.eclipse.emf.common.util.EList;
 public interface ActionCommand extends Action
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Var</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.browserautomation.mydsl.browserTest.Variable}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute list.
-   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionCommand_Name()
-   * @model unique="false"
+   * @return the value of the '<em>Var</em>' containment reference list.
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionCommand_Var()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getName();
+  EList<Variable> getVar();
 
   /**
    * Returns the value of the '<em><b>Command</b></em>' containment reference.

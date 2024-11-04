@@ -15,11 +15,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
 import org.xtext.browserautomation.mydsl.browserTest.ActionType;
 import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
+import org.xtext.browserautomation.mydsl.browserTest.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +31,7 @@ import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl#getVar <em>Var</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl#getCommand <em>Command</em>}</li>
  * </ul>
  *
@@ -38,14 +40,14 @@ import org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage;
 public class ActionCommandImpl extends ActionImpl implements ActionCommand
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute list.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getVar()
    * @generated
    * @ordered
    */
-  protected EList<String> name;
+  protected EList<Variable> var;
 
   /**
    * The cached value of the '{@link #getCommand() <em>Command</em>}' containment reference.
@@ -84,13 +86,13 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
    * @generated
    */
   @Override
-  public EList<String> getName()
+  public EList<Variable> getVar()
   {
-    if (name == null)
+    if (var == null)
     {
-      name = new EDataTypeEList<String>(String.class, this, BrowserTestPackage.ACTION_COMMAND__NAME);
+      var = new EObjectContainmentEList<Variable>(Variable.class, this, BrowserTestPackage.ACTION_COMMAND__VAR);
     }
-    return name;
+    return var;
   }
 
   /**
@@ -153,6 +155,8 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
   {
     switch (featureID)
     {
+      case BrowserTestPackage.ACTION_COMMAND__VAR:
+        return ((InternalEList<?>)getVar()).basicRemove(otherEnd, msgs);
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         return basicSetCommand(null, msgs);
     }
@@ -169,8 +173,8 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_COMMAND__NAME:
-        return getName();
+      case BrowserTestPackage.ACTION_COMMAND__VAR:
+        return getVar();
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         return getCommand();
     }
@@ -188,9 +192,9 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_COMMAND__NAME:
-        getName().clear();
-        getName().addAll((Collection<? extends String>)newValue);
+      case BrowserTestPackage.ACTION_COMMAND__VAR:
+        getVar().clear();
+        getVar().addAll((Collection<? extends Variable>)newValue);
         return;
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         setCommand((ActionType)newValue);
@@ -209,8 +213,8 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_COMMAND__NAME:
-        getName().clear();
+      case BrowserTestPackage.ACTION_COMMAND__VAR:
+        getVar().clear();
         return;
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         setCommand((ActionType)null);
@@ -229,29 +233,12 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
   {
     switch (featureID)
     {
-      case BrowserTestPackage.ACTION_COMMAND__NAME:
-        return name != null && !name.isEmpty();
+      case BrowserTestPackage.ACTION_COMMAND__VAR:
+        return var != null && !var.isEmpty();
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         return command != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //ActionCommandImpl
