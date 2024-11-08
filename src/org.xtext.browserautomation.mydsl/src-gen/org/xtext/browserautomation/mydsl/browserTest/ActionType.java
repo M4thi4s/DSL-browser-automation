@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getAction <em>Action</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getText <em>Text</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getOption <em>Option</em>}</li>
@@ -25,6 +26,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ActionType extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Action</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Action</em>' attribute.
+   * @see #setAction(String)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionType_Action()
+   * @model
+   * @generated
+   */
+  String getAction();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getAction <em>Action</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Action</em>' attribute.
+   * @see #getAction()
+   * @generated
+   */
+  void setAction(String value);
+
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.
    * The literals are from the enumeration {@link org.xtext.browserautomation.mydsl.browserTest.Boolean}.

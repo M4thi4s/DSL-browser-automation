@@ -131,7 +131,7 @@ public class SelectLib {
                             }
 
                             ActionLib actionLib = new ActionLib(driver, Duration.ofSeconds(10));
-                            actionLib.highlightElement(labelElement);
+                            actionLib.highlightElement(new SelectInfo(labelElement));
 
                             String forAttribute = labelElement.getAttribute("for");
                             xpath.append("[@id='").append(forAttribute).append("']");

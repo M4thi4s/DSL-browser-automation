@@ -16,10 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getProp <em>Prop</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getAlt <em>Alt</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLink <em>Link</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.Property#getChild <em>Child</em>}</li>
@@ -32,6 +34,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Property extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Prop</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Prop</em>' attribute.
+   * @see #setProp(String)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Prop()
+   * @model
+   * @generated
+   */
+  String getProp();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getProp <em>Prop</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Prop</em>' attribute.
+   * @see #getProp()
+   * @generated
+   */
+  void setProp(String value);
+
   /**
    * Returns the value of the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -119,6 +143,28 @@ public interface Property extends EObject
    * @generated
    */
   void setAlt(Entree value);
+
+  /**
+   * Returns the value of the '<em><b>Link</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Link</em>' containment reference.
+   * @see #setLink(Entree)
+   * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getProperty_Link()
+   * @model containment="true"
+   * @generated
+   */
+  Entree getLink();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLink <em>Link</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Link</em>' containment reference.
+   * @see #getLink()
+   * @generated
+   */
+  void setLink(Entree value);
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.

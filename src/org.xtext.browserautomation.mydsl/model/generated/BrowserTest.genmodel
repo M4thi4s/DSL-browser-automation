@@ -12,7 +12,7 @@
       <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/TEXT"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/CHECKBOX"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/DIV"/>
-      <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/TITLE"/>
+      <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/SELECT"/>
       <genEnumLiterals ecoreEnumLiteral="BrowserTest.ecore#//Type/CONTENT"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="BrowserTest.ecore#//Boolean">
@@ -53,10 +53,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//Entree/accessor"/>
     </genClasses>
     <genClasses ecoreClass="BrowserTest.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//Property/prop"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//Property/content"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//Property/label"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//Property/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//Property/alt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//Property/link"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//Property/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//Property/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//Property/child"/>
@@ -67,6 +69,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//ActionCommand/command"/>
     </genClasses>
     <genClasses ecoreClass="BrowserTest.ecore#//ActionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//ActionType/action"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserTest.ecore#//ActionType/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//ActionType/text"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserTest.ecore#//ActionType/option"/>

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class ActionLib {
 
@@ -31,11 +32,11 @@ public class ActionLib {
     }
 
     // [ACTION] Click on an element
-    public void clickElement(WebElement element) {
-        if (element != null) {
+    public void clickElement(SelectInfo select) {
+        if (select.element != null) {
             try {
                 Thread.sleep(1000);
-                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", select.element);
             } catch (Exception e) {
                 System.out.println("Failed to click element: " + e.getMessage());
             }
@@ -45,11 +46,11 @@ public class ActionLib {
     }
 
     // [ACTION] Set text of an input field
-    public void setText(WebElement element, String text) {
-        if (element != null) {
+    public void setText(SelectInfo select, String text) {
+        if (select != null) {
             try {
-                element.clear();
-                element.sendKeys(text);
+                select.element.clear();
+                select.element.sendKeys(text);
             } catch (Exception e) {
                 System.out.println("Failed to set text: " + e.getMessage());
             }
@@ -59,9 +60,9 @@ public class ActionLib {
     }
 
     // [ACTION] Check or uncheck a checkbox
-    public void checkCheckbox(WebElement checkbox, boolean check) {
-        if (checkbox != null && checkbox.isDisplayed()) {
-            boolean isSelected = checkbox.isSelected();
+    public void checkCheckbox(SelectInfo checkbox, boolean check) {
+        if (checkbox != null && checkbox.element.isDisplayed()) {
+            boolean isSelected = checkbox.element.isSelected();
             if ((check && !isSelected) || (!check && isSelected)) {
                 clickElement(checkbox);
             }
@@ -70,11 +71,21 @@ public class ActionLib {
         }
     }
 
-    public void highlightElement(WebElement element) {
-        if (element != null) {
+    public void checkCheckbox(List<SelectInfo> checkboxes, boolean check) {
+        if (checkboxes != null) {
+            for (SelectInfo checkbox : checkboxes) {
+                checkCheckbox(checkbox, check);
+            }
+        } else {
+            System.out.println("No checkboxes found.");
+        }
+    }
+
+    public void highlightElement(SelectInfo select) {
+        if (select != null) {
             try {
-                ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", element);
-                ((JavascriptExecutor) driver).executeScript("arguments[0].style.color='red'", element);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", select.element);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].style.color='red'", select.element);
             } catch (Exception e) {
                 System.out.println("Failed to highlight element: " + e.getMessage());
             }
@@ -84,11 +95,11 @@ public class ActionLib {
     }
 
     // [ACTION] Select an option from a dropdown by visible text
-    public void selectOption(WebElement dropdown, String visibleText) {
+    public void selectOption(SelectInfo dropdown, String visibleText) {
         if (dropdown != null) {
             try {
-                Select select = new Select(dropdown);
-                ((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'", dropdown);
+                Select select = new Select(dropdown.element);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block'", dropdown.element);
                 select.selectByVisibleText(visibleText);
             } catch (Exception e) {
                 System.out.println("Failed to select option '" + visibleText + "': " + e.getMessage());

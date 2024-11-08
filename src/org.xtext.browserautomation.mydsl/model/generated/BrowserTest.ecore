@@ -33,6 +33,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="accessor" eType="#//Accessor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Property">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prop" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//Entree"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Entree"
@@ -41,6 +42,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alt" eType="#//Entree"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" eType="#//Entree"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="child" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -48,12 +51,13 @@
         eType="#//Property" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionCommand" eSuperTypes="#//Action">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="var" upperBound="-1" eType="#//Variable"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//Variable"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="command" eType="#//ActionType"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Boolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="text" eType="#//Entree"
         containment="true"/>
@@ -70,7 +74,7 @@
     <eLiterals name="TEXT" value="2" literal="TEXT"/>
     <eLiterals name="CHECKBOX" value="3" literal="CHECKBOX"/>
     <eLiterals name="DIV" value="4" literal="DIV"/>
-    <eLiterals name="TITLE" value="5" literal="TITLE"/>
+    <eLiterals name="SELECT" value="5" literal="SELECT"/>
     <eLiterals name="CONTENT" value="6" literal="CONTENT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Boolean">

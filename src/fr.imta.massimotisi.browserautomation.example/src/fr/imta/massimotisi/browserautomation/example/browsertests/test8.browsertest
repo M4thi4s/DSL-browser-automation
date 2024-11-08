@@ -11,7 +11,7 @@
 	[SELECT] $searchField
 		[LABEL] "Rechercher"
 		[TYPE] $INPUT
-        [NTH-CHILD] 8
+        [NTH-CHILD] 2
 	[ACTION] $searchField
 		[SET-TEXT] $secondNewsLink.CONTENT
 	[SELECT] $btn
@@ -20,7 +20,8 @@
 	[ACTION] $btn
 		[CLICK]
     [SELECT] $link
-        [LINK] $secondNews.LINK
+        [LINK] $secondNewsLink.LINK
         [TYPE] $LINK
         [NTH-CHILD] 1
 	[TEST] $link
+  

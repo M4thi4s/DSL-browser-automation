@@ -28,30 +28,32 @@ Entree:
 	| '$'accessor=Accessor;
 
 Property:
-    '[CONTENT]' 			content=Entree |
-    '[LABEL]' 				label=Entree |
-    '[VALUE]' 				value=Entree |
-    '[ALT]' 				alt=Entree |
-    '[TYPE]' 				'$'type=Type |
-    '[NAME]' 				name=STRING |
-    '[NTH-CHILD]' 			child=INT |
-	{Property} '[PARENT]'	'{' subProperties+=Property* '}';
+    prop='[CONTENT]' 			content=Entree |
+    prop='[LABEL]' 				label=Entree |
+    prop='[VALUE]' 				value=Entree |
+    prop='[ALT]' 				alt=Entree |
+    prop='[LINK]'				link=Entree |
+    prop='[TYPE]' 				'$'type=Type |
+    prop='[NAME]' 				name=STRING |
+    prop='[NTH-CHILD]' 			child=INT |
+	{Property} prop='[PARENT]'	'{' subProperties+=Property* '}';
 
 ActionCommand:
-    '[ACTION]' var+=Variable+
+    '[ACTION]' var=Variable
     	command=ActionType;
 
 ActionType:
-    {ActionType} 	'[CLICK]' |
-    '[CHECK]' 		'$'value=Boolean |
-    '[SET-TEXT]'	text=Entree |
-    '[CHOOSE]' 		option=Entree;
+    {ActionType} 	
+    action='[CLICK]' 		|
+    action='[CHECK]' 		'$'value=Boolean |
+    action='[SET-TEXT]'	text=Entree |
+    action='[CHOOSE]' 		option=Entree;
     
 Test:
     '[TEST]' var=Variable;
 
 enum Type:
-    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE | CONTENT;
+    LINK | INPUT | TEXT | CHECKBOX | DIV | SELECT | CONTENT;
 
 enum Boolean:
 	FALSE | TRUE;

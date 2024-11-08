@@ -54,7 +54,7 @@ public class Test4 {
 
         //             [ACTION] $field
         //                [SET-TEXT] "Donald Trumpe"
-        actionLib.setText(field.element, "Donald Trumpe");
+        actionLib.setText(field, "Donald Trumpe");
 
         //             [SELECT] $btn
         //                [VALUE] "Appliquer les filtres"
@@ -69,7 +69,7 @@ public class Test4 {
 
         //             [ACTION] $btn
         //                [CLICK]
-        actionLib.clickElement(btn.element);
+        actionLib.clickElement(btn);
 
         //             [SELECT] $result
         //                [CONTENT] "Aucun résultat ne correspond à votre recherche"
@@ -82,7 +82,7 @@ public class Test4 {
 
         SelectInfo result = selectLib.selectElement(select_result);
 
-        // [ASSERT] $result
+        // [TEST] $result
         assertLib.assertElementExists(result.element, "$result");
 
         driver.quit();

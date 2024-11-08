@@ -1,5 +1,5 @@
 [TASK] "Test 2"
-    [GOTO] http://www.imt-atlantique.fr/fr
+    [GOTO] "http://www.imt-atlantique.fr/fr"
     [SELECT] $lien1
         [CONTENT] "Toutes les actualités"
         [TYPE] $LINK
@@ -10,4 +10,4 @@
         [CONTENT] "Accueil"
         [TYPE] $LINK
         [NTH-CHILD] 1
-    [ASSERT] $lien2
+    [TEST] $lien2

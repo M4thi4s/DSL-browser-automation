@@ -24,6 +24,7 @@ import org.xtext.browserautomation.mydsl.browserTest.Entree;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getAction <em>Action</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getText <em>Text</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionTypeImpl#getOption <em>Option</em>}</li>
@@ -33,6 +34,26 @@ import org.xtext.browserautomation.mydsl.browserTest.Entree;
  */
 public class ActionTypeImpl extends MinimalEObjectImpl.Container implements ActionType
 {
+  /**
+   * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAction()
+   * @generated
+   * @ordered
+   */
+  protected static final String ACTION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAction()
+   * @generated
+   * @ordered
+   */
+  protected String action = ACTION_EDEFAULT;
+
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -92,6 +113,31 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   protected EClass eStaticClass()
   {
     return BrowserTestPackage.Literals.ACTION_TYPE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getAction()
+  {
+    return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setAction(String newAction)
+  {
+    String oldAction = action;
+    action = newAction;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_TYPE__ACTION, oldAction, action));
   }
 
   /**
@@ -247,6 +293,8 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
+      case BrowserTestPackage.ACTION_TYPE__ACTION:
+        return getAction();
       case BrowserTestPackage.ACTION_TYPE__VALUE:
         return getValue();
       case BrowserTestPackage.ACTION_TYPE__TEXT:
@@ -267,6 +315,9 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
+      case BrowserTestPackage.ACTION_TYPE__ACTION:
+        setAction((String)newValue);
+        return;
       case BrowserTestPackage.ACTION_TYPE__VALUE:
         setValue((org.xtext.browserautomation.mydsl.browserTest.Boolean)newValue);
         return;
@@ -290,6 +341,9 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
+      case BrowserTestPackage.ACTION_TYPE__ACTION:
+        setAction(ACTION_EDEFAULT);
+        return;
       case BrowserTestPackage.ACTION_TYPE__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
@@ -313,6 +367,8 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
   {
     switch (featureID)
     {
+      case BrowserTestPackage.ACTION_TYPE__ACTION:
+        return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
       case BrowserTestPackage.ACTION_TYPE__VALUE:
         return value != VALUE_EDEFAULT;
       case BrowserTestPackage.ACTION_TYPE__TEXT:
@@ -334,7 +390,9 @@ public class ActionTypeImpl extends MinimalEObjectImpl.Container implements Acti
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (value: ");
+    result.append(" (action: ");
+    result.append(action);
+    result.append(", value: ");
     result.append(value);
     result.append(')');
     return result.toString();

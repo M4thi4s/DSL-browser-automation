@@ -3,7 +3,6 @@
  */
 package org.xtext.browserautomation.mydsl.browserTest;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,16 +24,26 @@ import org.eclipse.emf.common.util.EList;
 public interface ActionCommand extends Action
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.browserautomation.mydsl.browserTest.Variable}.
+   * Returns the value of the '<em><b>Var</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' containment reference list.
+   * @return the value of the '<em>Var</em>' containment reference.
+   * @see #setVar(Variable)
    * @see org.xtext.browserautomation.mydsl.browserTest.BrowserTestPackage#getActionCommand_Var()
    * @model containment="true"
    * @generated
    */
-  EList<Variable> getVar();
+  Variable getVar();
+
+  /**
+   * Sets the value of the '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getVar <em>Var</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Var</em>' containment reference.
+   * @see #getVar()
+   * @generated
+   */
+  void setVar(Variable value);
 
   /**
    * Returns the value of the '<em><b>Command</b></em>' containment reference.

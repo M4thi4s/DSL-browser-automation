@@ -22,7 +22,7 @@ public class Test2 {
                 [CONTENT] "Accueil"
                 [TYPE] $LINK
                 [NTH-CHILD] 1
-            [ASSERT] $lien2
+            [TEST] $lien2
         */
 
         // [TASK] "Test 2"
@@ -51,7 +51,7 @@ public class Test2 {
 
         // [ACTION] $lien1
         //      [CLICK]
-        actionLib.clickElement(lien1.element);
+        actionLib.clickElement(lien1);
 
         // [SELECT] $lien2
         //      [CONTENT] "Accueil"
@@ -65,7 +65,7 @@ public class Test2 {
 
         SelectInfo lien2 = selectLib.selectElement(select_lien2);
 
-        // [ASSERT] $lien2
+        // [TEST] $lien2
         assertLib.assertElementExists(lien2.element, "$lien2");
 
         driver.quit();

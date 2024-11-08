@@ -91,7 +91,7 @@ public class Test8 {
 
         //	[ACTION] $searchField
         //		[SET-TEXT] $secondNewsLink.CONTENT
-        actionLib.setText(searchField.element, secondNewsLink.content);
+        actionLib.setText(searchField, secondNewsLink.CONTENT);
 
         //	[SELECT] $btn
         //		[VALUE] "Appliquer les filtres"
@@ -106,13 +106,13 @@ public class Test8 {
 
         //	[ACTION] $btn
         //		[CLICK]
-        actionLib.clickElement(btn.element);
+        actionLib.clickElement(btn);
 
         //	[SELECT] $link
         //		[LINK] $secondNews.LINK
         //      [NTH-CHILD] 1
         SelectFilterProperty select_link = new SelectFilterProperty();
-        select_link.filterValue = secondNewsLink.link;
+        select_link.filterValue = secondNewsLink.LINK;
         select_link.filterBy = FilterBy.LINK;
         select_link.nthChild = 1;
 

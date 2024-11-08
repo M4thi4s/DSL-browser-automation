@@ -67,7 +67,7 @@ public class Test5 {
         //             [ACTION] $checkbox
         //                [CHECK] $FALSE
         for (SelectInfo el_checkbox : checkbox) {
-            actionLib.checkCheckbox(el_checkbox.element, false);
+            actionLib.checkCheckbox(el_checkbox, false);
         }
 
         //             [SELECT] $checkbox1
@@ -83,7 +83,7 @@ public class Test5 {
         SelectInfo checkbox1 = selectLib.selectElement(select_checkbox1);
 
         //             [SELECT] $checkbox2
-        //                [NAME] "A domicile"
+        //                [LABEL] "A domicile"
         //                [TYPE] $CHECKBOX
         //                [NTH-CHILD] 1
         SelectFilterProperty select_checkbox2 = new SelectFilterProperty();
@@ -95,7 +95,7 @@ public class Test5 {
         SelectInfo checkbox2 = selectLib.selectElement(select_checkbox2);
 
         //             [SELECT] $checkbox3
-        //                [NAME] "Temps plein"
+        //                [LABEL] "Temps plein"
         //                [TYPE] $CHECKBOX
         //                [NTH-CHILD] 1
         SelectFilterProperty select_checkbox3 = new SelectFilterProperty();
@@ -108,9 +108,9 @@ public class Test5 {
 
         //             [ACTION] $checkbox1 $checkbox2 $checkbox3
         //                [CHECK] $TRUE
-        actionLib.checkCheckbox(checkbox1.element, true);
-        actionLib.checkCheckbox(checkbox2.element, true);
-        actionLib.checkCheckbox(checkbox3.element, true);
+        actionLib.checkCheckbox(checkbox1, true);
+        actionLib.checkCheckbox(checkbox2, true);
+        actionLib.checkCheckbox(checkbox3, true);
 
         //             [SELECT] $btn
         //                [VALUE] "Appliquer les critères"
@@ -125,7 +125,7 @@ public class Test5 {
 
         //             [ACTION] $btn
         //                [CLICK]
-        actionLib.clickElement(btn.element);
+        actionLib.clickElement(btn);
 
         //             [SELECT] $result
         //                [TYPE] $TEXT

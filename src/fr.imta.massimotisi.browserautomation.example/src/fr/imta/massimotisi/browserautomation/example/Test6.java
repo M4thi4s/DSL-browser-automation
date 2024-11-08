@@ -61,7 +61,7 @@ public class Test6 {
 
         //             [ACTION] $field
         //                [SET-TEXT] "2006"
-        actionLib.setText(field.element, "2006");
+        actionLib.setText(field, "2006");
 
         //             [SELECT] $select
         //                [LABEL] "Période de publication"
@@ -77,7 +77,7 @@ public class Test6 {
 
         //             [ACTION] $select
         //                [CHOOSE] "Le mois dernier"
-        actionLib.selectOption(select.element, "Le mois dernier");
+        actionLib.selectOption(select, "Le mois dernier");
 
         //             [SELECT] $btn
         //                [VALUE] "Appliquer les filtres"
@@ -92,7 +92,7 @@ public class Test6 {
 
         //             [ACTION] $btn
         //                [CLICK]
-        actionLib.clickElement(btn.element);
+        actionLib.clickElement(btn);
 
         //             [SELECT] $result
         //                [CONTENT] "Aucun résultat ne correspond à votre recherche"
@@ -105,7 +105,7 @@ public class Test6 {
 
         SelectInfo result = selectLib.selectElement(select_result);
 
-        // [ASSERT] $result
+        // [TEST] $result
         assertLib.assertElementExists(result.element, "$result");
 
         driver.quit();

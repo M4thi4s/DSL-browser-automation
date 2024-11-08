@@ -3,20 +3,13 @@
  */
 package org.xtext.browserautomation.mydsl.browserTest.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.browserautomation.mydsl.browserTest.ActionCommand;
 import org.xtext.browserautomation.mydsl.browserTest.ActionType;
@@ -40,14 +33,14 @@ import org.xtext.browserautomation.mydsl.browserTest.Variable;
 public class ActionCommandImpl extends ActionImpl implements ActionCommand
 {
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference list.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getVar()
    * @generated
    * @ordered
    */
-  protected EList<Variable> var;
+  protected Variable var;
 
   /**
    * The cached value of the '{@link #getCommand() <em>Command</em>}' containment reference.
@@ -86,13 +79,48 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
    * @generated
    */
   @Override
-  public EList<Variable> getVar()
+  public Variable getVar()
   {
-    if (var == null)
-    {
-      var = new EObjectContainmentEList<Variable>(Variable.class, this, BrowserTestPackage.ACTION_COMMAND__VAR);
-    }
     return var;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar(Variable newVar, NotificationChain msgs)
+  {
+    Variable oldVar = var;
+    var = newVar;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_COMMAND__VAR, oldVar, newVar);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setVar(Variable newVar)
+  {
+    if (newVar != var)
+    {
+      NotificationChain msgs = null;
+      if (var != null)
+        msgs = ((InternalEObject)var).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_COMMAND__VAR, null, msgs);
+      if (newVar != null)
+        msgs = ((InternalEObject)newVar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.ACTION_COMMAND__VAR, null, msgs);
+      msgs = basicSetVar(newVar, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.ACTION_COMMAND__VAR, newVar, newVar));
   }
 
   /**
@@ -156,7 +184,7 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
     switch (featureID)
     {
       case BrowserTestPackage.ACTION_COMMAND__VAR:
-        return ((InternalEList<?>)getVar()).basicRemove(otherEnd, msgs);
+        return basicSetVar(null, msgs);
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         return basicSetCommand(null, msgs);
     }
@@ -186,15 +214,13 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case BrowserTestPackage.ACTION_COMMAND__VAR:
-        getVar().clear();
-        getVar().addAll((Collection<? extends Variable>)newValue);
+        setVar((Variable)newValue);
         return;
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         setCommand((ActionType)newValue);
@@ -214,7 +240,7 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
     switch (featureID)
     {
       case BrowserTestPackage.ACTION_COMMAND__VAR:
-        getVar().clear();
+        setVar((Variable)null);
         return;
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         setCommand((ActionType)null);
@@ -234,7 +260,7 @@ public class ActionCommandImpl extends ActionImpl implements ActionCommand
     switch (featureID)
     {
       case BrowserTestPackage.ACTION_COMMAND__VAR:
-        return var != null && !var.isEmpty();
+        return var != null;
       case BrowserTestPackage.ACTION_COMMAND__COMMAND:
         return command != null;
     }

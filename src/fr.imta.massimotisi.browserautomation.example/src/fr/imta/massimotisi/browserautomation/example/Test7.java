@@ -69,12 +69,12 @@ public class Test7 {
 
         //             [ACTION] $firstNewsLink
         //                [CLICK]
-        actionLib.clickElement(firstNewsLink.element);
+        actionLib.clickElement(firstNewsLink);
 
         //             [SELECT] $result
         //                [CONTENT] $firstNewsLink.CONTENT
         SelectFilterProperty select_result = new SelectFilterProperty();
-        select_result.filterValue = firstNewsLink.content; // Use content of the clicked link
+        select_result.filterValue = firstNewsLink.CONTENT; // Use content of the clicked link
         select_result.filterBy = fr.imta.massimotisi.browserautomation.lib.FilterBy.TEXT;
         select_result.elementType = fr.imta.massimotisi.browserautomation.lib.FilterElementType.ANY;
 

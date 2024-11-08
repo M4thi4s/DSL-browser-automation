@@ -83,11 +83,20 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     ActionCommand returns ActionCommand
 	 *
 	 * Constraint:
-	 *     (var+=Variable+ command=ActionType)
+	 *     (var=Variable command=ActionType)
 	 * </pre>
 	 */
 	protected void sequence_ActionCommand(ISerializationContext context, ActionCommand semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, BrowserTestPackage.Literals.ACTION_COMMAND__VAR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserTestPackage.Literals.ACTION_COMMAND__VAR));
+			if (transientValues.isValueTransient(semanticObject, BrowserTestPackage.Literals.ACTION_COMMAND__COMMAND) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserTestPackage.Literals.ACTION_COMMAND__COMMAND));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getActionCommandAccess().getVarVariableParserRuleCall_1_0(), semanticObject.getVar());
+		feeder.accept(grammarAccess.getActionCommandAccess().getCommandActionTypeParserRuleCall_2_0(), semanticObject.getCommand());
+		feeder.finish();
 	}
 	
 	
@@ -97,7 +106,7 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     ActionType returns ActionType
 	 *
 	 * Constraint:
-	 *     (value=Boolean | text=Entree | option=Entree)
+	 *     (action='[CLICK]' | (action='[CHECK]' value=Boolean) | (action='[SET-TEXT]' text=Entree) | (action='[CHOOSE]' option=Entree))
 	 * </pre>
 	 */
 	protected void sequence_ActionType(ISerializationContext context, ActionType semanticObject) {
@@ -147,15 +156,16 @@ public class BrowserTestSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *
 	 * Constraint:
 	 *     (
-	 *         content=Entree | 
-	 *         label=Entree | 
-	 *         value=Entree | 
-	 *         alt=Entree | 
-	 *         type=Type | 
-	 *         name=STRING | 
-	 *         child=INT | 
-	 *         subProperties+=Property+
-	 *     )?
+	 *         (prop='[CONTENT]' content=Entree) | 
+	 *         (prop='[LABEL]' label=Entree) | 
+	 *         (prop='[VALUE]' value=Entree) | 
+	 *         (prop='[ALT]' alt=Entree) | 
+	 *         (prop='[LINK]' link=Entree) | 
+	 *         (prop='[TYPE]' type=Type) | 
+	 *         (prop='[NAME]' name=STRING) | 
+	 *         (prop='[NTH-CHILD]' child=INT) | 
+	 *         (prop='[PARENT]' subProperties+=Property*)
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_Property(ISerializationContext context, Property semanticObject) {

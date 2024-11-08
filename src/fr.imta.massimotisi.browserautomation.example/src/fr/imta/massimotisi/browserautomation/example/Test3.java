@@ -56,7 +56,7 @@ public class Test3 {
 
         //             [ACTION] $toutesLesActus
         //                [CLICK]
-        actionLib.clickElement(toutesLesActus.element);
+        actionLib.clickElement(toutesLesActus);
 
         //             [SELECT] $image
         //                [ALT] "Accueil"
@@ -70,7 +70,7 @@ public class Test3 {
 
         //             [ACTION] $image
         //                [CLICK]
-        actionLib.clickElement(image.element);
+        actionLib.clickElement(image);
 
         //             [SELECT] $toutesLesActus2
         //                [CONTENT] "Toutes les actualités"
@@ -84,7 +84,7 @@ public class Test3 {
 
         SelectInfo toutesLesActus2 = selectLib.selectElement(select_toutesLesActus2);
 
-        // [ASSERT] $toutesLesActus2
+        // [TEST] $toutesLesActus2
         assertLib.assertElementExists(toutesLesActus2.element, "$toutesLesActus2");
 
         driver.quit();

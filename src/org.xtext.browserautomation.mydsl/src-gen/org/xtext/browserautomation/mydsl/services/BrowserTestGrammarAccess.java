@@ -266,68 +266,86 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.browserautomation.mydsl.BrowserTest.Property");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cCONTENTKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cPropAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final Keyword cPropCONTENTKeyword_0_0_0 = (Keyword)cPropAssignment_0_0.eContents().get(0);
 		private final Assignment cContentAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
 		private final RuleCall cContentEntreeParserRuleCall_0_1_0 = (RuleCall)cContentAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cLABELKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cPropAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cPropLABELKeyword_1_0_0 = (Keyword)cPropAssignment_1_0.eContents().get(0);
 		private final Assignment cLabelAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cLabelEntreeParserRuleCall_1_1_0 = (RuleCall)cLabelAssignment_1_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cVALUEKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cPropAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cPropVALUEKeyword_2_0_0 = (Keyword)cPropAssignment_2_0.eContents().get(0);
 		private final Assignment cValueAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cValueEntreeParserRuleCall_2_1_0 = (RuleCall)cValueAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cALTKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPropAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cPropALTKeyword_3_0_0 = (Keyword)cPropAssignment_3_0.eContents().get(0);
 		private final Assignment cAltAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cAltEntreeParserRuleCall_3_1_0 = (RuleCall)cAltAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Keyword cTYPEKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cDollarSignKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cTypeAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cTypeTypeEnumRuleCall_4_2_0 = (RuleCall)cTypeAssignment_4_2.eContents().get(0);
+		private final Assignment cPropAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
+		private final Keyword cPropLINKKeyword_4_0_0 = (Keyword)cPropAssignment_4_0.eContents().get(0);
+		private final Assignment cLinkAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cLinkEntreeParserRuleCall_4_1_0 = (RuleCall)cLinkAssignment_4_1.eContents().get(0);
 		private final Group cGroup_5 = (Group)cAlternatives.eContents().get(5);
-		private final Keyword cNAMEKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cNameAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cNameAssignment_5_1.eContents().get(0);
+		private final Assignment cPropAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final Keyword cPropTYPEKeyword_5_0_0 = (Keyword)cPropAssignment_5_0.eContents().get(0);
+		private final Keyword cDollarSignKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cTypeAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cTypeTypeEnumRuleCall_5_2_0 = (RuleCall)cTypeAssignment_5_2.eContents().get(0);
 		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
-		private final Keyword cNTHCHILDKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cChildAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cChildINTTerminalRuleCall_6_1_0 = (RuleCall)cChildAssignment_6_1.eContents().get(0);
+		private final Assignment cPropAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
+		private final Keyword cPropNAMEKeyword_6_0_0 = (Keyword)cPropAssignment_6_0.eContents().get(0);
+		private final Assignment cNameAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cNameSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cNameAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cAlternatives.eContents().get(7);
-		private final Action cPropertyAction_7_0 = (Action)cGroup_7.eContents().get(0);
-		private final Keyword cPARENTKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
-		private final Assignment cSubPropertiesAssignment_7_3 = (Assignment)cGroup_7.eContents().get(3);
-		private final RuleCall cSubPropertiesPropertyParserRuleCall_7_3_0 = (RuleCall)cSubPropertiesAssignment_7_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
+		private final Assignment cPropAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
+		private final Keyword cPropNTHCHILDKeyword_7_0_0 = (Keyword)cPropAssignment_7_0.eContents().get(0);
+		private final Assignment cChildAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cChildINTTerminalRuleCall_7_1_0 = (RuleCall)cChildAssignment_7_1.eContents().get(0);
+		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
+		private final Action cPropertyAction_8_0 = (Action)cGroup_8.eContents().get(0);
+		private final Assignment cPropAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final Keyword cPropPARENTKeyword_8_1_0 = (Keyword)cPropAssignment_8_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
+		private final Assignment cSubPropertiesAssignment_8_3 = (Assignment)cGroup_8.eContents().get(3);
+		private final RuleCall cSubPropertiesPropertyParserRuleCall_8_3_0 = (RuleCall)cSubPropertiesAssignment_8_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		
 		//Property:
-		//    '[CONTENT]'     content=Entree |
-		//    '[LABEL]'         label=Entree |
-		//    '[VALUE]'         value=Entree |
-		//    '[ALT]'         alt=Entree |
-		//    '[TYPE]'         '$'type=Type |
-		//    '[NAME]'         name=STRING |
-		//    '[NTH-CHILD]'     child=INT |
-		//    {Property} '[PARENT]'         '{' subProperties+=Property* '}';
+		//    prop='[CONTENT]'             content=Entree |
+		//    prop='[LABEL]'                 label=Entree |
+		//    prop='[VALUE]'                 value=Entree |
+		//    prop='[ALT]'                 alt=Entree |
+		//    prop='[LINK]'                link=Entree |
+		//    prop='[TYPE]'                 '$'type=Type |
+		//    prop='[NAME]'                 name=STRING |
+		//    prop='[NTH-CHILD]'             child=INT |
+		//    {Property} prop='[PARENT]'    '{' subProperties+=Property* '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'[CONTENT]'     content=Entree |
-		//'[LABEL]'         label=Entree |
-		//'[VALUE]'         value=Entree |
-		//'[ALT]'         alt=Entree |
-		//'[TYPE]'         '$'type=Type |
-		//'[NAME]'         name=STRING |
-		//'[NTH-CHILD]'     child=INT |
-		//{Property} '[PARENT]'         '{' subProperties+=Property* '}'
+		//prop='[CONTENT]'             content=Entree |
+		//prop='[LABEL]'                 label=Entree |
+		//prop='[VALUE]'                 value=Entree |
+		//prop='[ALT]'                 alt=Entree |
+		//prop='[LINK]'                link=Entree |
+		//prop='[TYPE]'                 '$'type=Type |
+		//prop='[NAME]'                 name=STRING |
+		//prop='[NTH-CHILD]'             child=INT |
+		//{Property} prop='[PARENT]'    '{' subProperties+=Property* '}'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'[CONTENT]' 	content=Entree
+		//prop='[CONTENT]' 			content=Entree
 		public Group getGroup_0() { return cGroup_0; }
 		
+		//prop='[CONTENT]'
+		public Assignment getPropAssignment_0_0() { return cPropAssignment_0_0; }
+		
 		//'[CONTENT]'
-		public Keyword getCONTENTKeyword_0_0() { return cCONTENTKeyword_0_0; }
+		public Keyword getPropCONTENTKeyword_0_0_0() { return cPropCONTENTKeyword_0_0_0; }
 		
 		//content=Entree
 		public Assignment getContentAssignment_0_1() { return cContentAssignment_0_1; }
@@ -335,11 +353,14 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Entree
 		public RuleCall getContentEntreeParserRuleCall_0_1_0() { return cContentEntreeParserRuleCall_0_1_0; }
 		
-		//'[LABEL]' 		label=Entree
+		//prop='[LABEL]' 				label=Entree
 		public Group getGroup_1() { return cGroup_1; }
 		
+		//prop='[LABEL]'
+		public Assignment getPropAssignment_1_0() { return cPropAssignment_1_0; }
+		
 		//'[LABEL]'
-		public Keyword getLABELKeyword_1_0() { return cLABELKeyword_1_0; }
+		public Keyword getPropLABELKeyword_1_0_0() { return cPropLABELKeyword_1_0_0; }
 		
 		//label=Entree
 		public Assignment getLabelAssignment_1_1() { return cLabelAssignment_1_1; }
@@ -347,11 +368,14 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Entree
 		public RuleCall getLabelEntreeParserRuleCall_1_1_0() { return cLabelEntreeParserRuleCall_1_1_0; }
 		
-		//'[VALUE]' 		value=Entree
+		//prop='[VALUE]' 				value=Entree
 		public Group getGroup_2() { return cGroup_2; }
 		
+		//prop='[VALUE]'
+		public Assignment getPropAssignment_2_0() { return cPropAssignment_2_0; }
+		
 		//'[VALUE]'
-		public Keyword getVALUEKeyword_2_0() { return cVALUEKeyword_2_0; }
+		public Keyword getPropVALUEKeyword_2_0_0() { return cPropVALUEKeyword_2_0_0; }
 		
 		//value=Entree
 		public Assignment getValueAssignment_2_1() { return cValueAssignment_2_1; }
@@ -359,11 +383,14 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Entree
 		public RuleCall getValueEntreeParserRuleCall_2_1_0() { return cValueEntreeParserRuleCall_2_1_0; }
 		
-		//'[ALT]' 		alt=Entree
+		//prop='[ALT]' 				alt=Entree
 		public Group getGroup_3() { return cGroup_3; }
 		
+		//prop='[ALT]'
+		public Assignment getPropAssignment_3_0() { return cPropAssignment_3_0; }
+		
 		//'[ALT]'
-		public Keyword getALTKeyword_3_0() { return cALTKeyword_3_0; }
+		public Keyword getPropALTKeyword_3_0_0() { return cPropALTKeyword_3_0_0; }
 		
 		//alt=Entree
 		public Assignment getAltAssignment_3_1() { return cAltAssignment_3_1; }
@@ -371,65 +398,92 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Entree
 		public RuleCall getAltEntreeParserRuleCall_3_1_0() { return cAltEntreeParserRuleCall_3_1_0; }
 		
-		//'[TYPE]' 		'$'type=Type
+		//prop='[LINK]'				link=Entree
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'[TYPE]'
-		public Keyword getTYPEKeyword_4_0() { return cTYPEKeyword_4_0; }
+		//prop='[LINK]'
+		public Assignment getPropAssignment_4_0() { return cPropAssignment_4_0; }
 		
-		//'$'
-		public Keyword getDollarSignKeyword_4_1() { return cDollarSignKeyword_4_1; }
+		//'[LINK]'
+		public Keyword getPropLINKKeyword_4_0_0() { return cPropLINKKeyword_4_0_0; }
 		
-		//type=Type
-		public Assignment getTypeAssignment_4_2() { return cTypeAssignment_4_2; }
+		//link=Entree
+		public Assignment getLinkAssignment_4_1() { return cLinkAssignment_4_1; }
 		
-		//Type
-		public RuleCall getTypeTypeEnumRuleCall_4_2_0() { return cTypeTypeEnumRuleCall_4_2_0; }
+		//Entree
+		public RuleCall getLinkEntreeParserRuleCall_4_1_0() { return cLinkEntreeParserRuleCall_4_1_0; }
 		
-		//'[NAME]' 		name=STRING
+		//prop='[TYPE]' 				'$'type=Type
 		public Group getGroup_5() { return cGroup_5; }
 		
-		//'[NAME]'
-		public Keyword getNAMEKeyword_5_0() { return cNAMEKeyword_5_0; }
+		//prop='[TYPE]'
+		public Assignment getPropAssignment_5_0() { return cPropAssignment_5_0; }
 		
-		//name=STRING
-		public Assignment getNameAssignment_5_1() { return cNameAssignment_5_1; }
+		//'[TYPE]'
+		public Keyword getPropTYPEKeyword_5_0_0() { return cPropTYPEKeyword_5_0_0; }
 		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_5_1_0() { return cNameSTRINGTerminalRuleCall_5_1_0; }
+		//'$'
+		public Keyword getDollarSignKeyword_5_1() { return cDollarSignKeyword_5_1; }
 		
-		//'[NTH-CHILD]' 	child=INT
+		//type=Type
+		public Assignment getTypeAssignment_5_2() { return cTypeAssignment_5_2; }
+		
+		//Type
+		public RuleCall getTypeTypeEnumRuleCall_5_2_0() { return cTypeTypeEnumRuleCall_5_2_0; }
+		
+		//prop='[NAME]' 				name=STRING
 		public Group getGroup_6() { return cGroup_6; }
 		
-		//'[NTH-CHILD]'
-		public Keyword getNTHCHILDKeyword_6_0() { return cNTHCHILDKeyword_6_0; }
+		//prop='[NAME]'
+		public Assignment getPropAssignment_6_0() { return cPropAssignment_6_0; }
 		
-		//child=INT
-		public Assignment getChildAssignment_6_1() { return cChildAssignment_6_1; }
+		//'[NAME]'
+		public Keyword getPropNAMEKeyword_6_0_0() { return cPropNAMEKeyword_6_0_0; }
 		
-		//INT
-		public RuleCall getChildINTTerminalRuleCall_6_1_0() { return cChildINTTerminalRuleCall_6_1_0; }
+		//name=STRING
+		public Assignment getNameAssignment_6_1() { return cNameAssignment_6_1; }
 		
-		//{Property} '[PARENT]' 		'{' subProperties+=Property* '}'
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_6_1_0() { return cNameSTRINGTerminalRuleCall_6_1_0; }
+		
+		//prop='[NTH-CHILD]' 			child=INT
 		public Group getGroup_7() { return cGroup_7; }
 		
+		//prop='[NTH-CHILD]'
+		public Assignment getPropAssignment_7_0() { return cPropAssignment_7_0; }
+		
+		//'[NTH-CHILD]'
+		public Keyword getPropNTHCHILDKeyword_7_0_0() { return cPropNTHCHILDKeyword_7_0_0; }
+		
+		//child=INT
+		public Assignment getChildAssignment_7_1() { return cChildAssignment_7_1; }
+		
+		//INT
+		public RuleCall getChildINTTerminalRuleCall_7_1_0() { return cChildINTTerminalRuleCall_7_1_0; }
+		
+		//{Property} prop='[PARENT]'	'{' subProperties+=Property* '}'
+		public Group getGroup_8() { return cGroup_8; }
+		
 		//{Property}
-		public Action getPropertyAction_7_0() { return cPropertyAction_7_0; }
+		public Action getPropertyAction_8_0() { return cPropertyAction_8_0; }
+		
+		//prop='[PARENT]'
+		public Assignment getPropAssignment_8_1() { return cPropAssignment_8_1; }
 		
 		//'[PARENT]'
-		public Keyword getPARENTKeyword_7_1() { return cPARENTKeyword_7_1; }
+		public Keyword getPropPARENTKeyword_8_1_0() { return cPropPARENTKeyword_8_1_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_2() { return cLeftCurlyBracketKeyword_7_2; }
+		public Keyword getLeftCurlyBracketKeyword_8_2() { return cLeftCurlyBracketKeyword_8_2; }
 		
 		//subProperties+=Property*
-		public Assignment getSubPropertiesAssignment_7_3() { return cSubPropertiesAssignment_7_3; }
+		public Assignment getSubPropertiesAssignment_8_3() { return cSubPropertiesAssignment_8_3; }
 		
 		//Property
-		public RuleCall getSubPropertiesPropertyParserRuleCall_7_3_0() { return cSubPropertiesPropertyParserRuleCall_7_3_0; }
+		public RuleCall getSubPropertiesPropertyParserRuleCall_8_3_0() { return cSubPropertiesPropertyParserRuleCall_8_3_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
+		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
 	}
 	public class ActionCommandElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.browserautomation.mydsl.BrowserTest.ActionCommand");
@@ -441,18 +495,18 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		private final RuleCall cCommandActionTypeParserRuleCall_2_0 = (RuleCall)cCommandAssignment_2.eContents().get(0);
 		
 		//ActionCommand:
-		//    '[ACTION]' var+=Variable+
+		//    '[ACTION]' var=Variable
 		//        command=ActionType;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'[ACTION]' var+=Variable+
+		//'[ACTION]' var=Variable
 		//    command=ActionType
 		public Group getGroup() { return cGroup; }
 		
 		//'[ACTION]'
 		public Keyword getACTIONKeyword_0() { return cACTIONKeyword_0; }
 		
-		//var+=Variable+
+		//var=Variable
 		public Assignment getVarAssignment_1() { return cVarAssignment_1; }
 		
 		//Variable
@@ -467,42 +521,63 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	public class ActionTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.browserautomation.mydsl.BrowserTest.ActionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cCLICKKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cActionTypeAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final Assignment cActionAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final Keyword cActionCLICKKeyword_0_1_0 = (Keyword)cActionAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cCHECKKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cActionAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cActionCHECKKeyword_1_0_0 = (Keyword)cActionAssignment_1_0.eContents().get(0);
 		private final Keyword cDollarSignKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
 		private final Assignment cValueAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cValueBooleanEnumRuleCall_1_2_0 = (RuleCall)cValueAssignment_1_2.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cSETTEXTKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cActionAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cActionSETTEXTKeyword_2_0_0 = (Keyword)cActionAssignment_2_0.eContents().get(0);
 		private final Assignment cTextAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cTextEntreeParserRuleCall_2_1_0 = (RuleCall)cTextAssignment_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cCHOOSEKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cActionAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final Keyword cActionCHOOSEKeyword_3_0_0 = (Keyword)cActionAssignment_3_0.eContents().get(0);
 		private final Assignment cOptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cOptionEntreeParserRuleCall_3_1_0 = (RuleCall)cOptionAssignment_3_1.eContents().get(0);
 		
 		//ActionType:
-		//    '[CLICK]' |
-		//    '[CHECK]' '$'value=Boolean |
-		//    '[SET-TEXT]' text=Entree |
-		//    '[CHOOSE]' option=Entree;
+		//    {ActionType}
+		//    action='[CLICK]'         |
+		//    action='[CHECK]'         '$'value=Boolean |
+		//    action='[SET-TEXT]'    text=Entree |
+		//    action='[CHOOSE]'         option=Entree;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'[CLICK]' |
-		//'[CHECK]' '$'value=Boolean |
-		//'[SET-TEXT]' text=Entree |
-		//'[CHOOSE]' option=Entree
+		//{ActionType}
+		//action='[CLICK]'         |
+		//action='[CHECK]'         '$'value=Boolean |
+		//action='[SET-TEXT]'    text=Entree |
+		//action='[CHOOSE]'         option=Entree
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//'[CLICK]'
-		public Keyword getCLICKKeyword_0() { return cCLICKKeyword_0; }
+		//{ActionType}
+		//action='[CLICK]'
+		public Group getGroup_0() { return cGroup_0; }
 		
-		//'[CHECK]' '$'value=Boolean
+		//{ActionType}
+		public Action getActionTypeAction_0_0() { return cActionTypeAction_0_0; }
+		
+		//action='[CLICK]'
+		public Assignment getActionAssignment_0_1() { return cActionAssignment_0_1; }
+		
+		//'[CLICK]'
+		public Keyword getActionCLICKKeyword_0_1_0() { return cActionCLICKKeyword_0_1_0; }
+		
+		//action='[CHECK]' 		'$'value=Boolean
 		public Group getGroup_1() { return cGroup_1; }
 		
+		//action='[CHECK]'
+		public Assignment getActionAssignment_1_0() { return cActionAssignment_1_0; }
+		
 		//'[CHECK]'
-		public Keyword getCHECKKeyword_1_0() { return cCHECKKeyword_1_0; }
+		public Keyword getActionCHECKKeyword_1_0_0() { return cActionCHECKKeyword_1_0_0; }
 		
 		//'$'
 		public Keyword getDollarSignKeyword_1_1() { return cDollarSignKeyword_1_1; }
@@ -513,11 +588,14 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Boolean
 		public RuleCall getValueBooleanEnumRuleCall_1_2_0() { return cValueBooleanEnumRuleCall_1_2_0; }
 		
-		//'[SET-TEXT]' text=Entree
+		//action='[SET-TEXT]'	text=Entree
 		public Group getGroup_2() { return cGroup_2; }
 		
+		//action='[SET-TEXT]'
+		public Assignment getActionAssignment_2_0() { return cActionAssignment_2_0; }
+		
 		//'[SET-TEXT]'
-		public Keyword getSETTEXTKeyword_2_0() { return cSETTEXTKeyword_2_0; }
+		public Keyword getActionSETTEXTKeyword_2_0_0() { return cActionSETTEXTKeyword_2_0_0; }
 		
 		//text=Entree
 		public Assignment getTextAssignment_2_1() { return cTextAssignment_2_1; }
@@ -525,11 +603,14 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		//Entree
 		public RuleCall getTextEntreeParserRuleCall_2_1_0() { return cTextEntreeParserRuleCall_2_1_0; }
 		
-		//'[CHOOSE]' option=Entree
+		//action='[CHOOSE]' 		option=Entree
 		public Group getGroup_3() { return cGroup_3; }
 		
+		//action='[CHOOSE]'
+		public Assignment getActionAssignment_3_0() { return cActionAssignment_3_0; }
+		
 		//'[CHOOSE]'
-		public Keyword getCHOOSEKeyword_3_0() { return cCHOOSEKeyword_3_0; }
+		public Keyword getActionCHOOSEKeyword_3_0_0() { return cActionCHOOSEKeyword_3_0_0; }
 		
 		//option=Entree
 		public Assignment getOptionAssignment_3_1() { return cOptionAssignment_3_1; }
@@ -574,16 +655,16 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		private final Keyword cCHECKBOXCHECKBOXKeyword_3_0 = (Keyword)cCHECKBOXEnumLiteralDeclaration_3.eContents().get(0);
 		private final EnumLiteralDeclaration cDIVEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
 		private final Keyword cDIVDIVKeyword_4_0 = (Keyword)cDIVEnumLiteralDeclaration_4.eContents().get(0);
-		private final EnumLiteralDeclaration cTITLEEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cTITLETITLEKeyword_5_0 = (Keyword)cTITLEEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cSELECTEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cSELECTSELECTKeyword_5_0 = (Keyword)cSELECTEnumLiteralDeclaration_5.eContents().get(0);
 		private final EnumLiteralDeclaration cCONTENTEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
 		private final Keyword cCONTENTCONTENTKeyword_6_0 = (Keyword)cCONTENTEnumLiteralDeclaration_6.eContents().get(0);
 		
 		//enum Type:
-		//    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE | CONTENT;
+		//    LINK | INPUT | TEXT | CHECKBOX | DIV | SELECT | CONTENT;
 		public EnumRule getRule() { return rule; }
 		
-		//LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE | CONTENT
+		//LINK | INPUT | TEXT | CHECKBOX | DIV | SELECT | CONTENT
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//LINK
@@ -611,10 +692,10 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 		
 		public Keyword getDIVDIVKeyword_4_0() { return cDIVDIVKeyword_4_0; }
 		
-		//TITLE
-		public EnumLiteralDeclaration getTITLEEnumLiteralDeclaration_5() { return cTITLEEnumLiteralDeclaration_5; }
+		//SELECT
+		public EnumLiteralDeclaration getSELECTEnumLiteralDeclaration_5() { return cSELECTEnumLiteralDeclaration_5; }
 		
-		public Keyword getTITLETITLEKeyword_5_0() { return cTITLETITLEKeyword_5_0; }
+		public Keyword getSELECTSELECTKeyword_5_0() { return cSELECTSELECTKeyword_5_0; }
 		
 		//CONTENT
 		public EnumLiteralDeclaration getCONTENTEnumLiteralDeclaration_6() { return cCONTENTEnumLiteralDeclaration_6; }
@@ -837,14 +918,15 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	}
 	
 	//Property:
-	//    '[CONTENT]'     content=Entree |
-	//    '[LABEL]'         label=Entree |
-	//    '[VALUE]'         value=Entree |
-	//    '[ALT]'         alt=Entree |
-	//    '[TYPE]'         '$'type=Type |
-	//    '[NAME]'         name=STRING |
-	//    '[NTH-CHILD]'     child=INT |
-	//    {Property} '[PARENT]'         '{' subProperties+=Property* '}';
+	//    prop='[CONTENT]'             content=Entree |
+	//    prop='[LABEL]'                 label=Entree |
+	//    prop='[VALUE]'                 value=Entree |
+	//    prop='[ALT]'                 alt=Entree |
+	//    prop='[LINK]'                link=Entree |
+	//    prop='[TYPE]'                 '$'type=Type |
+	//    prop='[NAME]'                 name=STRING |
+	//    prop='[NTH-CHILD]'             child=INT |
+	//    {Property} prop='[PARENT]'    '{' subProperties+=Property* '}';
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -854,7 +936,7 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	}
 	
 	//ActionCommand:
-	//    '[ACTION]' var+=Variable+
+	//    '[ACTION]' var=Variable
 	//        command=ActionType;
 	public ActionCommandElements getActionCommandAccess() {
 		return pActionCommand;
@@ -865,10 +947,11 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	}
 	
 	//ActionType:
-	//    '[CLICK]' |
-	//    '[CHECK]' '$'value=Boolean |
-	//    '[SET-TEXT]' text=Entree |
-	//    '[CHOOSE]' option=Entree;
+	//    {ActionType}
+	//    action='[CLICK]'         |
+	//    action='[CHECK]'         '$'value=Boolean |
+	//    action='[SET-TEXT]'    text=Entree |
+	//    action='[CHOOSE]'         option=Entree;
 	public ActionTypeElements getActionTypeAccess() {
 		return pActionType;
 	}
@@ -888,7 +971,7 @@ public class BrowserTestGrammarAccess extends AbstractElementFinder.AbstractGram
 	}
 	
 	//enum Type:
-	//    LINK | INPUT | TEXT | CHECKBOX | DIV | TITLE | CONTENT;
+	//    LINK | INPUT | TEXT | CHECKBOX | DIV | SELECT | CONTENT;
 	public TypeElements getTypeAccess() {
 		return eType;
 	}

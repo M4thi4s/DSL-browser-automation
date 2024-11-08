@@ -71,14 +71,14 @@ public enum Type implements Enumerator
   DIV(4, "DIV", "DIV"),
 
   /**
-   * The '<em><b>TITLE</b></em>' literal object.
+   * The '<em><b>SELECT</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #TITLE_VALUE
+   * @see #SELECT_VALUE
    * @generated
    * @ordered
    */
-  TITLE(5, "TITLE", "TITLE"),
+  SELECT(5, "SELECT", "SELECT"),
 
   /**
    * The '<em><b>CONTENT</b></em>' literal object.
@@ -146,15 +146,15 @@ public enum Type implements Enumerator
   public static final int DIV_VALUE = 4;
 
   /**
-   * The '<em><b>TITLE</b></em>' literal value.
+   * The '<em><b>SELECT</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #TITLE
+   * @see #SELECT
    * @model
    * @generated
    * @ordered
    */
-  public static final int TITLE_VALUE = 5;
+  public static final int SELECT_VALUE = 5;
 
   /**
    * The '<em><b>CONTENT</b></em>' literal value.
@@ -181,7 +181,7 @@ public enum Type implements Enumerator
       TEXT,
       CHECKBOX,
       DIV,
-      TITLE,
+      SELECT,
       CONTENT,
     };
 
@@ -252,7 +252,7 @@ public enum Type implements Enumerator
       case TEXT_VALUE: return TEXT;
       case CHECKBOX_VALUE: return CHECKBOX;
       case DIV_VALUE: return DIV;
-      case TITLE_VALUE: return TITLE;
+      case SELECT_VALUE: return SELECT;
       case CONTENT_VALUE: return CONTENT;
     }
     return null;

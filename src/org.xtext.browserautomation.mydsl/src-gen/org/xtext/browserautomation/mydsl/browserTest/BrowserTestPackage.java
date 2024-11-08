@@ -310,13 +310,22 @@ public interface BrowserTestPackage extends EPackage
   int PROPERTY = 7;
 
   /**
+   * The feature id for the '<em><b>Prop</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__PROP = 0;
+
+  /**
    * The feature id for the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROPERTY__CONTENT = 0;
+  int PROPERTY__CONTENT = 1;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -325,7 +334,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__LABEL = 1;
+  int PROPERTY__LABEL = 2;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -334,7 +343,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__VALUE = 2;
+  int PROPERTY__VALUE = 3;
 
   /**
    * The feature id for the '<em><b>Alt</b></em>' containment reference.
@@ -343,7 +352,16 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__ALT = 3;
+  int PROPERTY__ALT = 4;
+
+  /**
+   * The feature id for the '<em><b>Link</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__LINK = 5;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -352,7 +370,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__TYPE = 4;
+  int PROPERTY__TYPE = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -361,7 +379,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__NAME = 5;
+  int PROPERTY__NAME = 7;
 
   /**
    * The feature id for the '<em><b>Child</b></em>' attribute.
@@ -370,7 +388,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__CHILD = 6;
+  int PROPERTY__CHILD = 8;
 
   /**
    * The feature id for the '<em><b>Sub Properties</b></em>' containment reference list.
@@ -379,7 +397,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__SUB_PROPERTIES = 7;
+  int PROPERTY__SUB_PROPERTIES = 9;
 
   /**
    * The number of structural features of the '<em>Property</em>' class.
@@ -388,7 +406,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY_FEATURE_COUNT = 8;
+  int PROPERTY_FEATURE_COUNT = 10;
 
   /**
    * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.ActionCommandImpl <em>Action Command</em>}' class.
@@ -401,7 +419,7 @@ public interface BrowserTestPackage extends EPackage
   int ACTION_COMMAND = 8;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' containment reference list.
+   * The feature id for the '<em><b>Var</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -438,13 +456,22 @@ public interface BrowserTestPackage extends EPackage
   int ACTION_TYPE = 9;
 
   /**
+   * The feature id for the '<em><b>Action</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_TYPE__ACTION = 0;
+
+  /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION_TYPE__VALUE = 0;
+  int ACTION_TYPE__VALUE = 1;
 
   /**
    * The feature id for the '<em><b>Text</b></em>' containment reference.
@@ -453,7 +480,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTION_TYPE__TEXT = 1;
+  int ACTION_TYPE__TEXT = 2;
 
   /**
    * The feature id for the '<em><b>Option</b></em>' containment reference.
@@ -462,7 +489,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTION_TYPE__OPTION = 2;
+  int ACTION_TYPE__OPTION = 3;
 
   /**
    * The number of structural features of the '<em>Action Type</em>' class.
@@ -471,7 +498,7 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ACTION_TYPE_FEATURE_COUNT = 3;
+  int ACTION_TYPE_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.browserautomation.mydsl.browserTest.impl.TestImpl <em>Test</em>}' class.
@@ -755,6 +782,17 @@ public interface BrowserTestPackage extends EPackage
   EClass getProperty();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getProp <em>Prop</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Prop</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getProp()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Prop();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getContent <em>Content</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -797,6 +835,17 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    */
   EReference getProperty_Alt();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getLink <em>Link</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Link</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.Property#getLink()
+   * @see #getProperty()
+   * @generated
+   */
+  EReference getProperty_Link();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.Property#getType <em>Type</em>}'.
@@ -853,10 +902,10 @@ public interface BrowserTestPackage extends EPackage
   EClass getActionCommand();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getVar <em>Var</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Var</em>'.
+   * @return the meta object for the containment reference '<em>Var</em>'.
    * @see org.xtext.browserautomation.mydsl.browserTest.ActionCommand#getVar()
    * @see #getActionCommand()
    * @generated
@@ -883,6 +932,17 @@ public interface BrowserTestPackage extends EPackage
    * @generated
    */
   EClass getActionType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getAction <em>Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Action</em>'.
+   * @see org.xtext.browserautomation.mydsl.browserTest.ActionType#getAction()
+   * @see #getActionType()
+   * @generated
+   */
+  EAttribute getActionType_Action();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.browserautomation.mydsl.browserTest.ActionType#getValue <em>Value</em>}'.
@@ -1178,6 +1238,14 @@ public interface BrowserTestPackage extends EPackage
     EClass PROPERTY = eINSTANCE.getProperty();
 
     /**
+     * The meta object literal for the '<em><b>Prop</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__PROP = eINSTANCE.getProperty_Prop();
+
+    /**
      * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1208,6 +1276,14 @@ public interface BrowserTestPackage extends EPackage
      * @generated
      */
     EReference PROPERTY__ALT = eINSTANCE.getProperty_Alt();
+
+    /**
+     * The meta object literal for the '<em><b>Link</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTY__LINK = eINSTANCE.getProperty_Link();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -1252,7 +1328,7 @@ public interface BrowserTestPackage extends EPackage
     EClass ACTION_COMMAND = eINSTANCE.getActionCommand();
 
     /**
-     * The meta object literal for the '<em><b>Var</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1276,6 +1352,14 @@ public interface BrowserTestPackage extends EPackage
      * @generated
      */
     EClass ACTION_TYPE = eINSTANCE.getActionType();
+
+    /**
+     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ACTION_TYPE__ACTION = eINSTANCE.getActionType_Action();
 
     /**
      * The meta object literal for the '<em><b>Value</b></em>' attribute feature.

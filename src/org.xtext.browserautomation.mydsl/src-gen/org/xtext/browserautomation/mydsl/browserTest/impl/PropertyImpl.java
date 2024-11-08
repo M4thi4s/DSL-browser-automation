@@ -32,10 +32,12 @@ import org.xtext.browserautomation.mydsl.browserTest.Type;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getProp <em>Prop</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getContent <em>Content</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getAlt <em>Alt</em>}</li>
+ *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getLink <em>Link</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.browserautomation.mydsl.browserTest.impl.PropertyImpl#getChild <em>Child</em>}</li>
@@ -46,6 +48,26 @@ import org.xtext.browserautomation.mydsl.browserTest.Type;
  */
 public class PropertyImpl extends MinimalEObjectImpl.Container implements Property
 {
+  /**
+   * The default value of the '{@link #getProp() <em>Prop</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProp()
+   * @generated
+   * @ordered
+   */
+  protected static final String PROP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getProp() <em>Prop</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProp()
+   * @generated
+   * @ordered
+   */
+  protected String prop = PROP_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -85,6 +107,16 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @ordered
    */
   protected Entree alt;
+
+  /**
+   * The cached value of the '{@link #getLink() <em>Link</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLink()
+   * @generated
+   * @ordered
+   */
+  protected Entree link;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -175,6 +207,31 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   protected EClass eStaticClass()
   {
     return BrowserTestPackage.Literals.PROPERTY;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getProp()
+  {
+    return prop;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setProp(String newProp)
+  {
+    String oldProp = prop;
+    prop = newProp;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__PROP, oldProp, prop));
   }
 
   /**
@@ -383,6 +440,56 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
    * @generated
    */
   @Override
+  public Entree getLink()
+  {
+    return link;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLink(Entree newLink, NotificationChain msgs)
+  {
+    Entree oldLink = link;
+    link = newLink;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__LINK, oldLink, newLink);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLink(Entree newLink)
+  {
+    if (newLink != link)
+    {
+      NotificationChain msgs = null;
+      if (link != null)
+        msgs = ((InternalEObject)link).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__LINK, null, msgs);
+      if (newLink != null)
+        msgs = ((InternalEObject)newLink).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserTestPackage.PROPERTY__LINK, null, msgs);
+      msgs = basicSetLink(newLink, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserTestPackage.PROPERTY__LINK, newLink, newLink));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Type getType()
   {
     return type;
@@ -485,6 +592,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
         return basicSetValue(null, msgs);
       case BrowserTestPackage.PROPERTY__ALT:
         return basicSetAlt(null, msgs);
+      case BrowserTestPackage.PROPERTY__LINK:
+        return basicSetLink(null, msgs);
       case BrowserTestPackage.PROPERTY__SUB_PROPERTIES:
         return ((InternalEList<?>)getSubProperties()).basicRemove(otherEnd, msgs);
     }
@@ -501,6 +610,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
+      case BrowserTestPackage.PROPERTY__PROP:
+        return getProp();
       case BrowserTestPackage.PROPERTY__CONTENT:
         return getContent();
       case BrowserTestPackage.PROPERTY__LABEL:
@@ -509,6 +620,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
         return getValue();
       case BrowserTestPackage.PROPERTY__ALT:
         return getAlt();
+      case BrowserTestPackage.PROPERTY__LINK:
+        return getLink();
       case BrowserTestPackage.PROPERTY__TYPE:
         return getType();
       case BrowserTestPackage.PROPERTY__NAME:
@@ -532,6 +645,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
+      case BrowserTestPackage.PROPERTY__PROP:
+        setProp((String)newValue);
+        return;
       case BrowserTestPackage.PROPERTY__CONTENT:
         setContent((Entree)newValue);
         return;
@@ -543,6 +659,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
         return;
       case BrowserTestPackage.PROPERTY__ALT:
         setAlt((Entree)newValue);
+        return;
+      case BrowserTestPackage.PROPERTY__LINK:
+        setLink((Entree)newValue);
         return;
       case BrowserTestPackage.PROPERTY__TYPE:
         setType((Type)newValue);
@@ -571,6 +690,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
+      case BrowserTestPackage.PROPERTY__PROP:
+        setProp(PROP_EDEFAULT);
+        return;
       case BrowserTestPackage.PROPERTY__CONTENT:
         setContent((Entree)null);
         return;
@@ -582,6 +704,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
         return;
       case BrowserTestPackage.PROPERTY__ALT:
         setAlt((Entree)null);
+        return;
+      case BrowserTestPackage.PROPERTY__LINK:
+        setLink((Entree)null);
         return;
       case BrowserTestPackage.PROPERTY__TYPE:
         setType(TYPE_EDEFAULT);
@@ -609,6 +734,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
   {
     switch (featureID)
     {
+      case BrowserTestPackage.PROPERTY__PROP:
+        return PROP_EDEFAULT == null ? prop != null : !PROP_EDEFAULT.equals(prop);
       case BrowserTestPackage.PROPERTY__CONTENT:
         return content != null;
       case BrowserTestPackage.PROPERTY__LABEL:
@@ -617,6 +744,8 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
         return value != null;
       case BrowserTestPackage.PROPERTY__ALT:
         return alt != null;
+      case BrowserTestPackage.PROPERTY__LINK:
+        return link != null;
       case BrowserTestPackage.PROPERTY__TYPE:
         return type != TYPE_EDEFAULT;
       case BrowserTestPackage.PROPERTY__NAME:
@@ -640,7 +769,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (type: ");
+    result.append(" (prop: ");
+    result.append(prop);
+    result.append(", type: ");
     result.append(type);
     result.append(", name: ");
     result.append(name);
