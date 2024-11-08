@@ -3,24 +3,29 @@
 	[SELECT] $checkbox
 		[LABEL] $ALL
 		[TYPE] $CHECKBOX
+        [NTH-CHILD] 1
 	[ACTION] $checkbox
 		[CHECK] $FALSE
 	[SELECT] $checkbox1
 		[LABEL] "Anglais"
 		[TYPE] $CHECKBOX
+        [NTH-CHILD] 1
 	[SELECT] $checkbox2
 		[NAME] "À domicile"
 		[TYPE] $CHECKBOX
+        [NTH-CHILD] 1
 	[SELECT] $checkbox3
 		[NAME] "Temps plein"
 		[TYPE] $CHECKBOX
+        [NTH-CHILD] 1
 	[ACTION] $checkbox1 $checkbox2 $checkbox3
 		[CHECK] $TRUE
 	[SELECT] $btn
-		[VALUE] "Appliquer les filtres"
+		[VALUE] "Appliquer les critères"
+        [NTH-CHILD] 1
 	[ACTION] $btn
 		[CLICK]
 	[SELECT] $result
-		[TYPE] $TEXT
 		[CONTENT] "No found course matching your criteria."
+        [NTH-CHILD] 1
 	[TEST] $result

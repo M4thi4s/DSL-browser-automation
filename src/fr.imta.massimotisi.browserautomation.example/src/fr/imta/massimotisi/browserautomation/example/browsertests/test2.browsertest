@@ -1,11 +1,13 @@
-[TASK] Test2
-	[GOTO] "http://www.imt-atlantique.fr/fr"
-	[SELECT] $lien1
-		[CONTENT] "Toutes les actualités"
-		[TYPE] $LINK
-	[ACTION] $lien1
-		[CLICK]
-	[SELECT] $lien2
-		[CONTENT] "Accueil"
-	[TYPE] $LINK
-	[TEST] $lien2
+[TASK] "Test 2"
+    [GOTO] http://www.imt-atlantique.fr/fr
+    [SELECT] $lien1
+        [CONTENT] "Toutes les actualités"
+        [TYPE] $LINK
+        [NTH-CHILD] 1
+    [ACTION] $lien1
+        [CLICK]
+    [SELECT] $lien2
+        [CONTENT] "Accueil"
+        [TYPE] $LINK
+        [NTH-CHILD] 1
+    [ASSERT] $lien2

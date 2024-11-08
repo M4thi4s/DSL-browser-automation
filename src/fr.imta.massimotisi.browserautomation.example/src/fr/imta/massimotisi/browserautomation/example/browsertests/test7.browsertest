@@ -1,8 +1,8 @@
 [TASK] "Test 7"
 	[GOTO] "http://www.imt-atlantique.fr/fr"
 	[SELECT] $firstNewsLink
-		[TYPE] $DIV
 		[CONTENT] "Actualités"
+        [NTH-CHILD] 1
 		[PARENT] {
 			[TYPE] $LINK
 			[NTH-CHILD] 1
@@ -11,5 +11,5 @@
 		[CLICK] 
 	[SELECT] $result
 		[CONTENT] $firstNewsLink.CONTENT
-		[TYPE] $TITLE
+        [NTH-CHILD] 1
 	[TEST] $result

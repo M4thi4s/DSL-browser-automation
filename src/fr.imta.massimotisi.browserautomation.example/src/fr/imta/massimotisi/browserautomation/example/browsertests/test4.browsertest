@@ -1,15 +1,17 @@
-[TASK] Test_3
-  [GOTO] "http://www.imt-atlantique.fr/fr"
-  [SELECT] $toutesLesActus
-    [CONTENT] "Toutes les actualités"
-    [TYPE] $LINK
-  [ACTION] $toutesLesActus
-	[CLICK]
-  [SELECT] $image
-	[ALT] "Accueil"
-  [ACTION] $image
-	[CLICK] 
-  [SELECT] $toutesLesActus2
-	[TYPE] $LINK
-	[CONTENT] $toutesLesActus.CONTENT
-  [TEST] $toutesLesActus2
+[TASK] "Test 4"
+    [GOTO] "http://www.imt-atlantique.fr/fr/rechercher"
+    [SELECT] $field
+        [LABEL] "Rechercher"
+        [TYPE] $INPUT
+        [NTH-CHILD] 2
+    [ACTION] $field
+        [SET-TEXT] "Donald Trumpe"
+    [SELECT] $btn
+        [VALUE] "Appliquer les filtres"
+        [NTH-CHILD] 1
+    [ACTION] $btn
+        [CLICK]
+    [SELECT] $result
+        [CONTENT] "Aucun résultat ne correspond à votre recherche"
+        [NTH-CHILD] 1
+    [TEST] $result

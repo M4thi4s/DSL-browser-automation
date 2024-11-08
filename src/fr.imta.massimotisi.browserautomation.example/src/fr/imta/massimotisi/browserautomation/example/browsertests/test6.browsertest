@@ -3,18 +3,21 @@
 	[SELECT] $field
 		[LABEL] "Rechercher"
 		[TYPE] $INPUT
+        [NTH-CHILD] 1
 	[ACTION] $field
 		[SET-TEXT] "2006"
 	[SELECT] $select
 		[LABEL] "Période de publication"
 		[TYPE] $INPUT
+        [NTH-CHILD] 1
 	[ACTION] $select
 		[CHOOSE] "Le mois dernier"
 	[SELECT] $btn
 		[VALUE] "Appliquer les filtres"
+        [NTH-CHILD] 1
 	[ACTION] $btn
 		[CLICK]
 	[SELECT] $result
-		[TYPE] $TEXT
 		[CONTENT] "Aucun résultat ne correspond à votre recherche"
+        [NTH-CHILD] 1
 	[TEST] $result

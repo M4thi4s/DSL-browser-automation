@@ -3,4 +3,5 @@
 	[SELECT] $lien1
 		[CONTENT] "Toutes les actualités"
 		[TYPE] $LINK
+		[NTH-CHILD] 1
 	[TEST] $lien1

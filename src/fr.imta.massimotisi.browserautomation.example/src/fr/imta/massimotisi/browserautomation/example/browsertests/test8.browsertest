@@ -1,25 +1,26 @@
 [TASK] "Test 8"
 	[GOTO] "http://www.imt-atlantique.fr/fr"
 	[SELECT] $secondNewsLink
-		[TYPE] $DIV
 		[CONTENT] "Actualités"
+        [NTH-CHILD] 1
 		[PARENT] {
 			[TYPE] $LINK
 			[NTH-CHILD] 2	
 		}
 	[GOTO] "http://www.imt-atlantique.fr/fr/rechercher"
 	[SELECT] $searchField
-		[CONTENT] "Rechercher"          	
-		[PARENT] {
-			[TYPE] $INPUT
-		}
+		[LABEL] "Rechercher"
+		[TYPE] $INPUT
+        [NTH-CHILD] 8
 	[ACTION] $searchField
-		[SET-TEXT] $secondNewsLink.TITLE
+		[SET-TEXT] $secondNewsLink.CONTENT
 	[SELECT] $btn
 		[VALUE] "Appliquer les filtres"
+        [NTH-CHILD] 1
 	[ACTION] $btn
 		[CLICK]
-	[SELECT] $link
-		[CONTENT] $secondNews.LINK
-		[TYPE] $LINK
+    [SELECT] $link
+        [LINK] $secondNews.LINK
+        [TYPE] $LINK
+        [NTH-CHILD] 1
 	[TEST] $link

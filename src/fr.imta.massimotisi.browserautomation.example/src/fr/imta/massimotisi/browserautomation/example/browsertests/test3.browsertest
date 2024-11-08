@@ -3,13 +3,16 @@
   [SELECT] $toutesLesActus
     [CONTENT] "Toutes les actualités"
     [TYPE] $LINK
+    [NTH-CHILD] 1
   [ACTION] $toutesLesActus
 	[CLICK]
-  [SELECT] $image
+  [SELECT] $accueil
 	[ALT] "Accueil"
-  [ACTION] $image
+    [NTH-CHILD] 1
+  [ACTION] $accueil
 	[CLICK] 
   [SELECT] $toutesLesActus2
 	[TYPE] $LINK
 	[CONTENT] $toutesLesActus.CONTENT
+    [NTH-CHILD] 1
   [TEST] $toutesLesActus2
