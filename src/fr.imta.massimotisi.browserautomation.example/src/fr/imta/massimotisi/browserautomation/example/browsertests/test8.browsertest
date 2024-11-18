@@ -5,8 +5,8 @@
         [NTH-CHILD] 1
 		[PARENT] {
 			[TYPE] $LINK
-			[NTH-CHILD] 2	
-		}
+			[NTH-CHILD] 2	 
+		} 
 	[GOTO] "http://www.imt-atlantique.fr/fr/rechercher"
 	[SELECT] $searchField
 		[LABEL] "Rechercher"
@@ -24,4 +24,3 @@
         [TYPE] $LINK
         [NTH-CHILD] 1
 	[TEST] $link
-  

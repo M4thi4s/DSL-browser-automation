@@ -1,5 +1,3 @@
-package fr.imta.massimotisi.browserautomation.example;
-
 import fr.imta.massimotisi.browserautomation.lib.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,14 +18,11 @@ public class test8 {
         select_secondNewsLink.filterBy = FilterBy.TEXT;
         select_secondNewsLink.filterValue = "Actualités";
         select_secondNewsLink.nthChild = 1;
-        var select_secondNewsLink_parent = selectLib.getParent(selectLib.selectElement(select_secondNewsLink).element);
-        
-        select_secondNewsLink = new SelectFilterProperty();
-        
-        select_secondNewsLink.parent = select_secondNewsLink_parent.element;
-        
-        select_secondNewsLink.elementType = FilterElementType.LINK;
-        select_secondNewsLink.nthChild = 2;
+        {
+        	select_secondNewsLink = new SelectFilterProperty(selectLib.getParent(select_secondNewsLink).element);
+        	select_secondNewsLink.elementType = FilterElementType.LINK;
+        	select_secondNewsLink.nthChild = 2;
+        }
         
         var secondNewsLink = selectLib.selectElement(select_secondNewsLink);
         actionLib.goToUrl("http://www.imt-atlantique.fr/fr/rechercher");
@@ -53,7 +48,7 @@ public class test8 {
         select_link.nthChild = 1;
         
         var link = selectLib.selectElement(select_link);
-        assertLib.assertElementExists(link.element, "$link");
+        assertLib.assertElementExists(link.element, "link");
         
         driver.quit();
     }

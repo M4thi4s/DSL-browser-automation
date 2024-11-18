@@ -7,8 +7,12 @@ public class SelectFilterProperty {
     public FilterBy filterBy = FilterBy.TEXT; // Default = TEXT
     public FilterElementType elementType = FilterElementType.ANY; // Default = ALL
     public Integer nthChild = null; // If null, select all
-    public WebElement parent = null; // If null, select in the entire page
+    public WebElement searchFromElement = null; // If null, select in the entire page
 
     // Constructors for convenience
     public SelectFilterProperty() {}
+
+    public SelectFilterProperty(WebElement searchFromElement) {
+        this.searchFromElement = searchFromElement;
+    }
 }

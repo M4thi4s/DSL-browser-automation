@@ -1,5 +1,3 @@
-package fr.imta.massimotisi.browserautomation.example;
-
 import fr.imta.massimotisi.browserautomation.lib.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,7 +43,7 @@ public class test6 {
         select_result.nthChild = 1;
         
         var result = selectLib.selectElement(select_result);
-        assertLib.assertElementExists(result.element, "$result");
+        assertLib.assertElementExists(result.element, "result");
         
         driver.quit();
     }

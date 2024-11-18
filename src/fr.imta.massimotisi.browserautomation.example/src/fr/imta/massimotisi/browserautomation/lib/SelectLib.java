@@ -18,10 +18,11 @@ public class SelectLib {
     }
 
     // [SELECT] Get parent of an element
-    public SelectInfo getParent(WebElement element) {
+    public SelectInfo getParent(SelectFilterProperty filterProperty) {
+        SelectInfo selectInfo = selectElement(filterProperty);
         try {
             return new SelectInfo (
-                    (WebElement) ((JavascriptExecutor) driver).executeScript("return arguments[0].parentNode;", element)
+                    (WebElement) ((JavascriptExecutor) driver).executeScript("return arguments[0].parentNode;", selectInfo.element)
             );
         } catch (Exception e) {
             System.out.println("Failed to fetch parent of the element: " + e.getMessage());
@@ -61,8 +62,8 @@ public class SelectLib {
             String xpath = buildXPath(filterProperty);
 
             List<WebElement> elements;
-            if (filterProperty.parent != null) {
-                elements = filterProperty.parent.findElements(By.xpath(xpath));
+            if (filterProperty.searchFromElement != null) {
+                elements = filterProperty.searchFromElement.findElements(By.xpath(xpath));
             } else {
                 elements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath)));
             }
@@ -73,7 +74,6 @@ public class SelectLib {
             return null;
         }
     }
-
 
     // Helper method to build XPath based on SelectFilterProperty
     private String buildXPath(SelectFilterProperty filterProperty) {
@@ -122,8 +122,8 @@ public class SelectLib {
 
                         WebElement labelElement;
                         try {
-                            if (filterProperty.parent != null) {
-                                labelElement = filterProperty.parent.findElement(By.xpath(labelXpath));
+                            if (filterProperty.searchFromElement != null) {
+                                labelElement = filterProperty.searchFromElement.findElement(By.xpath(labelXpath));
                             } else {
                                 labelElement = (wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy((By.xpath(labelXpath)))).get(
                                         filterProperty.nthChild != null ? filterProperty.nthChild - 1 : 0
