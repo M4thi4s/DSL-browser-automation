@@ -1,9 +1,14 @@
-Arborescence du projet :
+# Projet Browser Automation
+## Description
+Ce projet a pour but de créer un langage pour tester des applications web. Ce langage permet de décrire des scénarios de test pour des applications web. Les tests sont écrits dans un fichier .browserTest et sont ensuite traduits en code JAVA. Ce code JAVA utilise l'API Selenium pour ouvrir un navigateur, effectuer les actions décrites dans le fichier .browserTest et fermer le navigateur.
+Le langage utilise une syntaxe spécifique créer en XText et est interprété par XTend.
+
+## Arborescence du projet :
 Nous avons travaillé au sein des packages suivants : 
 > org.xtext.browserautomation.mydsl : contient les fichiers décrivant notre syntaxe et le générateur de code Java
 > fr.imta.massimotisi.browserautomation.example : contient les fichiers de tests .browserTest, le code Java généré et la librairie permettant l'interface entre selenium et le JAVA généré par nos fichiers .browserTest.
 
-Comment lancer le projet :
+## Comment lancer le projet :
 1. Ouvrir les packages suivants dans une instance d'eclipse : 
 - org.xtext.browserautomation.mydsl
 - org.xtext.browserautomation.mydsl.ide
@@ -21,6 +26,7 @@ Comment lancer le projet :
 
 6. Il est possible de lancer le code généré en faisant un clic droit sur le fichier testNB.java et en sélectionnant "Run As" -> "Java Application". Ce code JAVA ouvre un navigateur, effectue les actions décrites dans le fichier .browserTest et ferme le navigateur. Vous verrez dans la console un message de la forme "[TEST] lien1 => OK" si le test a été réussi. Sinon, une erreur sera affichée.
 
+## Informations utiles
 Fichier contenant notre syntaxe :
 - src/org.xtext.browserautomation.mydsl/src/org/xtext/browserautomation/mydsl/BrowserTest.xtext
 
@@ -37,4 +43,4 @@ Les fichiers sont dans le package "fr.imta.massimotisi.browserautomation/lib/"
 
 Limites de notre langage : 
 - Notre librairie pourrait être améliorée. En particulier, les actions ne peuvent pas toutes recevoir de liste d'éléments en paramètre. Il faudrait modifier le fichier ActionLib.java et créer les fonctions clickElemen(List<WebElement> elements), setText(List<WebElement> elements), selectOption(List<WebElement> elements)
-- Les parents sont remontés un à un, il aurait été interessant de trouver un système plus performant en remontant au prochain parent qui utilise plus d'espace que son enfant. Ainsi, parcourir des arborescences HTML plus grandes serait plus rapide.
+- Les parents sont remontés un à un, il aurait été interessant de trouver un système plus performant en remontant jusqu'au prochain parent qui utilise plus d'espace que son enfant. Ainsi, parcourir des arborescences HTML plus profondes serait plus rapide.
