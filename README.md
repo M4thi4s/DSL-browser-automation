@@ -5,10 +5,14 @@ Le langage utilise une syntaxe spécifique créer en XText et est interprété p
 
 ## Arborescence du projet :
 Nous avons travaillé au sein des packages suivants : 
-> org.xtext.browserautomation.mydsl : contient les fichiers décrivant notre syntaxe et le générateur de code Java
-> fr.imta.massimotisi.browserautomation.example : contient les fichiers de tests .browserTest, le code Java généré et la librairie permettant l'interface entre selenium et le JAVA généré par nos fichiers .browserTest.
+- org.xtext.browserautomation.mydsl : contient les fichiers décrivant notre syntaxe et le générateur de code Java
+- fr.imta.massimotisi.browserautomation.example : contient les fichiers de tests .browserTest, le code Java généré et la librairie permettant l'interface entre selenium et le JAVA généré par nos fichiers .browserTest.
 
 ## Comment lancer le projet :
+### Prérequis :
+- Eclipse avec XText installé
+- Java 21
+
 1. Ouvrir les packages suivants dans une instance d'eclipse : 
 - org.xtext.browserautomation.mydsl
 - org.xtext.browserautomation.mydsl.ide
