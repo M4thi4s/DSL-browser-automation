@@ -38,12 +38,13 @@ Fichier permettant la génération du code Java à partir du fichier .browserTes
 - src/org.xtext.browserautomation.mydsl/src/org/xtext/browserautomation/mydsl/generator/BrowserTestGenerator.xtend
 
 Comment fonctionne notre librairie JAVA : 
+
 Notre librairie JAVA permet de faire le lien entre le code JAVA généré par notre syntaxe et l'API Selenium. Elle est composée de 3 classes principales :
 - ActionLib.java : contient les fonctions permettant d'effectuer les actions sur les éléments HTML
 - SelectLib.java : contient les fonctions permettant de sélectionner des éléments HTML
 - AssertLib.java : contient les fonctions permettant de vérifier l'existence des éléments HTML sélectionnés.
 
-Les fichiers sont dans le package "fr.imta.massimotisi.browserautomation/lib/"
+Les fichiers de notre librairie selenium sont dans le package "fr.imta.massimotisi.browserautomation/lib/"
 
 Limites de notre langage : 
 - Notre librairie pourrait être améliorée. En particulier, les actions ne peuvent pas toutes recevoir de liste d'éléments en paramètre. Il faudrait modifier le fichier ActionLib.java et créer les fonctions clickElemen(List<WebElement> elements), setText(List<WebElement> elements), selectOption(List<WebElement> elements)
